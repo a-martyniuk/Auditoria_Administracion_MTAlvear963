@@ -22,9 +22,21 @@ const fmtFull = (n) => new Intl.NumberFormat('es-AR', {
     style: 'currency', currency: 'ARS', minimumFractionDigits: 2, maximumFractionDigits: 2
 }).format(n || 0);
 
+const getAssetUrl = (filename) => {
+    let loc = window.location.href.split('?')[0].split('#')[0];
+    if (!loc.endsWith('/')) {
+        if (loc.endsWith('.html')) {
+            loc = loc.substring(0, loc.lastIndexOf('/') + 1);
+        } else {
+            loc = loc + '/';
+        }
+    }
+    return new URL(filename, loc).href;
+};
+
 // ── BOOTSTRAP ──────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-    fetch(new URL("prorrateo.json", document.baseURI).href)
+    fetch(getAssetUrl("prorrateo.json"))
         .then(r => r.json())
         .then(data => {
             const allProrrateo = data.prorrateo || [];
@@ -470,7 +482,7 @@ const loadServicesStatus = () => {
     const container = document.getElementById("servicesStatusWidget");
     if (!container) return;
 
-    fetch(new URL("servicios_status.json", document.baseURI).href)
+    fetch(getAssetUrl("servicios_status.json"))
         .then(r => r.json())
         .then(data => {
             const edesur = data.edesur || data.luz || { status: "Normal", message: "Sin alertas" };

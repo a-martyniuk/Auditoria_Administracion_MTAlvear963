@@ -162,11 +162,23 @@ const getCatPill = (rubro) => {
     return `<span class="pill ${cfg.cls}">${cfg.icon} ${norm}</span>`;
 };
 
+const getAssetUrl = (filename) => {
+    let loc = window.location.href.split('?')[0].split('#')[0];
+    if (!loc.endsWith('/')) {
+        if (loc.endsWith('.html')) {
+            loc = loc.substring(0, loc.lastIndexOf('/') + 1);
+        } else {
+            loc = loc + '/';
+        }
+    }
+    return new URL(filename, loc).href;
+};
+
 // ── BOOTSTRAP ──────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
     fetchIPC().catch(err => console.warn("IPC deferred:", err));
 
-    fetch("gastos.json")
+    fetch(getAssetUrl("gastos.json"))
         .then(r => r.json())
         .then(data => {
             rawExpenses = data.gastos || [];
@@ -1256,7 +1268,7 @@ const loadServicesStatus = () => {
     const container = document.getElementById("servicesStatusWidget");
     if (!container) return;
 
-    fetch(new URL("servicios_status.json", document.baseURI).href)
+    fetch(getAssetUrl("servicios_status.json"))
         .then(r => r.json())
         .then(data => {
             const edesur = data.edesur || data.luz || { status: "Normal", message: "Sin alertas" };
