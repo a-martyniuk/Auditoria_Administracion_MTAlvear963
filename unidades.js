@@ -299,8 +299,8 @@ const renderTable = () => {
             <td style="text-align:right;color:var(--red);font-weight:500;">${(item.deuda || 0) > 0 ? fmt(item.deuda) : '—'}</td>
             <td style="text-align:right;color:var(--purple);">${(item.interes || 0) > 0 ? fmt(item.interes) : '—'}</td>
             <td style="text-align:right;">${fmt(item.ga_monto)}</td>
-            <td style="text-align:right;">${(item.gb_monto || 0) > 0 ? fmt(item.gb_monto) : '—'}</td>
-            <td style="text-align:right;">${(item.fondo_operativo_monto || 0) > 0 ? fmt(item.fondo_operativo_monto) : '—'}</td>
+            <td style="text-align:right;">${(item.gastos_extra || 0) > 0 ? fmt(item.gastos_extra) : '—'}</td>
+            <td style="text-align:right;color:var(--text-3);">${(item.red_ajustes || 0) !== 0 ? fmt(item.red_ajustes) : '—'}</td>
             <td style="text-align:right;font-weight:700;color:var(--accent);">${fmt(item.total)}</td>
         </tr>`;
     }).join('');
