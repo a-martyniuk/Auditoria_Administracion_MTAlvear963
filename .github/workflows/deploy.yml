@@ -1,0 +1,41 @@
+name: Auto Ingestion & Deploy
+
+on:
+  schedule:
+    # Verificación de servicios públicos 4 veces al día (00:00, 09:00, 15:00, 21:00 UTC)
+    - cron: '0 0,9,15,21 * * *'
+    # Verificación e ingesta mensual de expensas del día 1 al 15 a las 18:00 Arg (21:00 UTC)
+    - cron: '0 21 1-15 * *'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Ingestion & Service Audit
+        env:
+          OCTOPUS_EMAIL: ${{ secrets.OCTOPUS_EMAIL }}
+          OCTOPUS_PASSWORD: ${{ secrets.OCTOPUS_PASSWORD }}
+        run: |
+          python cron_update.py --all
+
+      - name: Commit Updated Data Back to Repo
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add gastos.json prorrateo.json servicios_status.json expenses_summary.json liquidaciones/ || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: actualización automática de expensas y servicios [skip ci]" && git push)

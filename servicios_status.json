@@ -1,0 +1,15 @@
+{
+    "ultima_actualizacion": "2026-08-07 11:18:37",
+    "luz": {
+        "status": "Normal",
+        "detalles": "Sin interrupciones masivas reportadas en Edesur"
+    },
+    "agua": {
+        "status": "Normal",
+        "detalles": "Servicio de agua potable AySA normal"
+    },
+    "gas": {
+        "status": "Normal",
+        "detalles": "Red de gas de red Metrogas sin novedades de cortes"
+    }
+}

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvear 961/963 — Dashboard de Expensas & Auditoría</title>
+    <meta name="description" content="Panel de control de gastos, expensas, liquidaciones y servicios del consorcio M. T. de Alvear 961/963 (CABA).">
+
+    <!-- Metadatos de Seguridad (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data:; img-src 'self' https: data:; font-src 'self' https: fonts.gstatic.com; style-src 'self' https: 'unsafe-inline' fonts.googleapis.com;">
+
+    <!-- Favicon (Emoji) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+
+    <!-- Google Fonts & ApexCharts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        :root {
+            --bg-base: #050810;
+            --bg-surface: #0b1120;
+            --bg-card: rgba(11, 17, 32, 0.7);
+            --bg-sidebar: #07090f;
+            --border: rgba(255,255,255,0.06);
+            --border-accent: rgba(6,182,212,0.25);
+            --text-1: #f1f5f9;
+            --text-2: #94a3b8;
+            --text-3: #64748b;
+            --accent: #06b6d4;
+            --accent-dim: rgba(6,182,212,0.12);
+            --red: #f43f5e;
+            --red-dim: rgba(244,63,94,0.12);
+            --amber: #f59e0b;
+            --amber-dim: rgba(245,158,11,0.12);
+            --green: #10b981;
+            --green-dim: rgba(16,185,129,0.12);
+            --purple: #a78bfa;
+            --purple-dim: rgba(167,139,250,0.12);
+            --blue: #60a5fa;
+            --blue-dim: rgba(96,165,250,0.12);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-base);
+            color: var(--text-1);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand, .kpi-val, .metric-val {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* ── SIDEBAR ── */
+        .sidebar {
+            width: 230px;
+            min-width: 230px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0.88rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        .sidebar::-webkit-scrollbar { display: none; }
+
+        .brand {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-sub {
+            font-size: 0.7rem;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+            font-weight: 600;
+        }
+
+        .nav {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
+            color: var(--text-2);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.18s;
+            cursor: pointer;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-1);
+            background: var(--accent-dim);
+        }
+
+        .nav-link.active {
+            color: var(--accent);
+            border-left: 2px solid var(--accent);
+        }
+
+        .nav-icon { flex-shrink: 0; opacity: 0.7; }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-contact-sidebar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(139, 92, 246, 0.12));
+            border: 1px solid var(--border-accent);
+            border-radius: 8px;
+            color: var(--text-1);
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-contact-sidebar:hover {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.28), rgba(139, 92, 246, 0.28));
+            border-color: var(--accent);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+        }
+
+        .btn-contact-sidebar svg { color: var(--accent); transition: color 0.2s; }
+        .btn-contact-sidebar:hover svg { color: #ffffff; }
+
+        .sidebar-badge {
+            font-size: 0.7rem;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 3px 8px;
+            border-radius: 99px;
+            display: inline-block;
+        }
+
+        /* ── MAIN PANEL ── */
+        .main {
+            flex: 1;
+            min-width: 0;
+            padding: 2rem 2.5rem;
+            overflow-y: auto;
+        }
+
+        /* ── PAGE HEADER & TOOLBAR ── */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.75rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .page-title { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.5px; }
+        .page-subtitle { font-size: 0.875rem; color: var(--text-2); margin-top: 3px; }
+
+        .toolbar {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-1);
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            width: 260px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus { border-color: var(--accent); }
+        .search-input::placeholder { color: var(--text-3); }
+
+        select {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-1);
+            padding: 0.55rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* ── KPI GRID ── */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+        }
+        @media (max-width: 1300px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem;
+            backdrop-filter: blur(12px);
+            transition: border-color 0.2s;
+            position: relative;
+        }
+        .kpi-card:hover { border-color: var(--border-accent); }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            border-radius: 14px 14px 0 0;
+        }
+        .kpi-card.c-ingresos::before { background: var(--green); }
+        .kpi-card.c-gastos::before { background: var(--red); }
+        .kpi-card.c-balance::before { background: var(--accent); }
+        .kpi-card.c-predictivo::before { background: var(--purple); }
+
+        .kpi-label {
+            font-size: 0.7rem;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .kpi-val { font-size: 1.65rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; }
+        .kpi-val.green { color: var(--green); }
+        .kpi-val.red { color: var(--red); }
+        .kpi-val.cyan { color: var(--accent); }
+        .kpi-val.purple { color: var(--purple); }
+        .kpi-val.amber { color: var(--amber); }
+
+        .kpi-delta {
+            margin-top: 0.6rem;
+            font-size: 0.78rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .kpi-delta.neutral { color: var(--text-3); }
+
+        /* ── CHARTS LAYOUTS ── */
+        .charts-row { display: grid; grid-template-columns: 1.8fr 1fr; gap: 1rem; margin-bottom: 1.75rem; }
+        .charts-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.75rem; }
+        .charts-drilldown-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.25rem; margin-bottom: 2rem; }
+        .employee-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
+
+        @media (max-width: 1100px) {
+            .charts-row { grid-template-columns: 1fr; }
+            .employee-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem;
+            backdrop-filter: blur(12px);
+            transition: border-color 0.2s;
+        }
+        .card:hover { border-color: var(--border-accent); }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.1rem;
+        }
+        .card-title { font-size: 0.9rem; font-weight: 600; color: var(--text-1); }
+        .card-subtitle { font-size: 0.75rem; color: var(--text-3); margin-top: 2px; }
+
+        /* ── ANOMALY SECTION ── */
+        .anomaly-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ── TABLE SECTION ── */
+        .table-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.25rem;
+            backdrop-filter: blur(12px);
+            margin-bottom: 2rem;
+        }
+        .table-toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem; flex-wrap: wrap; gap: 0.75rem; }
+        .table-info { font-size: 0.78rem; color: var(--text-3); }
+        .table-actions { display: flex; gap: 0.5rem; }
+
+        .btn {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            color: var(--text-2);
+            padding: 0.4rem 0.9rem;
+            border-radius: 7px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.18s;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn:hover { color: var(--text-1); background: var(--accent-dim); border-color: var(--border-accent); }
+
+        .table-wrapper { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.845rem; }
+        thead th {
+            background: rgba(255,255,255,0.025); color: var(--text-3); font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.6px; padding: 0.9rem 1rem; border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+        tbody td { padding: 0.85rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.03); color: var(--text-1); vertical-align: middle; }
+        tbody tr:hover td { background: rgba(6,182,212,0.03); }
+
+        /* ── PILLS & BADGES ── */
+        .pill { display: inline-flex; align-items: center; gap: 5px; padding: 0.25rem 0.6rem; border-radius: 99px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; }
+        .pill-sueldos   { background: rgba(248,113,113,0.12); color: #f87171; border: 1px solid rgba(248,113,113,0.2); }
+        .pill-seguros   { background: rgba(251,146,60,0.12);  color: #fb923c; border: 1px solid rgba(251,146,60,0.2); }
+        .pill-servicios { background: rgba(251,191,36,0.12);  color: #fbbf24; border: 1px solid rgba(251,191,36,0.2); }
+        .pill-contratos { background: rgba(52,211,153,0.12);  color: #34d399; border: 1px solid rgba(52,211,153,0.2); }
+        .pill-admin     { background: rgba(96,165,250,0.12);  color: #60a5fa; border: 1px solid rgba(96,165,250,0.2); }
+        .pill-manto     { background: rgba(167,139,250,0.12); color: #a78bfa; border: 1px solid rgba(167,139,250,0.2); }
+        .pill-varios    { background: rgba(156,163,175,0.12); color: #9ca3af; border: 1px solid rgba(156,163,175,0.2); }
+
+        .badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 5px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.3px; }
+        .badge-fijo     { background: rgba(6,182,212,0.15);  color: #22d3ee; }
+        .badge-variable { background: rgba(236,72,153,0.15); color: #f472b6; }
+        .badge-anomalia { background: rgba(244,63,94,0.2);   color: #f43f5e; }
+        .badge-normal   { color: var(--text-3); font-size: 0.65rem; }
+        .badge-pendiente { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-pagado    { background: rgba(16,185,129,0.15); color: #34d399; }
+        .badge-success   { background: rgba(16,185,129,0.15); color: #34d399; }
+        .badge-warning   { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.2); }
+        .badge-danger    { background: rgba(244,63,94,0.15);  color: #f43f5e; border: 1px solid rgba(244,63,94,0.2); }
+
+        .concepto-text { color: var(--text-1); cursor: pointer; transition: color 0.15s; line-height: 1.45; word-break: break-word; }
+        .concepto-text:hover { color: var(--accent); }
+
+        /* ── PAGINATION ── */
+        .pagination { display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; flex-wrap: wrap; gap: 0.75rem; }
+        .pagination-info { font-size: 0.78rem; color: var(--text-3); }
+        .pagination-btns { display: flex; gap: 4px; }
+        .pg-btn { width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); color: var(--text-2); font-size: 0.8rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+        .pg-btn:hover, .pg-btn.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 700; }
+
+        /* ── MODALS ── */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(6px); }
+        .modal-overlay.open { display: flex; }
+        .modal { background: #0b1120; border: 1px solid var(--border-accent); border-radius: 16px; padding: 1.75rem; width: 90%; max-width: 620px; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        .modal-title { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; }
+        .modal-subtitle { font-size: 0.8rem; color: var(--text-3); margin-bottom: 1.5rem; }
+        .modal-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.5rem; }
+        .modal-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem; }
+        .modal-stat-label { font-size: 0.7rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+        .modal-stat-val { font-size: 1.3rem; font-weight: 700; font-family: 'Outfit', sans-serif; }
+        .modal-history-list { display: flex; flex-direction: column; gap: 8px; max-height: 300px; overflow-y: auto; }
+
+        /* Tooltip utilities */
+        [data-tooltip-right] { position: relative; cursor: help; }
+        [data-tooltip-right]::after {
+            content: attr(data-tooltip-right); position: absolute; top: 120%; right: 0;
+            background: rgba(15, 23, 42, 0.98); border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f1f5f9; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.72rem;
+            width: 220px; z-index: 9999; opacity: 0; pointer-events: none; transition: all 0.15s;
+        }
+        [data-tooltip-right]:hover::after { opacity: 1; }
+    </style>
+</head>
+<body>
+
+<!-- SIDEBAR LATERAL -->
+<aside class="sidebar">
+    <div>
+        <div class="brand">ALVEAR 961/963</div>
+        <div style="font-size:0.62rem; color:var(--text-3); display:flex; align-items:center; gap:4px; margin-top:4px; cursor:help; border-bottom: 1px dotted rgba(255,255,255,0.2); padding-bottom: 2px; width: max-content;" data-tooltip-right="Este panel es un desarrollo independiente de auditoría de expensas.">
+            ℹ️ Monitoreo de Copropietario
+        </div>
+    </div>
+
+    <nav class="nav">
+        <a class="nav-link active" href="#overview">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            Resumen General
+        </a>
+        <a class="nav-link" href="#graficos">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Tendencias
+        </a>
+        <a class="nav-link" href="#categorias">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Categorías
+        </a>
+        <a class="nav-link" href="#tabla">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Desglose Detallado
+        </a>
+        <a class="nav-link" href="#empleados">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Sueldos / Empleados
+        </a>
+        <a class="nav-link" href="unidades.html" style="border-top:1px dashed rgba(255,255,255,0.05); padding-top:0.75rem; margin-top:0.25rem;">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Expensas por U.F.
+        </a>
+
+        <!-- CONTROL DE FACTURAS EN SIDEBAR -->
+        <div style="margin: 1.25rem 0.5rem 0 0.5rem; border-top: 1px solid var(--border); padding-top: 1rem;" id="missingInvoicesSection">
+            <div style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-3); letter-spacing: 1.2px; margin-bottom: 0.4rem; font-weight: 700;">🕵️ Control de Facturas</div>
+            <div id="missingInvoicesAlerts" style="display: flex; flex-direction: column; gap: 0.4rem;">Cargando auditoría...</div>
+        </div>
+
+        <!-- ESTADO DE SERVICIOS EN SIDEBAR -->
+        <div style="margin: 1.25rem 0.5rem 0 0.5rem; border-top: 1px solid var(--border); padding-top: 1rem;">
+            <div style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-3); letter-spacing: 1.2px; margin-bottom: 0.25rem; font-weight: 700;">💧 Estado de Servicios</div>
+            <div style="font-size: 0.63rem; color: var(--text-3); margin-bottom: 0.5rem;">Consulta directa prestadoras</div>
+            <div id="servicesStatusWidget" style="display: flex; flex-direction: column; gap: 0.4rem;">Cargando estado...</div>
+        </div>
+    </nav>
+
+    <!-- FOOTER DEL SIDEBAR -->
+    <div class="sidebar-footer">
+        <button type="button" onclick="openContactModal(event)" class="btn-contact-sidebar" title="Evacuar duda o contactar al desarrollador">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>Evacuar Duda / Contacto</span>
+        </button>
+        <div class="brand-sub" style="margin-bottom:6px;">Fuente de datos</div>
+        <span class="sidebar-badge" id="sidebarPeriods">Cargando...</span>
+    </div>
+</aside>
+
+<!-- MAIN PANEL -->
+<main class="main">
+
+    <!-- PAGE HEADER + TOOLBAR -->
+    <div id="overview" class="page-header">
+        <div>
+            <h1 class="page-title">Cuadro de Mando</h1>
+            <p class="page-subtitle">Análisis financiero y auditoría — Alvear 961/963 (Retiro, CABA)</p>
+        </div>
+        <div class="toolbar">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Buscar concepto o proveedor...">
+            <select id="viewModeSelect">
+                <option value="DESGLOSADO">📋 Vista Desglosada</option>
+                <option value="COMPROBANTES">📄 Comprobantes Adjuntos</option>
+                <option value="LIQUIDACIONES">🏢 Liquidación Mensual</option>
+            </select>
+            <select id="periodFilter">
+                <option value="todos">Todos los Períodos</option>
+            </select>
+            <select id="statusFilter">
+                <option value="todos">Todos los Estados</option>
+                <option value="Pagado">Pagados</option>
+                <option value="Pendiente">Pendientes</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="kpi-grid">
+        <div class="kpi-card c-ingresos">
+            <div class="kpi-label">💰 Liquidación Total Consorcio</div>
+            <div class="kpi-val green" id="kpiRecaudado">$ 0,00</div>
+            <div class="kpi-delta neutral" id="kpiRecaudadoDelta">Masa total de expensas</div>
+        </div>
+        <div class="kpi-card c-gastos">
+            <div class="kpi-label">📤 Egresos / Gastos Auditados</div>
+            <div class="kpi-val red" id="kpiEgresado">$ 0,00</div>
+            <div class="kpi-delta neutral" id="kpiEgresadoDelta">Sumatoria del período</div>
+        </div>
+        <div class="kpi-card c-predictivo">
+            <div class="kpi-label">🏢 Promedio por U.F. (23 UF)</div>
+            <div class="kpi-val purple" id="kpiPromedio">$ 0,00</div>
+            <div class="kpi-delta neutral" id="kpiPromedioDelta">Cuota media mensual</div>
+        </div>
+        <div class="kpi-card c-balance">
+            <div class="kpi-label">⚠️ Anomalías / Alertas</div>
+            <div class="kpi-val cyan" id="kpiAnomalias">0</div>
+            <div class="kpi-delta neutral" id="kpiAnomaliasDelta">Desvíos > 50% vs media</div>
+        </div>
+    </div>
+
+    <!-- NARRATIVE SUMMARY -->
+    <div class="narrative" id="narrativeBlock">
+        Cargando resumen del período...
+    </div>
+
+    <!-- ALERTAS Y ANOMALÍAS SECCIÓN -->
+    <div class="anomaly-section" id="anomalySection"></div>
+
+    <!-- CHARTS ROW 1: HISTORICAL & DONUT -->
+    <div class="charts-row">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📈 Tendencia Histórica de Expensas</div>
+                    <div class="card-subtitle">Evolución mensual limpia de liquidaciones cerradas (2022 - 2026)</div>
+                </div>
+            </div>
+            <div id="historicalChart"></div>
+        </div>
+
+        <div id="categorias" class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🗂️ Distribución por Categoría</div>
+                    <div class="card-subtitle">% de participación en el período</div>
+                </div>
+            </div>
+            <div id="categoryChart"></div>
+            <div class="cat-legend" id="catLegend"></div>
+        </div>
+    </div>
+
+    <!-- CHARTS ROW 2: COMPARISON STACKED BAR -->
+    <div id="graficos" style="margin-bottom: 1.75rem;">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📊 Comparación Mensual por Rubro</div>
+                    <div class="card-subtitle">Evolución de cada categoría mes a mes (últimos 12 meses)</div>
+                </div>
+            </div>
+            <div id="comparisonChart"></div>
+        </div>
+    </div>
+
+    <!-- CHARTS ROW 3: PATRIMONIAL & PROVIDER AUDIT -->
+    <div class="charts-grid" style="margin-bottom: 1.75rem;">
+        <div class="card" id="patrimonialChartCard">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📈 Evolución Patrimonial y Disponibilidades</div>
+                    <div class="card-subtitle">Evolución del Patrimonio Neto vs. Liquidaciones al Cierre</div>
+                </div>
+            </div>
+            <div id="patrimonialChart"></div>
+        </div>
+
+        <div class="card" id="providerAuditCard">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🔍 Auditoría de Tarifas de Proveedores vs. IPC</div>
+                    <div class="card-subtitle">Desvíos interanuales de contratos y abonos vs. Inflación INDEC</div>
+                </div>
+            </div>
+            <div class="table-container" style="padding: 0.5rem; overflow-x: auto;">
+                <table class="data-table" id="providerAuditTable">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Proveedor</th>
+                            <th style="text-align: left;">Rubro</th>
+                            <th style="text-align: right;">Monto Reciente</th>
+                            <th style="text-align: right;">Monto Año Anterior</th>
+                            <th style="text-align: right;">Variación</th>
+                            <th style="text-align: right;">IPC Acum.</th>
+                            <th style="text-align: right;">Desvío vs. IPC</th>
+                            <th style="text-align: center;">Alerta</th>
+                        </tr>
+                    </thead>
+                    <tbody id="providerAuditBody">
+                        <!-- Se llena dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- DRILLDOWN GRID: 7 RUBRO CHARTS -->
+    <div style="margin-top: 2rem; margin-bottom: 1rem;">
+        <h2 style="font-size: 1.3rem; font-weight: 700; color: var(--text-1); margin-bottom: 0.25rem;">🔍 Desglose y Evolución por Rubro Legal de Expensas</h2>
+        <p style="font-size: 0.8rem; color: var(--text-3); margin-bottom: 1rem;">Evolución histórica respetando la clasificación oficial de la liquidación de expensas.</p>
+    </div>
+    <div class="charts-drilldown-grid">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">👤 1. Sueldos y Aportes</div>
+                    <div class="card-subtitle">Detalle por sueldo directo y aportes AFIP F 931 / SUTERH</div>
+                </div>
+            </div>
+            <div id="drillSueldosChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">⚡ 2. Servicios Públicos</div>
+                    <div class="card-subtitle">Evolución de Edesur, Personal e Iplan</div>
+                </div>
+            </div>
+            <div id="drillServiciosChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🛠️ 3. Abonos de Servicios</div>
+                    <div class="card-subtitle">Plataforma Octopus, Noplag, Asegal y Ascensores Ocampos</div>
+                </div>
+            </div>
+            <div id="drillContratosChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🔧 4. Mantenimiento de Partes Comunes</div>
+                    <div class="card-subtitle">Portero Dalla Valle, Cerrajería Hugo, Ramos Matías y emergencias</div>
+                </div>
+            </div>
+            <div id="drillMantoChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🏠 5. Trabajos de Reparación en U.F.</div>
+                    <div class="card-subtitle">Reparaciones particulares en unidades funcionales y plomería</div>
+                </div>
+            </div>
+            <div id="drillReparacionesChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🏛️ 6. Gastos Bancarios</div>
+                    <div class="card-subtitle">Mantenimiento de cuenta e impuestos Banco Itaú / Macro</div>
+                </div>
+            </div>
+            <div id="drillBancoChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🧹 7. Gastos de Limpieza</div>
+                    <div class="card-subtitle">Insumos, artículos y elementos de limpieza del consorcio</div>
+                </div>
+            </div>
+            <div id="drillLimpiezaChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📋 8. Gastos de Administración</div>
+                    <div class="card-subtitle">Honorarios Adm. Verónica Ferazzoli y gestión de expensas</div>
+                </div>
+            </div>
+            <div id="drillAdminChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">🛡️ 9. Pagos del Período por Seguros</div>
+                    <div class="card-subtitle">Seguro Integral de Consorcio Federación Patronal y Pólizas</div>
+                </div>
+            </div>
+            <div id="drillSegurosChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">📦 10. Otros</div>
+                    <div class="card-subtitle">Fotocopias, escaneos e imprevistos varios</div>
+                </div>
+            </div>
+            <div id="drillVariosChart"></div>
+        </div>
+    </div>
+
+    <!-- EMPLOYEE / SALARY SECTION -->
+    <section id="empleados" style="margin-bottom:1.75rem;">
+        <div class="card" style="margin-bottom:1rem;">
+            <div class="card-header">
+                <div>
+                    <div class="card-title">👥 Sueldos y Portería — Desglose Discriminado (Encargado Titular c/Vivienda)</div>
+                    <div class="card-subtitle" id="empSubtitle">
+                        Sueldo Base, SAC (Aguinaldo), Horas Extras y Cargas Sociales.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 KPI cards de empleados -->
+            <div class="employee-grid">
+                <div style="background:rgba(6,182,212,0.05);border:1px solid rgba(6,182,212,0.2);border-radius:12px;padding:1rem;border-top:2px solid #06b6d4;">
+                    <div style="font-size:0.65rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">🔵 Sueldo Base Encargado</div>
+                    <div style="font-size:0.88rem;font-weight:700;color:var(--text-1);margin-bottom:6px;">Básico + Antigüedad + Viáticos</div>
+                    <div style="font-size:1.4rem;font-weight:800;font-family:'Outfit',sans-serif;color:#06b6d4;" id="empIbrahimMonto">—</div>
+                    <div style="font-size:0.7rem;color:var(--text-3);margin-top:5px;" id="empIbrahimHist">Encargado Titular c/ Vivienda</div>
+                </div>
+
+                <div style="background:rgba(244,114,182,0.05);border:1px solid rgba(244,114,182,0.2);border-radius:12px;padding:1rem;border-top:2px solid #f472b6;">
+                    <div style="font-size:0.65rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">🎁 SAC / Aguinaldo</div>
+                    <div style="font-size:0.88rem;font-weight:700;color:var(--text-1);margin-bottom:6px;">Sueldo Anual Complementario</div>
+                    <div style="font-size:1.4rem;font-weight:800;font-family:'Outfit',sans-serif;color:#f472b6;" id="empLourdesMonto">—</div>
+                    <div style="font-size:0.7rem;color:var(--text-3);margin-top:5px;" id="empLourdesHist">Liquidado en Junio / Diciembre</div>
+                </div>
+
+                <div style="background:rgba(167,139,250,0.05);border:1px solid rgba(167,139,250,0.2);border-radius:12px;padding:1rem;border-top:2px solid #a78bfa;">
+                    <div style="font-size:0.65rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">⏱️ Horas Extras & Adicionales</div>
+                    <div style="font-size:0.88rem;font-weight:700;color:var(--text-1);margin-bottom:6px;">Horas Extras (50% / 100%)</div>
+                    <div style="font-size:1.4rem;font-weight:800;font-family:'Outfit',sans-serif;color:#a78bfa;" id="empYamilRepMonto">—</div>
+                    <div style="font-size:0.7rem;color:var(--text-3);margin-top:5px;">Trabajo en francos y feriados</div>
+                </div>
+
+                <div style="background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.2);border-radius:12px;padding:1rem;border-top:2px solid #fbbf24;">
+                    <div style="font-size:0.65rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">🟡 Aportes AFIP / Sindicato</div>
+                    <div style="font-size:0.88rem;font-weight:700;color:var(--text-1);margin-bottom:6px;">F. 931 / SUTERH / FATERYH</div>
+                    <div style="font-size:1.4rem;font-weight:800;font-family:'Outfit',sans-serif;color:#fbbf24;" id="empCargasMonto">—</div>
+                    <div style="font-size:0.7rem;color:var(--text-3);margin-top:5px;">Jubilación · PAMI · Sindicatos</div>
+                </div>
+            </div>
+
+            <!-- Gráfico de evolución salarial -->
+            <div class="card-header" style="margin-bottom:0.75rem;">
+                <div>
+                    <div class="card-title">📊 Evolución Salarial Mensual Discriminada</div>
+                    <div class="card-subtitle">Comparación discriminada entre Sueldo Base, SAC, Horas Extras y Cargas Sociales</div>
+                </div>
+            </div>
+            <div id="employeeChart"></div>
+        </div>
+    </section>
+
+    <!-- DETAILED EXPENSES TABLE -->
+    <section id="tabla" class="table-section">
+        <div class="table-toolbar">
+            <div>
+                <div class="card-title">📋 Desglose Detallado de Gastos & Comprobantes</div>
+                <div class="table-info" id="tableInfo">Cargando...</div>
+            </div>
+            <div class="table-actions">
+                <select id="pageSizeSelect">
+                    <option value="20">20 por página</option>
+                    <option value="50">50 por página</option>
+                    <option value="100">100 por página</option>
+                    <option value="9999">Todos</option>
+                </select>
+                <button type="button" class="btn" onclick="exportCSV()">⬇ Exportar CSV</button>
+                <button type="button" class="btn" onclick="exportPDF()" style="background:var(--purple); border-color:var(--purple); color:#fff;">⬇ Exportar PDF</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="expensesTable">
+                <thead>
+                    <tr>
+                        <th>Período</th>
+                        <th>Categoría</th>
+                        <th>Tipo</th>
+                        <th>Alerta</th>
+                        <th>Estado</th>
+                        <th>Concepto / Proveedor</th>
+                        <th style="text-align:right">Mes Anterior</th>
+                        <th style="text-align:right">Var. %</th>
+                        <th style="text-align:right">Monto Actual</th>
+                    </tr>
+                </thead>
+                <tbody id="expensesTableBody">
+                    <tr><td colspan="9" style="text-align:center;color:var(--text-3);padding:2rem;">Cargando registros...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <div class="pagination-info" id="paginationInfo"></div>
+            <div class="pagination-btns" id="paginationBtns"></div>
+        </div>
+    </section>
+
+    <!-- TABLA DE MULTAS POR UF -->
+    <div style="margin-top:2rem; margin-bottom:2rem;">
+        <div class="card">
+            <div class="card-header" style="border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1rem;">
+                <div>
+                    <h3 class="card-title">🚨 Registro de Multas del Período</h3>
+                    <p class="card-subtitle" id="finesSubtitle" style="font-size:0.8rem; color:var(--text-3);">Multas imputadas a Unidades Funcionales por incumplimiento del reglamento</p>
+                </div>
+            </div>
+            <div class="table-wrapper" style="max-height: 280px; overflow-y: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--border); text-align: left; color: var(--text-3);">
+                            <th style="padding: 0.75rem 0.5rem; width: 80px;">UF</th>
+                            <th style="padding: 0.75rem 0.5rem;">Motivo / Imputación</th>
+                            <th style="padding: 0.75rem 0.5rem; text-align: right; width: 140px;">Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="finesTableBody">
+                        <tr><td colspan="3" style="text-align:center;color:var(--text-3);padding:2rem;">No hay multas registradas en este período.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- MODAL OVERLAY DE PROVEEDOR -->
+<div class="modal-overlay" id="providerModal">
+    <div class="modal" style="position:relative;">
+        <div class="modal-title" id="providerModalName">Proveedor</div>
+        <div class="modal-subtitle">Historial completo de contrataciones y pagos</div>
+        <button type="button" class="btn" style="position:absolute;top:1.25rem;right:1.25rem;" onclick="closeModal()">✕ Cerrar</button>
+
+        <div class="modal-stats">
+            <div class="modal-stat">
+                <div class="modal-stat-label">Total Facturado Histórico</div>
+                <div class="modal-stat-val" id="providerTotal" style="color:var(--accent);">$0</div>
+            </div>
+            <div class="modal-stat">
+                <div class="modal-stat-label">Participación en Gastos</div>
+                <div class="modal-stat-val" id="providerPct" style="color:var(--purple);">0%</div>
+            </div>
+            <div class="modal-stat">
+                <div class="modal-stat-label">Cantidad de Órdenes</div>
+                <div class="modal-stat-val" id="providerCount" style="color:var(--amber);">0</div>
+            </div>
+            <div class="modal-stat">
+                <div class="modal-stat-label">Promedio por Orden</div>
+                <div class="modal-stat-val" id="providerAvg" style="color:var(--green);">$0</div>
+            </div>
+        </div>
+
+        <div class="modal-history-label" style="font-size:0.7rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:0.75rem; font-weight:600;">Historial de Órdenes y Pagos</div>
+        <div class="modal-history-list" id="providerHistoryList"></div>
+    </div>
+</div>
+
+<!-- MODAL OVERLAY DE CONTACTO -->
+<div class="modal-overlay" id="contactModal">
+    <div class="modal" style="position:relative; max-width: 480px; width: 92%;">
+        <div class="modal-title">✉️ Contactar al Desarrollador</div>
+        <div class="modal-subtitle">Proyecto Alvear 961/963 — Alexis Martyniuk</div>
+        <button type="button" class="btn" style="position:absolute;top:1.25rem;right:1.25rem;padding:4px 10px;" onclick="closeContactModal()">✕ Cerrar</button>
+
+        <div style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <p style="font-size: 0.82rem; color: var(--text-2); line-height: 1.5;">
+                Selecciona la opción de tu preferencia para enviar tu duda o consulta:
+            </p>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexis.martyniuk@gmail.com&su=%5BAlvear%20963%5D%20Consulta%20sobre%20el%20proyecto" 
+               target="_blank" rel="noopener noreferrer" class="btn" 
+               style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2)); border:1px solid var(--accent); color:var(--text-1); font-weight:600; text-decoration:none;">
+                🌐 Abrir en Gmail (Navegador Web)
+            </a>
+
+            <a href="mailto:alexis.martyniuk@gmail.com?subject=%5BAlvear%20963%5D%20Consulta%20sobre%20el%20proyecto" 
+               class="btn" 
+               style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-1); text-decoration:none;">
+                💻 Abrir App de Correo (Mailto)
+            </a>
+
+            <button type="button" onclick="copyContactEmail()" class="btn" style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-1); cursor:pointer;">
+                📋 Copiar Email: alexis.martyniuk@gmail.com
+            </button>
+            <div id="copyEmailFeedback" style="font-size: 0.78rem; color: var(--green); text-align: center; display: none; font-weight: 500;">
+                ✓ ¡Dirección copiada al portapapeles!
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openContactModal(e) {
+    if (e) e.preventDefault();
+    const modal = document.getElementById('contactModal');
+    if (modal) modal.classList.add('open');
+}
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) modal.classList.remove('open');
+}
+function copyContactEmail() {
+    navigator.clipboard.writeText('alexis.martyniuk@gmail.com').then(() => {
+        const feedback = document.getElementById('copyEmailFeedback');
+        if (feedback) {
+            feedback.style.display = 'block';
+            setTimeout(() => { feedback.style.display = 'none'; }, 3500);
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) closeContactModal();
+        });
+    }
+});
+</script>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

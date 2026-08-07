@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.playwright-mcp/
+.vscode/
+.idea/
+scratch/
+

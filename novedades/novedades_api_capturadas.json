@@ -1,0 +1,1607 @@
+[
+  {
+    "url": "https://lcqsbp4wfl.execute-api.us-west-2.amazonaws.com/staging/consortium-news?page=1&pageSize=1000",
+    "data": {
+      "status": "success",
+      "data": {
+        "consortiumNews": [
+          {
+            "id": "44954",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el VIERNES 26 DE JUNIO, a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-18T15:56:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "44481",
+            "title": "PAGO LIQUIDACION EXPENSAS",
+            "description": "Estimados vecinos,\r\nA todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-12T13:22:08.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43492",
+            "title": "Trabajos realizados en bajada cloacal y de agua",
+            "description": "Estimados vecinos nuevamente informamos y compartimos algunas imàgenes referidas a los trabajos realizados en los baños comunes del piso 7, previo a  la venta de las unidades del piso en cuestiòn la propietaria informò que tenia humedad en una de las paredes de su oficina, el vecino del piso 6 hizo referencia a una perdida que afectaba el baño de dicho piso. Por tal motivo se trabajo en los baños comunes del piso 7 encontrando los caños cloacales y de alimentaciòn en el estado que compartimos. Entendemos que puedan ser coincidentes los tiempos pero las reparaciones NO derivaron de las obras en curso.\r\nSe recuerda que el consorcio, tal como se decidiò en asamblea, no tomarà como propias las reparaciones que ocasione el uso derivado de las adecuaciones realizadas en cada unidad, SOLAMENTE responderà por los sectores comunes.\r\nTambien les informamos que el trabajo relativo a la instalaciòn y reconfiguraciòn de càmaras se debiò a dos situaciones: por un lado desconocemos el motivo del porque los vecinos en su momento permitieronque el moden de uso COMUN para las càmaras seapedido por un particular y colocado en su unidad, al venderse la misma desconociendo esta situaciòn se quito la instalaciòn del mismo por lo que debio solicitarse un servicio nuevo. El cambio de proveedor se debiò a que Iplan no presta servicios a consorcio y si lo hace Personal, resultando ademàs beneficioso el costo del abono ( el que paso de $ 58464 a $ 26485)  La reconfiguraciòn fue necesariaal hacer unmantenimiento del equipo y para podercompartir a los vecinos los datos de acceso ya que se carecian de los mismos.",
+            "file_name": [
+              "/v2/consortium-news/files/6a20394b2b1d37_OCTO_bajada-alimentacion-de-agua.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-03T14:25:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43243",
+            "title": "ACCESO A CAMARAS COMUNES",
+            "description": "ESTIMADOS SE COMPARTE EL QR A ESCANEAR Y DATOS DE ACCESO\r\nUsuario: admin\r\nContraseña: Marcelotalvear963963",
+            "file_name": [
+              "/v2/consortium-news/files/6a1dc67d97d703_OCTO_whatsapp-image-2026-05-27-at-15.11.39.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-01T17:50:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43239",
+            "title": "ACLARACIÓN: OBRAS EN CAÑOS DE BAJADA GENERAL DEL EDIFICIO",
+            "description": "Estimados, se les informa que los trabajos realizados por el proveedor Rogelio Villanueva son por cambio de los caños de bajada general del edificio, los cuales por ser originales se encontraban en estado de deterioro y con roturas, situación que hacía necesario su cambio. Los mismos alimentan los baños comunes de las unidades del consorcio. Y se aclara que esos trabajos no tienen relación ni son consecuencia de las obras particulares realizadas en la unidades de los pisos 7º y 8º. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-01T17:31:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "42461",
+            "title": "FUMIGACION",
+            "description": "Estimados vecino el dia 29 de mayo en el horario de 10.30 hs se estarà realizando el servicio de fumigaciòn en el edificio.\r\nAgradecemos su colaboraciòn permitiendo el ingreso del personal",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-22T14:14:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40876",
+            "title": "CORTE DE AGUA MIERCOLES 06 DE MAYO",
+            "description": "ESTIMADOS VECINOS POR TRABAJOS DE MANTENIMIENTO SE ESTARA CORTANDO EL AGUA EL DIA MIERCOLES 06 DE MAYO ENTRE LAS 13 Y LAS 15 HS.\r\nAGARDECEMOS SU COLABORACIÒN Y PEDIMOS DISCULPAS POR LAS MOLESTIAS OCASIONADAS.\r\nLA ADMINISTRACIÒN",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-05T17:30:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40616",
+            "title": "CORTE DE AGUA",
+            "description": "Estimados vecinos, esta acercándose al edificio el plomero a fin de cortar la baja de agua del edificio y evitar continuadesbordando agua por palieres yas cesnores.\r\nEn el dia de mañana concurrira nuevamente la empresa de destapación con un equipo de mayor embergadura junto con el plomero.\r\nEntre ambos trabajaran a fin de destapar las bajadas cloacales que estan con escombros.\r\nLamentamos las molestias generadas en el dia de la fecha.\r\nLa adminsitarción",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-01T18:02:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40383",
+            "title": "CORTE DE BAJADAS DE AGUA",
+            "description": "Estimados vecinos en el dia de mañana jueves 30 de Abril, se estarà realizando un trabajo de cambio de bajada cloacal del piso 8 a piso 7. \r\nPor tal motivo les informamos que SE CORTARA EL SUMINISTRO DE AGUA a fin de que no puedan utilizar ningun sanitario ni bacha.\r\nAgradecemos su colaboraaciòn ya que cualquier tipo de liquido deshechado caera directamente en el operario que se encuentre trabajando\r\nSalduos\r\nLa administraciòn",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-29T18:56:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "39260",
+            "title": "RETIRO DE RESIDUOS",
+            "description": "Estimados vecinos, les recordamos que durante el fin de semana, sábados y domingos no se realiza retiro de residuos del edificio. Por esta razón, los mismos deben ser llevados al contenedor del Gobierno de la Ciudad ubicado en la calle para tal fin. Por otro lado, tener presente que deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS. ROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO. Muchas Gracias, La administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-16T20:03:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "38424",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-08T14:13:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37516",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de marzoo a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-26T20:18:49.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37389",
+            "title": "Datos para Octopus",
+            "description": "Estimados vecinos, \r\nEn breve se agregará Whatsapp como otro medio de comunicación donde recibirán notificaciones, expensas etc. Les solicitamos completar la siguiente planilla, adjunta a través del link, con sus datos actualizados.\r\n\r\nhttps://docs.google.com/spreadsheets/d/1MrnZ6wEVcsFRQAvc3yzcTwTbiYoNa_7D6RdtzpO5Q0A/edit?usp=drive_link\r\n\r\nMuchas gracias,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-25T18:17:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37101",
+            "title": "RESIDUOS FIN DE SEMANA LARGO",
+            "description": "Estimados vecinos,\r\n\r\nRecordamos que durante el fin de semana y días feriados los residuos domiciliarios deben ser llevados al contenedor del Gobierno de la Ciudad, que se encuentra al frente del edificio.\r\nPor otro lado, recordamos que los residuos deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS.\r\n\r\nROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO.\r\n\r\nMuchas Gracias, \r\nLa administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-20T16:46:44.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "36312",
+            "title": "Obras en los departamentos",
+            "description": "Estimados vecinos,\r\nSi esta realizando obras en su propiedad, le recordamos no cargar materiales pesados por el ascensor, hacerlo por escalera, tener en cuenta que la capacidad máxima del mismo es de tres personas y mantener la limpieza en los espacios comunes.\r\nCoordialmente,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-11T14:26:35.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "35147",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de febrero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-26T16:29:59.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "34527",
+            "title": "PARO GENERAL 19 DE FEBRERO",
+            "description": "Estimados, se informa que debido al paro general convocado para mañana jueves, podrá suceder que el encagado del edificio se vea impedido para concurrir a cumplir su jornada laboral atento a que los gremios del transporte se pliegan a la medida convocada por la CGT. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-18T17:16:18.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "33204",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 30 de enero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-29T19:48:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "32387",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-16T15:46:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "31822",
+            "title": "VACACIONES DEL ENCARGADO",
+            "description": "Estimados, se les informa que el encargado Matias Ovierdo gozará de su licencia por vacaciones desde el 5 de enero hasta el 1° de febrero. Será suplido por personal de la empresa de limpieza ON CLEAN de lunes a viernes en el horario de 11 a 15 hs. La persona que asistirá al edificio se llama Rosa Cajal, DNI 34613581, cel 11 2757-8228. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-07T18:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30926",
+            "title": "EXPENSAS - AGUINALDO",
+            "description": "ESTIMADOS VECINOS, SOLICITAMOS A QUIEN NO HUBIERE CANCELADO LAS EXPENSAS CON VENCIMIENTO DICIEMBRE 2025 REALICE EN LA FECHA EL PAGO DE LAS MISMAS YA QUE NO SE HA PODIDO CUMPLIR CON LA OBLIGATORIEDAD DEL PAGO DEL AGUINALDO.\r\nEL EDIFICIO NO CUENTA CON FONDO QUE PERMITA CUBRIR SUS OBLIGACIONES EN TIEMPO Y FORMAY ASI EVITAR RECLAMOS POR POR PARTE DEL PERSONAL Y DEJAN AL CONSORCIO EXPUESTA A DEMANDAS LABORALES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-23T12:54:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30528",
+            "title": "Reclamos/consultas/informes de pago exclusivamente por Octopus vigencia 1/01/2026",
+            "description": "Estimados vecinos,\r\nles informamos que a partir del 1ro de enero de 2026 los reclamos, consultas e informes de pago deberán ser enviados exclusivamente por la plataforma de Octopus.\r\nLos siguientes emails quedarán inhabilitados:\r\nconsultas@adminferazzoli.com.ar\r\npagos@adminferazzoli.com.ar\r\nconsorcios@adminferazzoli.com.ar\r\n\r\nAtentamente Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T18:08:03.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30520",
+            "title": "Liquidaciones",
+            "description": "Estimados vecinos,\r\nLes informamos que a raíz de que algunas unidades no han abonado la expensa de vencimiento diciembre, no podremos cumplir con todas las obligaciones del consorcio.\r\nAtentamente Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T17:07:36.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30295",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS: A TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN AÚN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-15T15:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29869",
+            "title": "ACTA DE ASAMBLEA 207 DE NOVIEMBRE 2025",
+            "description": "ESTIMADOS VECINOS SE COMPARTE LA MISMA",
+            "file_name": [
+              "/v2/consortium-news/files/6938254d6ca221_OCTO_acta--27.11.25.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-12-09T13:34:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29096",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 28 de noviembre a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-11-27T19:30:54.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "28126",
+            "title": "Convocatoria Asamblea",
+            "description": "Estiamdos vecinos compartimos convocatoria a asamblea extraordinaria",
+            "file_name": [
+              "/v2/consortium-news/files/69134d1d114203_OCTO_convocatoria-asamblea-27.11.2025.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-11-11T14:50:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "27214",
+            "title": "PAGO EXPENSAS",
+            "description": "ESTIMADOS VECINOS:\r\nA TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-27T12:58:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "26263",
+            "title": "Habilitación pago con QR/costo",
+            "description": "Estimados,\r\nLes informamos que estamos rehabilitanso el pago de las expensas con QR.\r\nLos pagos por este medio TIENEN COSTO, al momento de abonar se genera automatixamente un descuento/comisión de aprox. el 0.9%, con lo cual el monto imputado a su pago será menor al que Uds efectivamente realicen.\r\nPor ej, si alguien deposita $297499 se acredita en la cta del consorcio $294619.\r\nEL VALOR QUE SE IMPUTA A LA UNIDAD COMO PAGO ES EL MONTO QUE EFECTIVAMENTE SE ACREDITA EN LA CUENTA BANCARIA DEL CONSORCIO.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-07T17:11:17.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25359",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 26 de septiembre a partir de las 10 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-22T17:27:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25079",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS LES INFORMAMOS QUE EL PASADO 10 DE SEPTIEMBRE PASO LA FECHA DE PAGO DE EXPENSAS. \r\nA FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO, SOLITAMOS EL PAGO DE LAS MISMAS.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-16T19:34:30.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "23214",
+            "title": "TAREAS DE MANTENIMIENTO EN SERVICIO DE INTERNET",
+            "description": "Estimados, La empresa IPLAN comunicó que en este jueves 14 de agosto entre las 8 y 17 hs estarán realizando tareas de mantenimiento. Por esta razón, el servicio estará interrumpido por 2 hs aproximadamente.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-08-13T14:46:39.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22114",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día 25 de julio a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:48:23.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22113",
+            "title": "PAGO DE EXPENSAS",
+            "description": "Estimados, Solicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar obligaciones y gastos del edificio. Atte, Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:42:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "19326",
+            "title": "Solicitud pago expensas",
+            "description": "Estimados,\r\nSolicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar los gastos del edificio.\r\nAtte",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-05-16T14:27:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "18090",
+            "title": "Licencia encargado",
+            "description": "Estimados comaprtimos el certìficado medicodel encargado por la ausencia dle dia de la fecha",
+            "file_name": [
+              "/v2/consortium-news/files/67f950ddd486b1_OCTO_whatsapp-image-2025-04-11-at-1.17.28-pm.jpeg"
+            ],
+            "status": null,
+            "updated_at": "2025-04-11T17:26:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17715",
+            "title": "Aviso de obra Local",
+            "description": "Buenso días se comparte el aviso de obra ante GCBA",
+            "file_name": [
+              "/v2/consortium-news/files/67ec26996c8ba7_OCTO_aviso-de-obra-registrado---marcelo-t-de-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-04-01T17:47:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17555",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumifgación el día 28 de abril a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-03-27T17:11:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15122",
+            "title": "Vacaciones Encargado",
+            "description": "Estimados, les informamos que el encargado Matías Ovierdo estará con licencia por vacaciones desde el 6 de enero hasta el 2 de febrero inclusive. Lo suplantará Gonzalo Barrera, DNI 40.091.176 y su cel es 1126772657.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T17:02:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15117",
+            "title": "Desinsectación",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de desinsectación el día 31 de enero partir de las 10:30 hs. Agradecemos su colaboración.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T16:36:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14824",
+            "title": "Cierre liquidación Diciembre",
+            "description": "Estimados vecinos,\r\nLes informamos que este mes estaremos cerrando antes las expensas de Diciembre, incluiremos todos los pagos que se reflejen en la cuenta bancaria hasta hoy 26/12, cualquier deposito/transferencia que realicen en los próximos días la verán reflejada en la liquidación de Enero 2025.\r\nLes recordamos que es importante que realicen sus pagos respetando los centavos para poder identificarlos correctamente.\r\nAprovechamos para desearles a Uds y sus familias un Muy Feliz 2025.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T20:49:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14811",
+            "title": "EXPENSAS IMPAGAS",
+            "description": "ESTIMADOS VECINOS AGRADECEREMOS A AQUELLAS UNIDADES CON EXPENSAS PENDIENTES DE CANCELACIÒN, REGULARIZAR DICHA SITUACIÒN A FIN DE PODER COMPLETAR EL PAGO DE LAS OBLIGACIONES DEL CONSORCIO",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T17:53:56.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13845",
+            "title": "Acta Asamblea Ordinaria 21/11/2024",
+            "description": "Estimados, se adjunta transcripción del Acta de Asamblea Ordinaria celebrada el 21 de noviembre de 2024.",
+            "file_name": [
+              "/v2/consortium-news/files/674736c2366bd1_OCTO_mt-alvear-961-asamblea-ordinaria-21-de-noviembre-2024.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-27T15:12:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13589",
+            "title": "Banco Macro: nuevos datos de cuenta bancaria, CBU y alias",
+            "description": "Estimados, les informamos que ya está activa la nueva cuenta bancaria del consorcio para realizar transferencias en el Banco Macro, a saber: \r\nCta Bancaria Nro. 346002279647100\r\nClave Bancaria Uniforme (CBU) 2850460930022796471009\r\nalias DIRIAS.DADIVA.SALINO\r\nSe adjunta informe del Banco Macro.",
+            "file_name": [
+              "/v2/consortium-news/files/673e1c0ab368e0_OCTO_cbu-mt-de-alvear.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-20T17:27:38.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13288",
+            "title": "Convocatoria Asamblea",
+            "description": "Estimados vecinos compartimos la convocatoria para la asambleadel día 21/11/2024",
+            "file_name": [
+              "/v2/consortium-news/files/67315f61935fb2_OCTO_convocatoria-asamblea-21-11---mtde-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-11T01:35:29.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "12200",
+            "title": "FUMIGACIÓN",
+            "description": "ESTIMADOS VECINOS, INFORMAMOS QUE EL DIA 25/10/2024 A LAS 10.30 HS SE ESTARÁ REALIZANDO EL SERVICIO DE FUMIGACIÓN EN UNIDADES Y PARTES COMUNES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-10-02T21:57:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "10847",
+            "title": "DESINSECTACIÓN",
+            "description": "ESTIMADOS VECINOS RECORDAMOS QUE EL DIA 30 DE AGOSTO 10 HS SE ESTARA REALIZANDO EL SERVICIO DE DESINSECTACIÓN EN EL EDIFICIO.\r\nAGRADECEMOS SU COLABORACION PERMITIENDO EL INGRESO A TODAS LAS UNIDADES.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-08-14T01:07:31.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "9152",
+            "title": "Fumigación",
+            "description": "Estimados, la empresa encargada de la fumigación estará pasando por el edificio el 28/6 a las 11Hs, agradecemos a aquellos que estén en la vivienda les permitan entrar.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-06-07T14:39:26.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "8508",
+            "title": "Fumigación",
+            "description": "Estimados, \r\nEl 31 Mayo a las 10:30 la empresa de fumigación estará por el edificio, como siempre agradecemos atiemdan al fumigador y le permitan ingresar a la unidad.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-05-10T17:51:40.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7798",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Se informa que el día viernes 26 de abril, a partir de las 10:30 hs, la empresa NOPLAG realizará el servicio de desinsectación y desinfección. Solicitamos su colaboración para permitir el ingreso a las unidades funcionales.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-04-04T15:21:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7283",
+            "title": "Pago expensas",
+            "description": "Estimados, Agradecemos el pago de las expensas  a fin de poder cumplimentar el pago de los haberes al encargado.\r\nGracias",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-03-07T22:23:24.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "6524",
+            "title": "AVISO DE FUMIGACIÒN",
+            "description": "Se comunica que el dìa 27 de febrero se realizarà el servicio de desinsectaciòn y desinfección a partir de la 11 hs.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-02-01T18:46:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "5933",
+            "title": "Vacaciones encargado",
+            "description": "Estimados, \r\nEsperamos hayan comenzado bein el año, les informamaos que el encargado tomará vacaciones del 2 al 29/01/24 inclusive, su reemplazo es el Sr. Ariel Bravo que hará horario de Lu-Vi de 12-15Hs.\r\nCordiales saludos y Felicidades\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-01-02T14:20:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4704",
+            "title": "Desinsectación",
+            "description": "Estimados,\r\nEl MARTES 28/11 a las 10:30Hs la empresa NOPLAG estará pasando por el edificio para realizar la desinsectación gral del mismo y en unidades.\r\nAtte.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-11-17T17:24:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4313",
+            "title": "Nuevo celular Administración",
+            "description": "Buen día!\r\n\r\nLes informamos que el celular de la Administración 11-36161901 no está disponible. Para comunicarse, podrán hacerlo al 11-25036089 o al teléfono de la oficina 5358-9238 en el horario de 12 a 16 hs.\r\n\r\nSaludos cordiales,\r\n\r\nAdministración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-10-19T14:38:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "326",
+            "title": "NOVEDADES",
+            "description": "TAREAS A REALIZAR, JUICIOS, Y OTRAS NOVEDADES",
+            "file_name": [
+              "/v2/consortium-news/files/novedades.pdf"
+            ],
+            "status": null,
+            "updated_at": "2022-09-17T14:40:07.000Z",
+            "assembly_related": false
+          }
+        ],
+        "total": 1
+      }
+    }
+  },
+  {
+    "url": "https://lcqsbp4wfl.execute-api.us-west-2.amazonaws.com/staging/consortium-news?page=1&pageSize=1000",
+    "data": {
+      "status": "success",
+      "data": {
+        "consortiumNews": [
+          {
+            "id": "44954",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el VIERNES 26 DE JUNIO, a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-18T15:56:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "44481",
+            "title": "PAGO LIQUIDACION EXPENSAS",
+            "description": "Estimados vecinos,\r\nA todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-12T13:22:08.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43492",
+            "title": "Trabajos realizados en bajada cloacal y de agua",
+            "description": "Estimados vecinos nuevamente informamos y compartimos algunas imàgenes referidas a los trabajos realizados en los baños comunes del piso 7, previo a  la venta de las unidades del piso en cuestiòn la propietaria informò que tenia humedad en una de las paredes de su oficina, el vecino del piso 6 hizo referencia a una perdida que afectaba el baño de dicho piso. Por tal motivo se trabajo en los baños comunes del piso 7 encontrando los caños cloacales y de alimentaciòn en el estado que compartimos. Entendemos que puedan ser coincidentes los tiempos pero las reparaciones NO derivaron de las obras en curso.\r\nSe recuerda que el consorcio, tal como se decidiò en asamblea, no tomarà como propias las reparaciones que ocasione el uso derivado de las adecuaciones realizadas en cada unidad, SOLAMENTE responderà por los sectores comunes.\r\nTambien les informamos que el trabajo relativo a la instalaciòn y reconfiguraciòn de càmaras se debiò a dos situaciones: por un lado desconocemos el motivo del porque los vecinos en su momento permitieronque el moden de uso COMUN para las càmaras seapedido por un particular y colocado en su unidad, al venderse la misma desconociendo esta situaciòn se quito la instalaciòn del mismo por lo que debio solicitarse un servicio nuevo. El cambio de proveedor se debiò a que Iplan no presta servicios a consorcio y si lo hace Personal, resultando ademàs beneficioso el costo del abono ( el que paso de $ 58464 a $ 26485)  La reconfiguraciòn fue necesariaal hacer unmantenimiento del equipo y para podercompartir a los vecinos los datos de acceso ya que se carecian de los mismos.",
+            "file_name": [
+              "/v2/consortium-news/files/6a20394b2b1d37_OCTO_bajada-alimentacion-de-agua.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-03T14:25:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43243",
+            "title": "ACCESO A CAMARAS COMUNES",
+            "description": "ESTIMADOS SE COMPARTE EL QR A ESCANEAR Y DATOS DE ACCESO\r\nUsuario: admin\r\nContraseña: Marcelotalvear963963",
+            "file_name": [
+              "/v2/consortium-news/files/6a1dc67d97d703_OCTO_whatsapp-image-2026-05-27-at-15.11.39.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-01T17:50:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43239",
+            "title": "ACLARACIÓN: OBRAS EN CAÑOS DE BAJADA GENERAL DEL EDIFICIO",
+            "description": "Estimados, se les informa que los trabajos realizados por el proveedor Rogelio Villanueva son por cambio de los caños de bajada general del edificio, los cuales por ser originales se encontraban en estado de deterioro y con roturas, situación que hacía necesario su cambio. Los mismos alimentan los baños comunes de las unidades del consorcio. Y se aclara que esos trabajos no tienen relación ni son consecuencia de las obras particulares realizadas en la unidades de los pisos 7º y 8º. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-01T17:31:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "42461",
+            "title": "FUMIGACION",
+            "description": "Estimados vecino el dia 29 de mayo en el horario de 10.30 hs se estarà realizando el servicio de fumigaciòn en el edificio.\r\nAgradecemos su colaboraciòn permitiendo el ingreso del personal",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-22T14:14:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40876",
+            "title": "CORTE DE AGUA MIERCOLES 06 DE MAYO",
+            "description": "ESTIMADOS VECINOS POR TRABAJOS DE MANTENIMIENTO SE ESTARA CORTANDO EL AGUA EL DIA MIERCOLES 06 DE MAYO ENTRE LAS 13 Y LAS 15 HS.\r\nAGARDECEMOS SU COLABORACIÒN Y PEDIMOS DISCULPAS POR LAS MOLESTIAS OCASIONADAS.\r\nLA ADMINISTRACIÒN",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-05T17:30:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40616",
+            "title": "CORTE DE AGUA",
+            "description": "Estimados vecinos, esta acercándose al edificio el plomero a fin de cortar la baja de agua del edificio y evitar continuadesbordando agua por palieres yas cesnores.\r\nEn el dia de mañana concurrira nuevamente la empresa de destapación con un equipo de mayor embergadura junto con el plomero.\r\nEntre ambos trabajaran a fin de destapar las bajadas cloacales que estan con escombros.\r\nLamentamos las molestias generadas en el dia de la fecha.\r\nLa adminsitarción",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-01T18:02:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40383",
+            "title": "CORTE DE BAJADAS DE AGUA",
+            "description": "Estimados vecinos en el dia de mañana jueves 30 de Abril, se estarà realizando un trabajo de cambio de bajada cloacal del piso 8 a piso 7. \r\nPor tal motivo les informamos que SE CORTARA EL SUMINISTRO DE AGUA a fin de que no puedan utilizar ningun sanitario ni bacha.\r\nAgradecemos su colaboraaciòn ya que cualquier tipo de liquido deshechado caera directamente en el operario que se encuentre trabajando\r\nSalduos\r\nLa administraciòn",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-29T18:56:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "39260",
+            "title": "RETIRO DE RESIDUOS",
+            "description": "Estimados vecinos, les recordamos que durante el fin de semana, sábados y domingos no se realiza retiro de residuos del edificio. Por esta razón, los mismos deben ser llevados al contenedor del Gobierno de la Ciudad ubicado en la calle para tal fin. Por otro lado, tener presente que deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS. ROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO. Muchas Gracias, La administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-16T20:03:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "38424",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-08T14:13:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37516",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de marzoo a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-26T20:18:49.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37389",
+            "title": "Datos para Octopus",
+            "description": "Estimados vecinos, \r\nEn breve se agregará Whatsapp como otro medio de comunicación donde recibirán notificaciones, expensas etc. Les solicitamos completar la siguiente planilla, adjunta a través del link, con sus datos actualizados.\r\n\r\nhttps://docs.google.com/spreadsheets/d/1MrnZ6wEVcsFRQAvc3yzcTwTbiYoNa_7D6RdtzpO5Q0A/edit?usp=drive_link\r\n\r\nMuchas gracias,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-25T18:17:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37101",
+            "title": "RESIDUOS FIN DE SEMANA LARGO",
+            "description": "Estimados vecinos,\r\n\r\nRecordamos que durante el fin de semana y días feriados los residuos domiciliarios deben ser llevados al contenedor del Gobierno de la Ciudad, que se encuentra al frente del edificio.\r\nPor otro lado, recordamos que los residuos deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS.\r\n\r\nROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO.\r\n\r\nMuchas Gracias, \r\nLa administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-20T16:46:44.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "36312",
+            "title": "Obras en los departamentos",
+            "description": "Estimados vecinos,\r\nSi esta realizando obras en su propiedad, le recordamos no cargar materiales pesados por el ascensor, hacerlo por escalera, tener en cuenta que la capacidad máxima del mismo es de tres personas y mantener la limpieza en los espacios comunes.\r\nCoordialmente,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-11T14:26:35.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "35147",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de febrero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-26T16:29:59.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "34527",
+            "title": "PARO GENERAL 19 DE FEBRERO",
+            "description": "Estimados, se informa que debido al paro general convocado para mañana jueves, podrá suceder que el encagado del edificio se vea impedido para concurrir a cumplir su jornada laboral atento a que los gremios del transporte se pliegan a la medida convocada por la CGT. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-18T17:16:18.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "33204",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 30 de enero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-29T19:48:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "32387",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-16T15:46:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "31822",
+            "title": "VACACIONES DEL ENCARGADO",
+            "description": "Estimados, se les informa que el encargado Matias Ovierdo gozará de su licencia por vacaciones desde el 5 de enero hasta el 1° de febrero. Será suplido por personal de la empresa de limpieza ON CLEAN de lunes a viernes en el horario de 11 a 15 hs. La persona que asistirá al edificio se llama Rosa Cajal, DNI 34613581, cel 11 2757-8228. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-07T18:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30926",
+            "title": "EXPENSAS - AGUINALDO",
+            "description": "ESTIMADOS VECINOS, SOLICITAMOS A QUIEN NO HUBIERE CANCELADO LAS EXPENSAS CON VENCIMIENTO DICIEMBRE 2025 REALICE EN LA FECHA EL PAGO DE LAS MISMAS YA QUE NO SE HA PODIDO CUMPLIR CON LA OBLIGATORIEDAD DEL PAGO DEL AGUINALDO.\r\nEL EDIFICIO NO CUENTA CON FONDO QUE PERMITA CUBRIR SUS OBLIGACIONES EN TIEMPO Y FORMAY ASI EVITAR RECLAMOS POR POR PARTE DEL PERSONAL Y DEJAN AL CONSORCIO EXPUESTA A DEMANDAS LABORALES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-23T12:54:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30528",
+            "title": "Reclamos/consultas/informes de pago exclusivamente por Octopus vigencia 1/01/2026",
+            "description": "Estimados vecinos,\r\nles informamos que a partir del 1ro de enero de 2026 los reclamos, consultas e informes de pago deberán ser enviados exclusivamente por la plataforma de Octopus.\r\nLos siguientes emails quedarán inhabilitados:\r\nconsultas@adminferazzoli.com.ar\r\npagos@adminferazzoli.com.ar\r\nconsorcios@adminferazzoli.com.ar\r\n\r\nAtentamente Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T18:08:03.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30520",
+            "title": "Liquidaciones",
+            "description": "Estimados vecinos,\r\nLes informamos que a raíz de que algunas unidades no han abonado la expensa de vencimiento diciembre, no podremos cumplir con todas las obligaciones del consorcio.\r\nAtentamente Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T17:07:36.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30295",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS: A TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN AÚN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-15T15:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29869",
+            "title": "ACTA DE ASAMBLEA 207 DE NOVIEMBRE 2025",
+            "description": "ESTIMADOS VECINOS SE COMPARTE LA MISMA",
+            "file_name": [
+              "/v2/consortium-news/files/6938254d6ca221_OCTO_acta--27.11.25.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-12-09T13:34:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29096",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 28 de noviembre a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-11-27T19:30:54.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "28126",
+            "title": "Convocatoria Asamblea",
+            "description": "Estiamdos vecinos compartimos convocatoria a asamblea extraordinaria",
+            "file_name": [
+              "/v2/consortium-news/files/69134d1d114203_OCTO_convocatoria-asamblea-27.11.2025.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-11-11T14:50:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "27214",
+            "title": "PAGO EXPENSAS",
+            "description": "ESTIMADOS VECINOS:\r\nA TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-27T12:58:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "26263",
+            "title": "Habilitación pago con QR/costo",
+            "description": "Estimados,\r\nLes informamos que estamos rehabilitanso el pago de las expensas con QR.\r\nLos pagos por este medio TIENEN COSTO, al momento de abonar se genera automatixamente un descuento/comisión de aprox. el 0.9%, con lo cual el monto imputado a su pago será menor al que Uds efectivamente realicen.\r\nPor ej, si alguien deposita $297499 se acredita en la cta del consorcio $294619.\r\nEL VALOR QUE SE IMPUTA A LA UNIDAD COMO PAGO ES EL MONTO QUE EFECTIVAMENTE SE ACREDITA EN LA CUENTA BANCARIA DEL CONSORCIO.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-07T17:11:17.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25359",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 26 de septiembre a partir de las 10 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-22T17:27:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25079",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS LES INFORMAMOS QUE EL PASADO 10 DE SEPTIEMBRE PASO LA FECHA DE PAGO DE EXPENSAS. \r\nA FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO, SOLITAMOS EL PAGO DE LAS MISMAS.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-16T19:34:30.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "23214",
+            "title": "TAREAS DE MANTENIMIENTO EN SERVICIO DE INTERNET",
+            "description": "Estimados, La empresa IPLAN comunicó que en este jueves 14 de agosto entre las 8 y 17 hs estarán realizando tareas de mantenimiento. Por esta razón, el servicio estará interrumpido por 2 hs aproximadamente.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-08-13T14:46:39.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22114",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día 25 de julio a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:48:23.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22113",
+            "title": "PAGO DE EXPENSAS",
+            "description": "Estimados, Solicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar obligaciones y gastos del edificio. Atte, Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:42:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "19326",
+            "title": "Solicitud pago expensas",
+            "description": "Estimados,\r\nSolicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar los gastos del edificio.\r\nAtte",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-05-16T14:27:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "18090",
+            "title": "Licencia encargado",
+            "description": "Estimados comaprtimos el certìficado medicodel encargado por la ausencia dle dia de la fecha",
+            "file_name": [
+              "/v2/consortium-news/files/67f950ddd486b1_OCTO_whatsapp-image-2025-04-11-at-1.17.28-pm.jpeg"
+            ],
+            "status": null,
+            "updated_at": "2025-04-11T17:26:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17715",
+            "title": "Aviso de obra Local",
+            "description": "Buenso días se comparte el aviso de obra ante GCBA",
+            "file_name": [
+              "/v2/consortium-news/files/67ec26996c8ba7_OCTO_aviso-de-obra-registrado---marcelo-t-de-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-04-01T17:47:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17555",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumifgación el día 28 de abril a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-03-27T17:11:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15122",
+            "title": "Vacaciones Encargado",
+            "description": "Estimados, les informamos que el encargado Matías Ovierdo estará con licencia por vacaciones desde el 6 de enero hasta el 2 de febrero inclusive. Lo suplantará Gonzalo Barrera, DNI 40.091.176 y su cel es 1126772657.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T17:02:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15117",
+            "title": "Desinsectación",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de desinsectación el día 31 de enero partir de las 10:30 hs. Agradecemos su colaboración.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T16:36:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14824",
+            "title": "Cierre liquidación Diciembre",
+            "description": "Estimados vecinos,\r\nLes informamos que este mes estaremos cerrando antes las expensas de Diciembre, incluiremos todos los pagos que se reflejen en la cuenta bancaria hasta hoy 26/12, cualquier deposito/transferencia que realicen en los próximos días la verán reflejada en la liquidación de Enero 2025.\r\nLes recordamos que es importante que realicen sus pagos respetando los centavos para poder identificarlos correctamente.\r\nAprovechamos para desearles a Uds y sus familias un Muy Feliz 2025.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T20:49:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14811",
+            "title": "EXPENSAS IMPAGAS",
+            "description": "ESTIMADOS VECINOS AGRADECEREMOS A AQUELLAS UNIDADES CON EXPENSAS PENDIENTES DE CANCELACIÒN, REGULARIZAR DICHA SITUACIÒN A FIN DE PODER COMPLETAR EL PAGO DE LAS OBLIGACIONES DEL CONSORCIO",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T17:53:56.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13845",
+            "title": "Acta Asamblea Ordinaria 21/11/2024",
+            "description": "Estimados, se adjunta transcripción del Acta de Asamblea Ordinaria celebrada el 21 de noviembre de 2024.",
+            "file_name": [
+              "/v2/consortium-news/files/674736c2366bd1_OCTO_mt-alvear-961-asamblea-ordinaria-21-de-noviembre-2024.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-27T15:12:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13589",
+            "title": "Banco Macro: nuevos datos de cuenta bancaria, CBU y alias",
+            "description": "Estimados, les informamos que ya está activa la nueva cuenta bancaria del consorcio para realizar transferencias en el Banco Macro, a saber: \r\nCta Bancaria Nro. 346002279647100\r\nClave Bancaria Uniforme (CBU) 2850460930022796471009\r\nalias DIRIAS.DADIVA.SALINO\r\nSe adjunta informe del Banco Macro.",
+            "file_name": [
+              "/v2/consortium-news/files/673e1c0ab368e0_OCTO_cbu-mt-de-alvear.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-20T17:27:38.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13288",
+            "title": "Convocatoria Asamblea",
+            "description": "Estimados vecinos compartimos la convocatoria para la asambleadel día 21/11/2024",
+            "file_name": [
+              "/v2/consortium-news/files/67315f61935fb2_OCTO_convocatoria-asamblea-21-11---mtde-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-11T01:35:29.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "12200",
+            "title": "FUMIGACIÓN",
+            "description": "ESTIMADOS VECINOS, INFORMAMOS QUE EL DIA 25/10/2024 A LAS 10.30 HS SE ESTARÁ REALIZANDO EL SERVICIO DE FUMIGACIÓN EN UNIDADES Y PARTES COMUNES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-10-02T21:57:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "10847",
+            "title": "DESINSECTACIÓN",
+            "description": "ESTIMADOS VECINOS RECORDAMOS QUE EL DIA 30 DE AGOSTO 10 HS SE ESTARA REALIZANDO EL SERVICIO DE DESINSECTACIÓN EN EL EDIFICIO.\r\nAGRADECEMOS SU COLABORACION PERMITIENDO EL INGRESO A TODAS LAS UNIDADES.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-08-14T01:07:31.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "9152",
+            "title": "Fumigación",
+            "description": "Estimados, la empresa encargada de la fumigación estará pasando por el edificio el 28/6 a las 11Hs, agradecemos a aquellos que estén en la vivienda les permitan entrar.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-06-07T14:39:26.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "8508",
+            "title": "Fumigación",
+            "description": "Estimados, \r\nEl 31 Mayo a las 10:30 la empresa de fumigación estará por el edificio, como siempre agradecemos atiemdan al fumigador y le permitan ingresar a la unidad.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-05-10T17:51:40.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7798",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Se informa que el día viernes 26 de abril, a partir de las 10:30 hs, la empresa NOPLAG realizará el servicio de desinsectación y desinfección. Solicitamos su colaboración para permitir el ingreso a las unidades funcionales.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-04-04T15:21:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7283",
+            "title": "Pago expensas",
+            "description": "Estimados, Agradecemos el pago de las expensas  a fin de poder cumplimentar el pago de los haberes al encargado.\r\nGracias",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-03-07T22:23:24.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "6524",
+            "title": "AVISO DE FUMIGACIÒN",
+            "description": "Se comunica que el dìa 27 de febrero se realizarà el servicio de desinsectaciòn y desinfección a partir de la 11 hs.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-02-01T18:46:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "5933",
+            "title": "Vacaciones encargado",
+            "description": "Estimados, \r\nEsperamos hayan comenzado bein el año, les informamaos que el encargado tomará vacaciones del 2 al 29/01/24 inclusive, su reemplazo es el Sr. Ariel Bravo que hará horario de Lu-Vi de 12-15Hs.\r\nCordiales saludos y Felicidades\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-01-02T14:20:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4704",
+            "title": "Desinsectación",
+            "description": "Estimados,\r\nEl MARTES 28/11 a las 10:30Hs la empresa NOPLAG estará pasando por el edificio para realizar la desinsectación gral del mismo y en unidades.\r\nAtte.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-11-17T17:24:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4313",
+            "title": "Nuevo celular Administración",
+            "description": "Buen día!\r\n\r\nLes informamos que el celular de la Administración 11-36161901 no está disponible. Para comunicarse, podrán hacerlo al 11-25036089 o al teléfono de la oficina 5358-9238 en el horario de 12 a 16 hs.\r\n\r\nSaludos cordiales,\r\n\r\nAdministración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-10-19T14:38:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "326",
+            "title": "NOVEDADES",
+            "description": "TAREAS A REALIZAR, JUICIOS, Y OTRAS NOVEDADES",
+            "file_name": [
+              "/v2/consortium-news/files/novedades.pdf"
+            ],
+            "status": null,
+            "updated_at": "2022-09-17T14:40:07.000Z",
+            "assembly_related": false
+          }
+        ],
+        "total": 1
+      }
+    }
+  },
+  {
+    "url": "https://lcqsbp4wfl.execute-api.us-west-2.amazonaws.com/staging/consortium-news?page=1&pageSize=1000",
+    "data": {
+      "status": "success",
+      "data": {
+        "consortiumNews": [
+          {
+            "id": "44954",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el VIERNES 26 DE JUNIO, a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-18T15:56:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "44481",
+            "title": "PAGO LIQUIDACION EXPENSAS",
+            "description": "Estimados vecinos,\r\nA todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-12T13:22:08.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43492",
+            "title": "Trabajos realizados en bajada cloacal y de agua",
+            "description": "Estimados vecinos nuevamente informamos y compartimos algunas imàgenes referidas a los trabajos realizados en los baños comunes del piso 7, previo a  la venta de las unidades del piso en cuestiòn la propietaria informò que tenia humedad en una de las paredes de su oficina, el vecino del piso 6 hizo referencia a una perdida que afectaba el baño de dicho piso. Por tal motivo se trabajo en los baños comunes del piso 7 encontrando los caños cloacales y de alimentaciòn en el estado que compartimos. Entendemos que puedan ser coincidentes los tiempos pero las reparaciones NO derivaron de las obras en curso.\r\nSe recuerda que el consorcio, tal como se decidiò en asamblea, no tomarà como propias las reparaciones que ocasione el uso derivado de las adecuaciones realizadas en cada unidad, SOLAMENTE responderà por los sectores comunes.\r\nTambien les informamos que el trabajo relativo a la instalaciòn y reconfiguraciòn de càmaras se debiò a dos situaciones: por un lado desconocemos el motivo del porque los vecinos en su momento permitieronque el moden de uso COMUN para las càmaras seapedido por un particular y colocado en su unidad, al venderse la misma desconociendo esta situaciòn se quito la instalaciòn del mismo por lo que debio solicitarse un servicio nuevo. El cambio de proveedor se debiò a que Iplan no presta servicios a consorcio y si lo hace Personal, resultando ademàs beneficioso el costo del abono ( el que paso de $ 58464 a $ 26485)  La reconfiguraciòn fue necesariaal hacer unmantenimiento del equipo y para podercompartir a los vecinos los datos de acceso ya que se carecian de los mismos.",
+            "file_name": [
+              "/v2/consortium-news/files/6a20394b2b1d37_OCTO_bajada-alimentacion-de-agua.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-03T14:25:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43243",
+            "title": "ACCESO A CAMARAS COMUNES",
+            "description": "ESTIMADOS SE COMPARTE EL QR A ESCANEAR Y DATOS DE ACCESO\r\nUsuario: admin\r\nContraseña: Marcelotalvear963963",
+            "file_name": [
+              "/v2/consortium-news/files/6a1dc67d97d703_OCTO_whatsapp-image-2026-05-27-at-15.11.39.pdf"
+            ],
+            "status": null,
+            "updated_at": "2026-06-01T17:50:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "43239",
+            "title": "ACLARACIÓN: OBRAS EN CAÑOS DE BAJADA GENERAL DEL EDIFICIO",
+            "description": "Estimados, se les informa que los trabajos realizados por el proveedor Rogelio Villanueva son por cambio de los caños de bajada general del edificio, los cuales por ser originales se encontraban en estado de deterioro y con roturas, situación que hacía necesario su cambio. Los mismos alimentan los baños comunes de las unidades del consorcio. Y se aclara que esos trabajos no tienen relación ni son consecuencia de las obras particulares realizadas en la unidades de los pisos 7º y 8º. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-06-01T17:31:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "42461",
+            "title": "FUMIGACION",
+            "description": "Estimados vecino el dia 29 de mayo en el horario de 10.30 hs se estarà realizando el servicio de fumigaciòn en el edificio.\r\nAgradecemos su colaboraciòn permitiendo el ingreso del personal",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-22T14:14:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40876",
+            "title": "CORTE DE AGUA MIERCOLES 06 DE MAYO",
+            "description": "ESTIMADOS VECINOS POR TRABAJOS DE MANTENIMIENTO SE ESTARA CORTANDO EL AGUA EL DIA MIERCOLES 06 DE MAYO ENTRE LAS 13 Y LAS 15 HS.\r\nAGARDECEMOS SU COLABORACIÒN Y PEDIMOS DISCULPAS POR LAS MOLESTIAS OCASIONADAS.\r\nLA ADMINISTRACIÒN",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-05T17:30:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40616",
+            "title": "CORTE DE AGUA",
+            "description": "Estimados vecinos, esta acercándose al edificio el plomero a fin de cortar la baja de agua del edificio y evitar continuadesbordando agua por palieres yas cesnores.\r\nEn el dia de mañana concurrira nuevamente la empresa de destapación con un equipo de mayor embergadura junto con el plomero.\r\nEntre ambos trabajaran a fin de destapar las bajadas cloacales que estan con escombros.\r\nLamentamos las molestias generadas en el dia de la fecha.\r\nLa adminsitarción",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-05-01T18:02:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "40383",
+            "title": "CORTE DE BAJADAS DE AGUA",
+            "description": "Estimados vecinos en el dia de mañana jueves 30 de Abril, se estarà realizando un trabajo de cambio de bajada cloacal del piso 8 a piso 7. \r\nPor tal motivo les informamos que SE CORTARA EL SUMINISTRO DE AGUA a fin de que no puedan utilizar ningun sanitario ni bacha.\r\nAgradecemos su colaboraaciòn ya que cualquier tipo de liquido deshechado caera directamente en el operario que se encuentre trabajando\r\nSalduos\r\nLa administraciòn",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-29T18:56:33.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "39260",
+            "title": "RETIRO DE RESIDUOS",
+            "description": "Estimados vecinos, les recordamos que durante el fin de semana, sábados y domingos no se realiza retiro de residuos del edificio. Por esta razón, los mismos deben ser llevados al contenedor del Gobierno de la Ciudad ubicado en la calle para tal fin. Por otro lado, tener presente que deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS. ROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO. Muchas Gracias, La administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-16T20:03:27.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "38424",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-04-08T14:13:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37516",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de marzoo a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-26T20:18:49.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37389",
+            "title": "Datos para Octopus",
+            "description": "Estimados vecinos, \r\nEn breve se agregará Whatsapp como otro medio de comunicación donde recibirán notificaciones, expensas etc. Les solicitamos completar la siguiente planilla, adjunta a través del link, con sus datos actualizados.\r\n\r\nhttps://docs.google.com/spreadsheets/d/1MrnZ6wEVcsFRQAvc3yzcTwTbiYoNa_7D6RdtzpO5Q0A/edit?usp=drive_link\r\n\r\nMuchas gracias,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-25T18:17:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "37101",
+            "title": "RESIDUOS FIN DE SEMANA LARGO",
+            "description": "Estimados vecinos,\r\n\r\nRecordamos que durante el fin de semana y días feriados los residuos domiciliarios deben ser llevados al contenedor del Gobierno de la Ciudad, que se encuentra al frente del edificio.\r\nPor otro lado, recordamos que los residuos deben tirarse embolsados. NO DESCARGARLOS/COLOCARLOS SUELTOS.\r\n\r\nROGAMOS MANTENER LA LIMPIEZA DEL EDIFICIO.\r\n\r\nMuchas Gracias, \r\nLa administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-20T16:46:44.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "36312",
+            "title": "Obras en los departamentos",
+            "description": "Estimados vecinos,\r\nSi esta realizando obras en su propiedad, le recordamos no cargar materiales pesados por el ascensor, hacerlo por escalera, tener en cuenta que la capacidad máxima del mismo es de tres personas y mantener la limpieza en los espacios comunes.\r\nCoordialmente,\r\nAdministración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-03-11T14:26:35.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "35147",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 27 de febrero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades. Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-26T16:29:59.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "34527",
+            "title": "PARO GENERAL 19 DE FEBRERO",
+            "description": "Estimados, se informa que debido al paro general convocado para mañana jueves, podrá suceder que el encagado del edificio se vea impedido para concurrir a cumplir su jornada laboral atento a que los gremios del transporte se pliegan a la medida convocada por la CGT. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-02-18T17:16:18.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "33204",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 30 de enero a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-29T19:48:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "32387",
+            "title": "Pago de expensas",
+            "description": "Estimados vecinos,\r\na todos aquellos que no hayan abonado las expensas, les solicitamos que lo hagan con el fin de poder cumplir con las responsabilidades del consorcio.\r\nCoordialmente\r\nAdministración Ferazzzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-16T15:46:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "31822",
+            "title": "VACACIONES DEL ENCARGADO",
+            "description": "Estimados, se les informa que el encargado Matias Ovierdo gozará de su licencia por vacaciones desde el 5 de enero hasta el 1° de febrero. Será suplido por personal de la empresa de limpieza ON CLEAN de lunes a viernes en el horario de 11 a 15 hs. La persona que asistirá al edificio se llama Rosa Cajal, DNI 34613581, cel 11 2757-8228. Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2026-01-07T18:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30926",
+            "title": "EXPENSAS - AGUINALDO",
+            "description": "ESTIMADOS VECINOS, SOLICITAMOS A QUIEN NO HUBIERE CANCELADO LAS EXPENSAS CON VENCIMIENTO DICIEMBRE 2025 REALICE EN LA FECHA EL PAGO DE LAS MISMAS YA QUE NO SE HA PODIDO CUMPLIR CON LA OBLIGATORIEDAD DEL PAGO DEL AGUINALDO.\r\nEL EDIFICIO NO CUENTA CON FONDO QUE PERMITA CUBRIR SUS OBLIGACIONES EN TIEMPO Y FORMAY ASI EVITAR RECLAMOS POR POR PARTE DEL PERSONAL Y DEJAN AL CONSORCIO EXPUESTA A DEMANDAS LABORALES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-23T12:54:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30528",
+            "title": "Reclamos/consultas/informes de pago exclusivamente por Octopus vigencia 1/01/2026",
+            "description": "Estimados vecinos,\r\nles informamos que a partir del 1ro de enero de 2026 los reclamos, consultas e informes de pago deberán ser enviados exclusivamente por la plataforma de Octopus.\r\nLos siguientes emails quedarán inhabilitados:\r\nconsultas@adminferazzoli.com.ar\r\npagos@adminferazzoli.com.ar\r\nconsorcios@adminferazzoli.com.ar\r\n\r\nAtentamente Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T18:08:03.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30520",
+            "title": "Liquidaciones",
+            "description": "Estimados vecinos,\r\nLes informamos que a raíz de que algunas unidades no han abonado la expensa de vencimiento diciembre, no podremos cumplir con todas las obligaciones del consorcio.\r\nAtentamente Administración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-17T17:07:36.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "30295",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS: A TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN AÚN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-12-15T15:52:43.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29869",
+            "title": "ACTA DE ASAMBLEA 207 DE NOVIEMBRE 2025",
+            "description": "ESTIMADOS VECINOS SE COMPARTE LA MISMA",
+            "file_name": [
+              "/v2/consortium-news/files/6938254d6ca221_OCTO_acta--27.11.25.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-12-09T13:34:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "29096",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 28 de noviembre a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-11-27T19:30:54.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "28126",
+            "title": "Convocatoria Asamblea",
+            "description": "Estiamdos vecinos compartimos convocatoria a asamblea extraordinaria",
+            "file_name": [
+              "/v2/consortium-news/files/69134d1d114203_OCTO_convocatoria-asamblea-27.11.2025.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-11-11T14:50:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "27214",
+            "title": "PAGO EXPENSAS",
+            "description": "ESTIMADOS VECINOS:\r\nA TODOS AQUELLOS QUE NO HAYAN ABONADO LA LIQUIDACIÓN, LES SOLICITAMOS HACERLO A FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-27T12:58:48.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "26263",
+            "title": "Habilitación pago con QR/costo",
+            "description": "Estimados,\r\nLes informamos que estamos rehabilitanso el pago de las expensas con QR.\r\nLos pagos por este medio TIENEN COSTO, al momento de abonar se genera automatixamente un descuento/comisión de aprox. el 0.9%, con lo cual el monto imputado a su pago será menor al que Uds efectivamente realicen.\r\nPor ej, si alguien deposita $297499 se acredita en la cta del consorcio $294619.\r\nEL VALOR QUE SE IMPUTA A LA UNIDAD COMO PAGO ES EL MONTO QUE EFECTIVAMENTE SE ACREDITA EN LA CUENTA BANCARIA DEL CONSORCIO.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-10-07T17:11:17.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25359",
+            "title": "SERVICIO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día viernes 26 de septiembre a partir de las 10 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-22T17:27:42.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "25079",
+            "title": "PAGO DE EXPENSAS",
+            "description": "ESTIMADOS VECINOS LES INFORMAMOS QUE EL PASADO 10 DE SEPTIEMBRE PASO LA FECHA DE PAGO DE EXPENSAS. \r\nA FIN DE PODER CUMPLIR CON LOS PAGOS DE LAS OBLIGACIONES DEL EDIFICIO, SOLITAMOS EL PAGO DE LAS MISMAS.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-09-16T19:34:30.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "23214",
+            "title": "TAREAS DE MANTENIMIENTO EN SERVICIO DE INTERNET",
+            "description": "Estimados, La empresa IPLAN comunicó que en este jueves 14 de agosto entre las 8 y 17 hs estarán realizando tareas de mantenimiento. Por esta razón, el servicio estará interrumpido por 2 hs aproximadamente.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-08-13T14:46:39.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22114",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumigación el día 25 de julio a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:48:23.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "22113",
+            "title": "PAGO DE EXPENSAS",
+            "description": "Estimados, Solicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar obligaciones y gastos del edificio. Atte, Administración Ferazzoli",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-07-21T18:42:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "19326",
+            "title": "Solicitud pago expensas",
+            "description": "Estimados,\r\nSolicitamos a TODAS LAS UNIDADES QUE NO HAYAN ABONADO LA EXPENSA, que procedan al pago de las mismas a fin de afrontar los gastos del edificio.\r\nAtte",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-05-16T14:27:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "18090",
+            "title": "Licencia encargado",
+            "description": "Estimados comaprtimos el certìficado medicodel encargado por la ausencia dle dia de la fecha",
+            "file_name": [
+              "/v2/consortium-news/files/67f950ddd486b1_OCTO_whatsapp-image-2025-04-11-at-1.17.28-pm.jpeg"
+            ],
+            "status": null,
+            "updated_at": "2025-04-11T17:26:53.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17715",
+            "title": "Aviso de obra Local",
+            "description": "Buenso días se comparte el aviso de obra ante GCBA",
+            "file_name": [
+              "/v2/consortium-news/files/67ec26996c8ba7_OCTO_aviso-de-obra-registrado---marcelo-t-de-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2025-04-01T17:47:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "17555",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de fumifgación el día 28 de abril a partir de las 10:30 hs. Agradecemos su colaboración y permitir el ingreso del personal a sus unidades.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-03-27T17:11:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15122",
+            "title": "Vacaciones Encargado",
+            "description": "Estimados, les informamos que el encargado Matías Ovierdo estará con licencia por vacaciones desde el 6 de enero hasta el 2 de febrero inclusive. Lo suplantará Gonzalo Barrera, DNI 40.091.176 y su cel es 1126772657.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T17:02:05.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "15117",
+            "title": "Desinsectación",
+            "description": "Estimados, les informamos que la Empresa Noplag estará realizando el servicio de desinsectación el día 31 de enero partir de las 10:30 hs. Agradecemos su colaboración.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2025-01-07T16:36:22.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14824",
+            "title": "Cierre liquidación Diciembre",
+            "description": "Estimados vecinos,\r\nLes informamos que este mes estaremos cerrando antes las expensas de Diciembre, incluiremos todos los pagos que se reflejen en la cuenta bancaria hasta hoy 26/12, cualquier deposito/transferencia que realicen en los próximos días la verán reflejada en la liquidación de Enero 2025.\r\nLes recordamos que es importante que realicen sus pagos respetando los centavos para poder identificarlos correctamente.\r\nAprovechamos para desearles a Uds y sus familias un Muy Feliz 2025.\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T20:49:11.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "14811",
+            "title": "EXPENSAS IMPAGAS",
+            "description": "ESTIMADOS VECINOS AGRADECEREMOS A AQUELLAS UNIDADES CON EXPENSAS PENDIENTES DE CANCELACIÒN, REGULARIZAR DICHA SITUACIÒN A FIN DE PODER COMPLETAR EL PAGO DE LAS OBLIGACIONES DEL CONSORCIO",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-12-26T17:53:56.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13845",
+            "title": "Acta Asamblea Ordinaria 21/11/2024",
+            "description": "Estimados, se adjunta transcripción del Acta de Asamblea Ordinaria celebrada el 21 de noviembre de 2024.",
+            "file_name": [
+              "/v2/consortium-news/files/674736c2366bd1_OCTO_mt-alvear-961-asamblea-ordinaria-21-de-noviembre-2024.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-27T15:12:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13589",
+            "title": "Banco Macro: nuevos datos de cuenta bancaria, CBU y alias",
+            "description": "Estimados, les informamos que ya está activa la nueva cuenta bancaria del consorcio para realizar transferencias en el Banco Macro, a saber: \r\nCta Bancaria Nro. 346002279647100\r\nClave Bancaria Uniforme (CBU) 2850460930022796471009\r\nalias DIRIAS.DADIVA.SALINO\r\nSe adjunta informe del Banco Macro.",
+            "file_name": [
+              "/v2/consortium-news/files/673e1c0ab368e0_OCTO_cbu-mt-de-alvear.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-20T17:27:38.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "13288",
+            "title": "Convocatoria Asamblea",
+            "description": "Estimados vecinos compartimos la convocatoria para la asambleadel día 21/11/2024",
+            "file_name": [
+              "/v2/consortium-news/files/67315f61935fb2_OCTO_convocatoria-asamblea-21-11---mtde-alvear-961.pdf"
+            ],
+            "status": null,
+            "updated_at": "2024-11-11T01:35:29.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "12200",
+            "title": "FUMIGACIÓN",
+            "description": "ESTIMADOS VECINOS, INFORMAMOS QUE EL DIA 25/10/2024 A LAS 10.30 HS SE ESTARÁ REALIZANDO EL SERVICIO DE FUMIGACIÓN EN UNIDADES Y PARTES COMUNES",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-10-02T21:57:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "10847",
+            "title": "DESINSECTACIÓN",
+            "description": "ESTIMADOS VECINOS RECORDAMOS QUE EL DIA 30 DE AGOSTO 10 HS SE ESTARA REALIZANDO EL SERVICIO DE DESINSECTACIÓN EN EL EDIFICIO.\r\nAGRADECEMOS SU COLABORACION PERMITIENDO EL INGRESO A TODAS LAS UNIDADES.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-08-14T01:07:31.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "9152",
+            "title": "Fumigación",
+            "description": "Estimados, la empresa encargada de la fumigación estará pasando por el edificio el 28/6 a las 11Hs, agradecemos a aquellos que estén en la vivienda les permitan entrar.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-06-07T14:39:26.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "8508",
+            "title": "Fumigación",
+            "description": "Estimados, \r\nEl 31 Mayo a las 10:30 la empresa de fumigación estará por el edificio, como siempre agradecemos atiemdan al fumigador y le permitan ingresar a la unidad.\r\nSdos",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-05-10T17:51:40.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7798",
+            "title": "AVISO DE FUMIGACIÓN",
+            "description": "Se informa que el día viernes 26 de abril, a partir de las 10:30 hs, la empresa NOPLAG realizará el servicio de desinsectación y desinfección. Solicitamos su colaboración para permitir el ingreso a las unidades funcionales.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-04-04T15:21:02.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "7283",
+            "title": "Pago expensas",
+            "description": "Estimados, Agradecemos el pago de las expensas  a fin de poder cumplimentar el pago de los haberes al encargado.\r\nGracias",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-03-07T22:23:24.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "6524",
+            "title": "AVISO DE FUMIGACIÒN",
+            "description": "Se comunica que el dìa 27 de febrero se realizarà el servicio de desinsectaciòn y desinfección a partir de la 11 hs.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-02-01T18:46:10.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "5933",
+            "title": "Vacaciones encargado",
+            "description": "Estimados, \r\nEsperamos hayan comenzado bein el año, les informamaos que el encargado tomará vacaciones del 2 al 29/01/24 inclusive, su reemplazo es el Sr. Ariel Bravo que hará horario de Lu-Vi de 12-15Hs.\r\nCordiales saludos y Felicidades\r\nLa Administración",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2024-01-02T14:20:57.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4704",
+            "title": "Desinsectación",
+            "description": "Estimados,\r\nEl MARTES 28/11 a las 10:30Hs la empresa NOPLAG estará pasando por el edificio para realizar la desinsectación gral del mismo y en unidades.\r\nAtte.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-11-17T17:24:41.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "4313",
+            "title": "Nuevo celular Administración",
+            "description": "Buen día!\r\n\r\nLes informamos que el celular de la Administración 11-36161901 no está disponible. Para comunicarse, podrán hacerlo al 11-25036089 o al teléfono de la oficina 5358-9238 en el horario de 12 a 16 hs.\r\n\r\nSaludos cordiales,\r\n\r\nAdministración Ferazzoli.",
+            "file_name": [],
+            "status": null,
+            "updated_at": "2023-10-19T14:38:15.000Z",
+            "assembly_related": false
+          },
+          {
+            "id": "326",
+            "title": "NOVEDADES",
+            "description": "TAREAS A REALIZAR, JUICIOS, Y OTRAS NOVEDADES",
+            "file_name": [
+              "/v2/consortium-news/files/novedades.pdf"
+            ],
+            "status": null,
+            "updated_at": "2022-09-17T14:40:07.000Z",
+            "assembly_related": false
+          }
+        ],
+        "total": 1
+      }
+    }
+  }
+]

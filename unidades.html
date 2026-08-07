@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvear 961/963 — Unidades Funcionales & Prorrateo</title>
+    <meta name="description" content="Detalle de prorrateo, coeficientes, historial de pagos y morosidad por Unidad Funcional del consorcio Alvear 961/963.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <style>
+        :root {
+            --bg-base: #050810;
+            --bg-surface: #0b1120;
+            --bg-card: rgba(11, 17, 32, 0.7);
+            --bg-sidebar: #07090f;
+            --border: rgba(255,255,255,0.06);
+            --text-1: #f1f5f9;
+            --text-2: #94a3b8;
+            --text-3: #64748b;
+            --accent: #06b6d4;
+            --accent-dim: rgba(6,182,212,0.12);
+            --red: #f43f5e;
+            --red-dim: rgba(244,63,94,0.12);
+            --green: #10b981;
+            --green-dim: rgba(16,185,129,0.12);
+            --purple: #a78bfa;
+            --purple-dim: rgba(167,139,250,0.12);
+            --amber: #fb923c;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-base);
+            color: var(--text-1);
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 230px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            top: 0; bottom: 0; left: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        .sidebar::-webkit-scrollbar { display: none; }
+
+        .brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            background: linear-gradient(135deg, #06b6d4 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 1rem;
+            letter-spacing: -0.5px;
+        }
+        .brand-sub {
+            font-size: 0.72rem;
+            color: var(--text-3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0 1rem;
+            margin-top: 0.25rem;
+            font-weight: 600;
+        }
+        .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 1rem;
+            flex-grow: 1;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.45rem 1rem;
+            color: var(--text-2);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        .nav-link:hover {
+            background: rgba(255,255,255,0.02);
+            color: var(--text-1);
+        }
+        .nav-link.active {
+            color: var(--text-1);
+            background: rgba(6,182,212,0.04);
+            border-left-color: var(--accent);
+        }
+        .nav-icon {
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .nav-link:hover .nav-icon, .nav-link.active .nav-icon { opacity: 1; }
+
+        .sidebar-footer {
+            padding: 0 1.5rem;
+            margin-top: auto;
+        }
+
+        .btn-contact-sidebar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 0.55rem 0.75rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, rgba(6,182,212,0.12), rgba(139,92,246,0.12));
+            border: 1px solid rgba(6,182,212,0.25);
+            border-radius: 8px;
+            color: var(--text-1);
+            font-family: inherit;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .btn-contact-sidebar:hover {
+            background: linear-gradient(135deg, rgba(6,182,212,0.28), rgba(139,92,246,0.28));
+            border-color: var(--accent);
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(6,182,212,0.25);
+        }
+        .btn-contact-sidebar svg { color: var(--accent); transition: color 0.2s; }
+        .btn-contact-sidebar:hover svg { color: #ffffff; }
+
+        .sidebar-badge {
+            font-size: 0.7rem;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 3px 8px;
+            border-radius: 99px;
+            display: inline-block;
+        }
+
+        /* MAIN PANEL */
+        .main {
+            margin-left: 250px;
+            flex-grow: 1;
+            padding: 2rem;
+            max-width: 1400px;
+            width: calc(100% - 250px);
+        }
+
+        /* PAGE HEADER & TOOLBAR */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+        .page-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.75rem;
+            letter-spacing: -0.5px;
+        }
+        .page-subtitle {
+            font-size: 0.88rem;
+            color: var(--text-3);
+            margin-top: 0.25rem;
+        }
+        .toolbar {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+        select, input {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            outline: none;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        select:focus, input:focus { border-color: var(--accent); }
+
+        /* ALERTA DE AUDITORÍA DE COEFICIENTES */
+        .coef-alert {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            border-radius: 12px;
+            color: var(--text-1);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+        .coef-alert.error-alert { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #f87171; }
+        .coef-alert.warning-alert { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2); color: #fbbf24; }
+        .coef-alert.success-alert { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); color: #4ade80; }
+
+        /* KPIS GRID */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .kpi-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            position: relative;
+        }
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent);
+            border-radius: 12px 0 0 12px;
+        }
+        .kpi-card.purple::before { background: var(--purple); }
+        .kpi-card.red::before { background: var(--red); }
+        .kpi-card.green::before { background: var(--green); }
+
+        .kpi-title {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-3);
+            font-weight: 700;
+        }
+        .kpi-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            color: var(--text-1);
+        }
+        .kpi-sub {
+            font-size: 0.75rem;
+            color: var(--text-2);
+            margin-top: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* CHARTS GRID */
+        .charts-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* TABLE SECTION */
+        .table-section { margin-bottom: 2rem; }
+        .table-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .table-actions { display: flex; gap: 0.5rem; align-items: center; }
+        .table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+        th, td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+        th {
+            background: rgba(255,255,255,0.02);
+            color: var(--text-2);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: rgba(255,255,255,0.01); }
+
+        .uf-row { cursor: pointer; transition: all 0.15s; }
+        .uf-row:hover td { color: var(--accent) !important; }
+
+        /* BADGES */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+        }
+        .badge-deuda { background: rgba(244,63,94,0.1); color: var(--red); border-color: rgba(244,63,94,0.2); }
+        .badge-regular { background: rgba(16,185,129,0.1); color: var(--green); border-color: rgba(16,185,129,0.2); }
+
+        /* BTN */
+        .btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            color: var(--text-2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .btn:hover { color: var(--text-1); border-color: var(--text-3); }
+
+        /* PAGINATION */
+        .pagination { display: none !important; }
+
+        /* MODAL DETALLE */
+        .modal {
+            position: fixed;
+            top: 0; bottom: 0; left: 0; right: 0;
+            background: rgba(5,8,16,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+        .modal.open { opacity: 1; pointer-events: auto; }
+        .modal-content {
+            background: #0b1120;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        }
+        .close-btn {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            color: var(--text-2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: inherit;
+        }
+        .close-btn:hover { color: var(--text-1); background: rgba(255,255,255,0.1); }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        /* MODAL CONTACTO */
+        .modal-overlay {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(6px);
+        }
+        .modal-overlay.open { display: flex; }
+        .modal-overlay .modal-inner {
+            background: #0b1120;
+            border: 1px solid rgba(6,182,212,0.25);
+            border-radius: 16px;
+            padding: 1.75rem;
+            width: 90%;
+            max-width: 480px;
+            position: relative;
+        }
+        .modal-title { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem; font-family: 'Outfit', sans-serif; }
+        .modal-subtitle { font-size: 0.8rem; color: var(--text-3); margin-bottom: 1.5rem; }
+
+        /* TOOLTIPS */
+        [data-tooltip] { position: relative; cursor: help; }
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%; left: 50%;
+            transform: translateX(-50%) scale(0.95);
+            background: rgba(15,23,42,0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #f1f5f9;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 1.4;
+            white-space: normal;
+            width: max-content;
+            max-width: 220px;
+            z-index: 9999;
+            opacity: 0; pointer-events: none;
+            transition: all 0.15s cubic-bezier(0.4,0,0.2,1);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        [data-tooltip]:hover::after { opacity: 1; transform: translateX(-50%) scale(1); }
+
+        .sidebar [data-tooltip]::after {
+            bottom: auto; left: 105%; top: 50%;
+            transform: translateY(-50%) scale(0.95);
+        }
+        .sidebar [data-tooltip]:hover::after { opacity: 1; transform: translateY(-50%) scale(1); }
+
+        /* SERVICIOS SIDEBAR */
+        .services-section {
+            margin: 1.25rem 1rem 0 1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            .sidebar { width: 100%; min-width: 100%; height: auto; position: relative; padding: 1.25rem 1rem; border-right: none; border-bottom: 1px solid var(--border); }
+            .nav { flex-direction: row; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+            .nav-link { width: auto; flex: 1 1 auto; justify-content: center; padding: 0.5rem 0.6rem; font-size: 0.8rem; }
+            .sidebar-footer { display: none !important; }
+            .main { margin-left: 0 !important; width: 100% !important; padding: 1.25rem 1rem; }
+            .page-header { flex-direction: column; align-items: stretch; }
+            .toolbar { flex-direction: column; align-items: stretch; width: 100%; gap: 0.5rem; }
+            .toolbar select, .toolbar input { width: 100%; margin-left: 0 !important; }
+            .kpi-grid { grid-template-columns: 1fr !important; gap: 0.75rem; }
+            .charts-row { display: flex; flex-direction: column !important; gap: 1rem; }
+            .table-wrapper { overflow-x: auto; }
+            table { min-width: 800px; }
+        }
+
+        @media print {
+            body { background: #fff !important; color: #000 !important; }
+            .sidebar, .toolbar, .table-toolbar, .pagination, .btn { display: none !important; }
+            .main { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+            .card { background: #fff !important; border: 1px solid #e5e7eb !important; color: #000 !important; box-shadow: none !important; page-break-inside: avoid; }
+            .kpi-card { background: #f9fafb !important; border: 1px solid #e5e7eb !important; color: #000 !important; }
+            table { width: 100% !important; border-collapse: collapse !important; }
+            th, td { border-bottom: 1px solid #e5e7eb !important; padding: 8px !important; color: #000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div>
+        <div class="brand">ALVEAR 961/963</div>
+        <div style="font-size:0.62rem; color:var(--text-3); display:flex; align-items:center; gap:4px; margin-top:4px; cursor:help; border-bottom: 1px dotted rgba(255,255,255,0.2); padding-bottom: 2px; width: max-content; margin-left: 1rem;"
+             data-tooltip="Este panel es un desarrollo independiente de un copropietario. Los datos se extraen de las liquidaciones de expensas oficiales provistas por la administración.">
+            ℹ️ Monitoreo de Copropietario
+        </div>
+    </div>
+
+    <nav class="nav">
+        <a class="nav-link" href="index.html">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+            Dashboard de Gastos
+        </a>
+        <a class="nav-link active" href="unidades.html">
+            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Expensas por U.F.
+        </a>
+    </nav>
+
+    <!-- ESTADO DE SERVICIOS -->
+    <div class="services-section">
+        <div style="font-size: 0.68rem; text-transform: uppercase; color: var(--text-3); letter-spacing: 1.2px; margin-bottom: 0.25rem; font-weight: 700;">💧 Estado de Servicios</div>
+        <div style="font-size: 0.63rem; color: var(--text-3); margin-bottom: 0.5rem;">Consulta directa prestadoras</div>
+        <div id="servicesStatusWidget" style="display: flex; flex-direction: column; gap: 0.4rem;">Cargando...</div>
+    </div>
+
+    <div class="sidebar-footer">
+        <button type="button" onclick="openContactModal(event)" class="btn-contact-sidebar" title="Evacuar duda o contactar al desarrollador">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>Evacuar Duda / Contacto</span>
+        </button>
+        <div class="brand-sub" style="margin-bottom:6px;">Consorcio Retiro</div>
+        <span class="sidebar-badge" id="sidebarPeriods">Cargando...</span>
+    </div>
+</aside>
+
+<!-- MAIN PANEL -->
+<main class="main">
+
+    <!-- HEADER & FILTERS -->
+    <header class="page-header">
+        <div>
+            <h1 class="page-title">Expensas por Unidad Funcional</h1>
+            <p class="page-subtitle">Prorrateo, recaudación y control de deuda — Alvear 961/963</p>
+        </div>
+        <div class="toolbar">
+            <input type="text" id="searchInput" placeholder="Buscar UF o depto...">
+            <select id="periodFilter">
+                <!-- Se poblará dinámicamente -->
+            </select>
+        </div>
+    </header>
+
+    <!-- ALERTA DE AUDITORÍA DE COEFICIENTES -->
+    <div id="coeficientAlerts" class="coef-alert" style="display: none;"></div>
+
+    <!-- KPIS -->
+    <section class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-title" data-tooltip="Suma total de expensas emitidas para todas las unidades en este mes." style="cursor:help; border-bottom:1px dotted rgba(255,255,255,0.2); width: max-content;">Facturado Período</div>
+            <div class="kpi-val" id="kpiFacturado">$0</div>
+            <div class="kpi-sub">Total emitido en expensas</div>
+        </div>
+        <div class="kpi-card green">
+            <div class="kpi-title" data-tooltip="Total recaudado efectivamente por la administración por pagos de expensas en este período." style="cursor:help; border-bottom:1px dotted rgba(255,255,255,0.2); width: max-content;">Recaudado</div>
+            <div class="kpi-val" id="kpiRecaudado">$0</div>
+            <div class="kpi-sub" id="kpiRecaudadoPct">0% de efectividad de cobro</div>
+        </div>
+        <div class="kpi-card red">
+            <div class="kpi-title" data-tooltip="Suma acumulada de saldos deudores de meses anteriores que siguen sin cancelarse." style="cursor:help; border-bottom:1px dotted rgba(255,255,255,0.2); width: max-content;">Deuda Acumulada</div>
+            <div class="kpi-val" id="kpiDeuda">$0</div>
+            <div class="kpi-sub">Saldos deudores acumulados</div>
+        </div>
+        <div class="kpi-card purple">
+            <div class="kpi-title">Intereses por Mora</div>
+            <div class="kpi-val" id="kpiInteres">$0</div>
+            <div class="kpi-sub">Intereses cobrados en el mes</div>
+        </div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="charts-row">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">⚠️ Top 7 Propietarios con Mayor Deuda Acumulada</div>
+            </div>
+            <div id="morosityChart"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">💰 Estado de Caja</div>
+            </div>
+            <div id="cajaChart"></div>
+        </div>
+    </section>
+
+    <!-- TABLE -->
+    <section class="table-section">
+        <div class="table-toolbar">
+            <div>
+                <div class="card-title">📋 Prorrateo y Liquidación Detallada</div>
+            </div>
+            <div class="table-actions">
+                <button class="btn" onclick="exportCSV()">⬇ Exportar CSV</button>
+                <button class="btn" onclick="exportPDF()" style="background:var(--purple); border-color:var(--purple); color:#fff; margin-left:0.5rem;">⬇ Exportar PDF</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="prorrateoTable">
+                <thead>
+                    <tr>
+                        <th>U.F.</th>
+                        <th>Piso</th>
+                        <th>Dpto.</th>
+                        <th style="text-align:right;">Saldo Anterior</th>
+                        <th style="text-align:right;">Pagado</th>
+                        <th style="text-align:right;">Deuda</th>
+                        <th style="text-align:right;">Interés</th>
+                        <th style="text-align:right;">Exp. A (GA)</th>
+                        <th style="text-align:right;">Exp. B (GB)</th>
+                        <th style="text-align:right;">Fondo Operat.</th>
+                        <th style="text-align:right;">Total Exp.</th>
+                    </tr>
+                </thead>
+                <tbody id="prorrateoTableBody">
+                    <!-- Se poblará dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="btn" id="prevPageBtn">Anterior</button>
+            <span id="pageInfo" style="font-size:0.85rem;color:var(--text-3);">Página 1 de 1</span>
+            <button class="btn" id="nextPageBtn">Siguiente</button>
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL DETALLE DE U.F. -->
+<div class="modal" id="ufModal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">✕ Cerrar</button>
+        <h2 style="font-family:'Outfit',sans-serif;margin-bottom:0.25rem;" id="modalTitle">Detalle de U.F.</h2>
+        <p style="color:var(--text-3);font-size:0.88rem;margin-bottom:1.5rem;" id="modalSubtitle">Historial y Coeficientes</p>
+
+        <section class="kpi-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.5rem;">
+            <div class="kpi-card">
+                <div class="kpi-title">Coeficiente Gasto A</div>
+                <div class="kpi-val" id="modalCoefA">0.00%</div>
+            </div>
+            <div class="kpi-card purple">
+                <div class="kpi-title">Promedio Histórico</div>
+                <div class="kpi-val" id="modalCoefB">$0</div>
+            </div>
+            <div class="kpi-card green">
+                <div class="kpi-title">Estado de Pago</div>
+                <div class="kpi-val" id="modalStatusBadge" style="font-size:1.15rem;margin-top:0.75rem;">Al Día</div>
+            </div>
+        </section>
+
+        <!-- AUDITORÍA DE INTERESES POR MORA -->
+        <div id="modalInterestAudit" style="margin-bottom: 1.5rem; display: none;"></div>
+
+        <div class="modal-grid">
+            <div>
+                <h3 style="font-size:0.95rem;margin-bottom:0.75rem;">📊 Historial Reciente (Expensas vs Pagos)</h3>
+                <div id="ufHistoryList" style="display:flex; flex-direction:column; gap:0.5rem; max-height:250px; overflow-y:auto;">
+                    <!-- Se poblará dinámicamente -->
+                </div>
+            </div>
+            <div>
+                <h3 style="font-size:0.95rem;margin-bottom:0.75rem;">📈 Evolución de Facturado Histórico</h3>
+                <div id="ufHistoryChart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL CONTACTO -->
+<div class="modal-overlay" id="contactModal">
+    <div class="modal-inner">
+        <div class="modal-title">✉️ Contactar al Desarrollador</div>
+        <div class="modal-subtitle">Proyecto Alvear 961/963 — Alexis Martyniuk</div>
+        <button class="btn" style="position:absolute;top:1.25rem;right:1.25rem;padding:4px 10px;" onclick="closeContactModal()">✕ Cerrar</button>
+
+        <div style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+            <p style="font-size: 0.82rem; color: var(--text-2); line-height: 1.5;">
+                Selecciona la opción de tu preferencia para enviar tu duda o consulta:
+            </p>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexis.martyniuk@gmail.com&su=%5BAlvear%20963%5D%20Consulta%20sobre%20el%20proyecto"
+               target="_blank" rel="noopener noreferrer" class="btn"
+               style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:linear-gradient(135deg, rgba(6,182,212,0.2), rgba(139,92,246,0.2)); border:1px solid var(--accent); color:var(--text-1); font-weight:600; text-decoration:none;">
+                🌐 Abrir en Gmail (Navegador Web)
+            </a>
+
+            <a href="mailto:alexis.martyniuk@gmail.com?subject=%5BAlvear%20963%5D%20Consulta%20sobre%20el%20proyecto"
+               class="btn"
+               style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-1); text-decoration:none;">
+                💻 Abrir App de Correo (Mailto)
+            </a>
+
+            <button type="button" onclick="copyContactEmail()" class="btn" style="display:flex; align-items:center; justify-content:center; gap:8px; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid var(--border); color:var(--text-1); cursor:pointer;">
+                📋 Copiar Email: alexis.martyniuk@gmail.com
+            </button>
+            <div id="copyEmailFeedback" style="font-size: 0.78rem; color: var(--green); text-align: center; display: none; font-weight: 500;">
+                ✓ ¡Dirección copiada al portapapeles!
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openContactModal(e) {
+    if (e) e.preventDefault();
+    const modal = document.getElementById('contactModal');
+    if (modal) modal.classList.add('open');
+}
+function closeContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) modal.classList.remove('open');
+}
+function copyContactEmail() {
+    navigator.clipboard.writeText('alexis.martyniuk@gmail.com').then(() => {
+        const feedback = document.getElementById('copyEmailFeedback');
+        if (feedback) {
+            feedback.style.display = 'block';
+            setTimeout(() => { feedback.style.display = 'none'; }, 3500);
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const contactModal = document.getElementById('contactModal');
+    if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) closeContactModal();
+        });
+    }
+});
+</script>
+<script src="unidades.js?v=2"></script>
+</body>
+</html>

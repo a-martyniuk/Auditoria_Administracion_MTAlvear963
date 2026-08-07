@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera - Control de Expensas Alvear 961/963</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --teal: #06b6d4;
+            --teal-light: #ecfeff;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --gray-light: #f8fafc;
+            --border: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: #fff;
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            padding: 12mm 15mm;
+            margin: 0 auto;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-decor {
+            height: 6px;
+            background: linear-gradient(90deg, var(--navy) 0%, var(--teal) 100%);
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo { font-size: 2.2rem; margin-bottom: 0.25rem; }
+        .title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 2.0rem;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.0rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-top: 0.25rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .intro-box {
+            background-color: var(--teal-light);
+            border-left: 4px solid var(--teal);
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .kpi-card {
+            background-color: var(--gray-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .kpi-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+
+        .kpi-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-top: 0.2rem;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--navy);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .qr-text h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .qr-text p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            border-top: 1px solid var(--border);
+            padding-top: 0.75rem;
+        }
+
+        @media print {
+            body { background: none; }
+            .page { width: 100%; height: 100vh; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div>
+            <div class="header-decor"></div>
+
+            <div class="header">
+                <div class="logo">🏢</div>
+                <div class="title">Consorcio Alvear 961/963</div>
+                <div class="subtitle">Cartelera Informativa de Expensas & Auditoría</div>
+            </div>
+
+            <div class="intro-box">
+                📢 <strong>Estimados Vecinos y Propietarios:</strong> Presentamos el resumen oficial de liquidación y auditoría de expensas del edificio M. T. de Alvear 961/963. Podrán consultar el detalle de comprobantes y estado de cuentas en el portal interactivo.
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-title">Expensa Mensual (Período 2026-06)</div>
+                    <div class="kpi-val">$ 86.486,19</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-title">Promedio por U.F. (23 UFs)</div>
+                    <div class="kpi-val">$ 3.760,27</div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-title">1er Vencimiento</div>
+                    <div class="kpi-val" style="color: var(--teal);">10/07/2026</div>
+                </div>
+            </div>
+
+            <div class="section-title">📌 Estado General de Servicios Públicos</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: var(--gray-light); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
+                    <strong>Edesur (Luz):</strong> <span style="color: #10b981; font-weight:700;">Normal</span>
+                </div>
+                <div style="background: var(--gray-light); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
+                    <strong>AySA (Agua):</strong> <span style="color: #10b981; font-weight:700;">Normal</span>
+                </div>
+                <div style="background: var(--gray-light); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--border); text-align: center;">
+                    <strong>Metrogas (Gas):</strong> <span style="color: #10b981; font-weight:700;">Normal</span>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-text">
+                    <h3>Accedé al Portal Digital Completo</h3>
+                    <p>Escaneá o ingresá para ver comprobantes, saldos por U.F. y gráficos históricos.</p>
+                    <p style="margin-top: 5px; font-weight:700; color: var(--teal);">M. T. de Alvear 961/963 — Retiro, CABA</p>
+                </div>
+                <div>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://alexismartyniuk.com.ar/alvear-963/" alt="QR Portal Expensas" style="border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Documento Informativo impreso de forma automatizada por el Sistema de Auditoría Alvear 961/963 — CABA
+        </div>
+    </div>
+
+</body>
+</html>
