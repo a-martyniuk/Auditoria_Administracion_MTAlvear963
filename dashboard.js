@@ -188,16 +188,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             rawExpenses.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
             rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
-
             rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
             const history = {};
             rawExpenses.forEach(e => {
-                const key = (e.concepto || "").toLowerCase().slice(0, 30);
+                const lowerKey = (e.concepto || "").toLowerCase();
+                const key = lowerKey.slice(0, 30);
                 const prev = history[key] || [];
                 if (prev.length >= 2) {
                     const recent = prev.slice(-3);
                     const avg = recent.reduce((a, v) => a + v, 0) / recent.length;
-                    if (avg > 10000 && e.monto > (avg * 1.45) && !e.concepto.toLowerCase().includes("sac")) {
+                    const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
+                    if (avg > 10000 && e.monto > (avg * 1.45) && !isSac) {
                         e.anomalia = true;
                         e.desviacion_pct = Math.round(((e.monto - avg) / avg) * 100);
                     } else {
