@@ -15,7 +15,7 @@ let currentPage = 1;
 
 // Formatters
 const fmt = (n) => new Intl.NumberFormat('es-AR', {
-    style: 'currency', currency: 'ARS', minimumFractionDigits: 0, maximumFractionDigits: 0
+    style: 'currency', currency: 'ARS', minimumFractionDigits: 2, maximumFractionDigits: 2
 }).format(n || 0);
 
 const fmtFull = (n) => new Intl.NumberFormat('es-AR', {
