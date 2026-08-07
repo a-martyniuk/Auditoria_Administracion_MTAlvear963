@@ -1,6 +1,323 @@
 {
   "gastos": [
     {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical SUTERH (2%)",
+      "monto": 1381647.19,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 82
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "AFIP F 931 – Contribuciones Laborales",
+      "monto": 1299884.77,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 132
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Sueldo Básico",
+      "monto": 1050581.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "Basualdo Silvia Cristina – 00000462 - Cambio de columna cloacal del piso 7*18. Cuota 2/2.",
+      "monto": 900000.0,
+      "tipo": "Variable",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Antigüedad",
+      "monto": 483266.8,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Gastos de Administración",
+      "concepto": "Verónica Ferazzoli – 00001983 - Honorarios administración (Período Junio)",
+      "monto": 386315.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 358475.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": true,
+      "desviacion_pct": 186
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 260862.1,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001553 - Mantenimiento de bombas elevadoras de agua (Período Abril)",
+      "monto": 200000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Jubilación – Aporte Empleado (11%)",
+      "monto": 194225.16,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": true,
+      "desviacion_pct": 82
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Servicios Públicos",
+      "concepto": "Edesur SA – 84873622 - Período de consumo 28/07 al 25/09, consumo 1080kw , liq 1/2 (Período Junio)",
+      "monto": 182246.91,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Suterh (Período Junio)",
+      "monto": 130172.08,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Noplag – 00004060 - Servicio de desinsectación (Período Mayo)",
+      "monto": 126500.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Suma Remunerativa No Retenible",
+      "monto": 80000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Adicional Viáticos",
+      "monto": 73765.1,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Gestionar – 00041876 - Servicio de gestion de ddjj, registro de empleadores, y empleados, ley de fachadas, regis",
+      "monto": 57000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Otros",
+      "concepto": "Ocampos Abel Antonio – 00001560 - Servicio y mantenimiento de bomba/s elevadoras de agua, correspondiente al mes de Junio.",
+      "monto": 55000.0,
+      "tipo": "Variable",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Gastos Bancarios",
+      "concepto": "Comisiones bancarias (Período Julio)",
+      "monto": 54549.11,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "INSSJP / PAMI – Aporte Empleado (3%)",
+      "monto": 52970.5,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Obra Social SUTERH – Aporte Empleado (3%)",
+      "monto": 52970.5,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "OCTOPUS – 00374966 - Servicio de procesamiento de expensas (Período Julio)",
+      "monto": 51750.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Retiro de Residuos",
+      "monto": 44640.7,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Perez Catriel Damian – 00008826 - Liquidación de sueldos y cargas sociales. Rúbrica digital CABA. (Período Junio)",
+      "monto": 40000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Clasificación de Residuos",
+      "monto": 33429.7,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Personal – 88018506 - Período Facturado: 06/2026 + fecha de vto: 13/07/2026",
+      "monto": 27957.31,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Caja Protección Familiar – FATERYH (1%)",
+      "monto": 17656.83,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 17656.83,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH / SERACARH – Aportes Patronales",
+      "monto": 14463.57,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical CCT589/10 (0.75%)",
+      "monto": 13242.62,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-07",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 8816.0,
+      "tipo": "Fijo",
+      "archivo": "2026-07_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
       "periodo": "2026-06",
       "rubro": "Sueldos y Aportes",
       "concepto": "Cuota Sindical SUTERH (2%)",
@@ -94,7 +411,7 @@
       "tipo": "Fijo",
       "archivo": "2026-06_expensa_oficial.pdf",
       "anomalia": true,
-      "desviacion_pct": 143
+      "desviacion_pct": 134
     },
     {
       "periodo": "2026-06",
@@ -1785,7 +2102,7 @@
       "tipo": "Fijo",
       "archivo": "2026-02_expensa_oficial.pdf",
       "anomalia": true,
-      "desviacion_pct": 107
+      "desviacion_pct": 81
     },
     {
       "periodo": "2026-02",
@@ -2463,7 +2780,7 @@
       "archivo": "2025-12_expensa_oficial.pdf",
       "sub_tipo": "Cargas Sociales",
       "anomalia": true,
-      "desviacion_pct": 328
+      "desviacion_pct": 319
     },
     {
       "periodo": "2025-12",
@@ -2556,7 +2873,7 @@
       "tipo": "Fijo",
       "archivo": "2025-12_expensa_oficial.pdf",
       "anomalia": true,
-      "desviacion_pct": 122
+      "desviacion_pct": 103
     },
     {
       "periodo": "2025-12",
@@ -2812,6 +3129,376 @@
       "monto": 6788.91,
       "tipo": "Fijo",
       "archivo": "2025-12_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical SUTERH (2%)",
+      "monto": 1111895.96,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Sueldo Básico",
+      "monto": 855038.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "AFIP F 931 – Contribuciones Laborales",
+      "monto": 639787.05,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Antigüedad",
+      "monto": 393318.4,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Trabajos de Reparación en Unidades Funcionales",
+      "concepto": "Gallardo Miguel Ángel – 00000376 - Trabajo de yesería mas pintura en unidad 7*17 trabajo en m oldura mas una pared, material",
+      "monto": 325000.0,
+      "tipo": "Variable",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 220365.91,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Otros",
+      "concepto": "METALURGICA LARRAUDE SA – 00032679 - Provisión de cartelería, martillos",
+      "monto": 217830.0,
+      "tipo": "Variable",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Otros",
+      "concepto": "00006601 - Honorarios abogado convenio de pago sindicato. Dr. Olivier Maximiliano.",
+      "monto": 200947.22,
+      "tipo": "Variable",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Jubilación – Aporte Empleado (11%)",
+      "monto": 156304.86,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Servicios Públicos",
+      "concepto": "Edesur SA – 63405709 - Período de consumo 28/07 al 25/09, consumo 1080kw , liq 2/2 (Período Octubre)",
+      "monto": 149828.61,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Gastos de Administración",
+      "concepto": "Administracion Ferazzoli – 00000175 - Honorarios administración (Período Octubre)",
+      "monto": 146839.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001341 - Previsión Mantenimiento mensual de dos ascensores (Período Octubre)",
+      "monto": 140000.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 118213.96,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 147
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Noplag – 00003323 - Servicio de desinsectación (Período Octubre)",
+      "monto": 115500.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Gastos Bancarios",
+      "concepto": "Comisiones bancarias (Período Noviembre)",
+      "monto": 87099.74,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": true,
+      "desviacion_pct": 79
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Convenio sindicato N°68106 Osperyhra Boleta 25",
+      "monto": 79089.32,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Convenio sindicato N° 68106 Osperyhra Boleta 25",
+      "monto": 72488.41,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Convenio 681006 Boleta 25",
+      "monto": 64640.97,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "SUTERH – Cuotas Sindicales",
+      "monto": 63942.9,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Adicional Viáticos",
+      "monto": 59852.2,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "OCTOPUS – 00330127 - Servicio de procesamiento de expensas (Período Noviembre)",
+      "monto": 54337.5,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "BONO REMUNERATIVO",
+      "monto": 50000.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Iplan – 05211730 - Servicio de internet (Período Noviembre)",
+      "monto": 45275.28,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "INSSJP / PAMI – Aporte Empleado (3%)",
+      "monto": 42628.6,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Obra Social SUTERH – Aporte Empleado (3%)",
+      "monto": 42628.6,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001345 - Mantenimiento de bombas elevadoras de agua (Período Octubre)",
+      "monto": 40000.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Gestionar – 00002200 - Servicio de gestion de ddjj, registro de empleadores, y empleados, ley de fachadas, regis",
+      "monto": 39300.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Retiro de Residuos",
+      "monto": 35877.7,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Perez Catriel Damian – 00007896 - Liquidación de sueldos y cargas sociales. Rúbrica digital CABA. (Período Septiembre)",
+      "monto": 30000.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Clasificación de Residuos",
+      "monto": 26867.0,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Otros",
+      "concepto": "Provisión varios ferretería.",
+      "monto": 15961.0,
+      "tipo": "Variable",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Caja Protección Familiar – FATERYH (1%)",
+      "monto": 14209.53,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 14209.53,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical CCT589/10 (0.75%)",
+      "monto": 10657.15,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2025-11",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH / SERACARH – Aportes Patronales",
+      "monto": 7104.77,
+      "tipo": "Fijo",
+      "archivo": "2025-11_expensa_oficial.pdf",
       "sub_tipo": "Cargas Sociales",
       "anomalia": false,
       "desviacion_pct": 0
@@ -17828,259 +18515,6 @@
       "sub_tipo": "Remuneración Directa",
       "anomalia": false,
       "desviacion_pct": 0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "Sueldo Neto – Encargado Titular c/Vivienda (Básico + Antigüedad + Adicionales)",
-      "monto": 1111895.96,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_liquidacion.pdf",
-      "sub_tipo": "sueldo_base",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "AFIP F 931 – Contribuciones Laborales (Período Octubre)",
-      "monto": 639787.05,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627527_f-931-vep.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "FATERYH – Aportes Patronales (Período Octubre)",
-      "monto": 118213.96,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627373_sindicatos.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "FATERYH-SERACARH – Aportes Patronales (Período Octubre)",
-      "monto": 7104.77,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627373_sindicatos.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "SUTERH – Cuotas Sindicales (Período Octubre)",
-      "monto": 63942.9,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627686_sindicato-unico-de-trabajadores-de-edificios-de-renta-y-horizontal.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "Obra Social SUTERH (OSPERYHRA) – Boleta 25-0015286",
-      "monto": 72488.41,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627639_obra-social-de-personal-de-edificios-de-renta-y-horizontal-de-la-republica-argentina2.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "Obra Social SUTERH (OSPERYHRA) – Boleta 25-0009350",
-      "monto": 79089.32,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627693_obra-social-de-personal-de-edificios-de-renta-y-horizontal-de-la-republica-argentina2.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Sueldos y Aportes",
-      "concepto": "Convenio Sindical 68106 – Boleta 25-0015547",
-      "monto": 64640.97,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627373_sindicatos.pdf",
-      "sub_tipo": "cargas_sociales",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Servicios Públicos",
-      "concepto": "Edesur SA – FC 0501-63405709 – Consumo 1080kw (liq 2/2 Oct)",
-      "monto": 149828.61,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627549_edesur-fc-0501-6340570918.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Gestionar – FC 0005-00002200 – Gestion DDJJ y empleadores (Nov)",
-      "monto": 39300.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_646086_gestionar-fc-2200.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Iplan – FC 0005-05211730 – Servicio de internet (Nov)",
-      "monto": 45275.28,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627519_iplan-fc-1730.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Noplag – FC 0002-00003323 – Servicio de desinsectacion (Oct)",
-      "monto": 115500.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627359_noplag-fc-3323.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Ocampos Abel Antonio – FC 0002-00001345 – Mantenimiento bombas elevadoras (Oct)",
-      "monto": 40000.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627354_ocampo-fc-1345.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Ocampos Abel Antonio – FC 0002-00001341 – Prevision Mantenimiento ascensores (Oct)",
-      "monto": 140000.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627363_ocampo-fc-1341.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "OCTOPUS – FC 0001-00330127 – Servicio procesamiento de expensas (Nov)",
-      "monto": 54337.5,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627380_octopus-fc-330127.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Abonos de Servicios",
-      "concepto": "Perez Catriel Damian – FC 0002-00007896 – Liquidacion sueldos y rubrica digital (Sep)",
-      "monto": 30000.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_627351_perez-catriel-fc-7896.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Trabajos de Reparación en Unidades Funcionales",
-      "concepto": "Gallardo Miguel Angel – FC 0002-00000376 – Yeseria y pintura Unidad 7x17 (material y mano de obra)",
-      "monto": 325000.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_648239_gallardo-miguel-fc-00376.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Gastos Bancarios",
-      "concepto": "Comisiones bancarias (Período Noviembre)",
-      "monto": 87099.74,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_expensa_oficial.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Gastos de Administración",
-      "concepto": "Administracion Ferazzoli – FC 0002-00000175 – Honorarios administracion (Oct)",
-      "monto": 146839.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_646096_adm-vf-fc-0175.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Pagos del Período por Seguros",
-      "concepto": "Federacion Patronal Seguros – Seguro integral consorcio poliza 1-1956650 (Nov)",
-      "monto": 220365.91,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_648239_gallardo-miguel-fc-00376.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Otros",
-      "concepto": "Metalurgica Larraude SA – FC 0008-00032679 – Provision carteleria y martillos",
-      "monto": 217830.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_expensa_oficial.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Otros",
-      "concepto": "Olivier Maximiliano – FC 0006-00006601 – Honorarios abogado convenio de pago sindicato",
-      "monto": 200947.22,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_octo_647187_oliver-maximiliano-fc-6601.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
-    },
-    {
-      "periodo": "2025-11",
-      "rubro": "Otros",
-      "concepto": "Provision varios ferreteria",
-      "monto": 15961.0,
-      "tipo": "expensa_oficial",
-      "archivo": "2025-11_expensa_oficial.pdf",
-      "sub_tipo": "",
-      "anomalia": false,
-      "desviacion_pct": 0.0
     }
   ],
   "comprobantes": [
@@ -21277,6 +21711,14 @@
   ],
   "balances": [
     {
+      "periodo": "2026-07",
+      "expense_id": null,
+      "monto_expensa": 5535639.04,
+      "vencimiento_1": "2026-08-10T00:00:00.000Z",
+      "vencimiento_2": "2026-08-13T00:00:00.000Z",
+      "cierre": null
+    },
+    {
       "periodo": "2026-06",
       "expense_id": 98442,
       "monto_expensa": 6335802.17,
@@ -21335,7 +21777,7 @@
     {
       "periodo": "2025-11",
       "expense_id": 68483,
-      "monto_expensa": 3985447.6,
+      "monto_expensa": 4385447.6,
       "vencimiento_1": "2025-12-10T00:00:00.000Z",
       "vencimiento_2": "2025-12-15T00:00:00.000Z",
       "cierre": "2025-11-29T00:00:00.000Z"
