@@ -39,7 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(getAssetUrl("prorrateo.json"))
         .then(r => r.json())
         .then(data => {
-            const allProrrateo = data.prorrateo || [];
+            const allProrrateo = [];
+            if (Array.isArray(data)) {
+                data.forEach(item => allProrrateo.push(item));
+            } else if (data.prorrateo && Array.isArray(data.prorrateo)) {
+                data.prorrateo.forEach(item => allProrrateo.push(item));
+            } else if (data && typeof data === 'object') {
+                Object.keys(data).forEach(p => {
+                    if (Array.isArray(data[p])) {
+                        data[p].forEach(item => {
+                            allProrrateo.push({ ...item, periodo: p });
+                        });
+                    }
+                });
+            }
+
             if (allProrrateo.length > 0) {
                 rawProrrateo = allProrrateo;
                 rawProrrateo.sort((a, b) => a.periodo.localeCompare(b.periodo));
