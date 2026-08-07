@@ -428,6 +428,16 @@
   "2026": {
     "expenses": [
       {
+        "month": "07",
+        "amount": 85532.19,
+        "second_amount": 85532.19,
+        "expense_id": 106862,
+        "period": "07/2026",
+        "first_due_date": "2026-08-10T00:00:00.000Z",
+        "second_due_date": "2026-08-13T00:00:00.000Z",
+        "close_date": "2026-08-03T00:00:00.000Z"
+      },
+      {
         "month": "06",
         "amount": 86486.19,
         "second_amount": 86486.19,
