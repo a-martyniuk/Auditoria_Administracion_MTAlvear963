@@ -2,7 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <base href="./">
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var baseHref = path.endsWith('/') ? path : (path.endsWith('.html') ? path.substring(0, path.lastIndexOf('/') + 1) : path + '/');
+            document.write('<base href="' + baseHref + '">');
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alvear 961/963 — Unidades Funcionales & Prorrateo</title>
     <meta name="description" content="Detalle de prorrateo, coeficientes, historial de pagos y morosidad por Unidad Funcional del consorcio Alvear 961/963.">
