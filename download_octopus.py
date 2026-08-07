@@ -11,6 +11,15 @@ if hasattr(sys.stdout, 'reconfigure'):
 DOWNLOAD_DIR = "liquidaciones"
 API_BASE = "https://lcqsbp4wfl.execute-api.us-west-2.amazonaws.com/staging"
 
+env_file = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(env_file):
+    with open(env_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
+
 CREDENTIALS = {
     "email": os.environ.get("OCTOPUS_EMAIL", ""),
     "password": os.environ.get("OCTOPUS_PASSWORD", "")
