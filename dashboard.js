@@ -4,6 +4,7 @@ let rawExpenses = [];
 let rawComprobantes = [];
 let rawBalances = [];
 let rawMultas = [];
+let rawProrrateo = [];
 let filteredExpenses = [];
 let currentPage = 1;
 let pageSize = 20;
@@ -178,46 +179,60 @@ const getAssetUrl = (filename) => {
 document.addEventListener("DOMContentLoaded", () => {
     fetchIPC().catch(err => console.warn("IPC deferred:", err));
 
-    fetch(getAssetUrl("gastos.json"))
-        .then(r => r.json())
-        .then(data => {
-            rawExpenses = data.gastos || [];
-            rawComprobantes = data.comprobantes || [];
-            rawBalances = data.balances || [];
-            rawMultas = data.multas || [];
+    Promise.all([
+        fetch(getAssetUrl("gastos.json")).then(r => r.json()),
+        fetch(getAssetUrl("prorrateo.json")).then(r => r.json()).catch(() => ({}))
+    ])
+    .then(([data, prorrateoData]) => {
+        rawExpenses = data.gastos || [];
+        rawComprobantes = data.comprobantes || [];
+        rawBalances = data.balances || [];
+        rawMultas = data.multas || [];
 
-            rawExpenses.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
-            rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
-            rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
-            const history = {};
-            rawExpenses.forEach(e => {
-                const lowerKey = (e.concepto || "").toLowerCase();
-                const key = lowerKey.slice(0, 30);
-                const prev = history[key] || [];
-                if (prev.length >= 2) {
-                    const recent = prev.slice(-3);
-                    const avg = recent.reduce((a, v) => a + v, 0) / recent.length;
-                    const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
-                    if (avg > 10000 && e.monto > (avg * 1.45) && !isSac) {
-                        e.anomalia = true;
-                        e.desviacion_pct = Math.round(((e.monto - avg) / avg) * 100);
-                    } else {
-                        e.anomalia = false;
-                        e.desviacion_pct = 0;
-                    }
+        const allProrrateo = [];
+        if (prorrateoData && typeof prorrateoData === 'object') {
+            Object.keys(prorrateoData).forEach(p => {
+                if (Array.isArray(prorrateoData[p])) {
+                    prorrateoData[p].forEach(item => {
+                        allProrrateo.push({ ...item, periodo: p });
+                    });
+                }
+            });
+        }
+        rawProrrateo = allProrrateo;
+
+        rawExpenses.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
+        rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
+        rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
+        const history = {};
+        rawExpenses.forEach(e => {
+            const lowerKey = (e.concepto || "").toLowerCase();
+            const key = lowerKey.slice(0, 30);
+            const prev = history[key] || [];
+            if (prev.length >= 2) {
+                const recent = prev.slice(-3);
+                const avg = recent.reduce((a, v) => a + v, 0) / recent.length;
+                const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
+                if (avg > 10000 && e.monto > (avg * 1.45) && !isSac) {
+                    e.anomalia = true;
+                    e.desviacion_pct = Math.round(((e.monto - avg) / avg) * 100);
                 } else {
                     e.anomalia = false;
                     e.desviacion_pct = 0;
                 }
-                if (!history[key]) history[key] = [];
-                history[key].push(e.monto);
-            });
+            } else {
+                e.anomalia = false;
+                e.desviacion_pct = 0;
+            }
+            if (!history[key]) history[key] = [];
+            history[key].push(e.monto);
+        });
 
-            populatePeriodFilter();
-            setupEventListeners();
-            applyFilter();
-            loadServicesStatus();
-        })
+        populatePeriodFilter();
+        setupEventListeners();
+        applyFilter();
+        loadServicesStatus();
+    })
         .catch(err => {
             console.error("Error al cargar gastos.json:", err);
             document.getElementById("expensesTableBody").innerHTML =
@@ -1330,28 +1345,33 @@ const renderFines = (period) => {
     const subtitleEl = document.getElementById("finesSubtitle");
     if (!tbody) return;
 
-    const filteredMultas = period === "todos"
-        ? rawMultas
-        : rawMultas.filter(m => m.periodo === period);
+    const items = rawProrrateo.filter(item => {
+        const okPeriod = (period === "todos" || item.periodo === period);
+        const amt = item.gastos_extra || 0;
+        const okAmount = amt >= 1.0 && amt < 500000;
+        return okPeriod && okAmount;
+    });
 
     if (subtitleEl) {
         subtitleEl.innerText = period === "todos"
-            ? "Multas aplicadas en todos los períodos auditados"
-            : `Multas aplicadas en el período ${period}`;
+            ? "Imputaciones individuales y gastos particulares en todos los períodos auditados"
+            : `Gastos Particulares / Imputaciones registradas en la col. GAST. PART. (Pág. 6) del período ${period}`;
     }
 
-    if (filteredMultas.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;color:var(--text-3);padding:1.5rem;">No hay multas registradas en este período.</td></tr>`;
+    if (items.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center;color:var(--text-3);padding:1.5rem;">No hay gastos particulares ni imputaciones individuales registradas en este período.</td></tr>`;
         return;
     }
 
-    tbody.innerHTML = filteredMultas.map(m => `
+    tbody.innerHTML = items.map(m => {
+        const ubi = (m.piso && m.piso !== m.dpto) ? `Piso ${m.piso}, Dpto ${m.dpto}` : `Dpto ${m.dpto}`;
+        return `
         <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:0.75rem 0.5rem; font-weight:700; color:var(--accent);">UF ${m.uf || m.unidad}</td>
-            <td style="padding:0.75rem 0.5rem; color:var(--text-1);">${m.motivo || m.concepto}</td>
-            <td style="padding:0.75rem 0.5rem; text-align:right; font-weight:700; color:var(--red);">${fmtFull(m.monto)}</td>
-        </tr>
-    `).join("");
+            <td style="padding:0.75rem 0.5rem; font-weight:700; color:var(--accent);">UF ${String(m.uf).padStart(3, '0')} (${ubi})</td>
+            <td style="padding:0.75rem 0.5rem; color:var(--text-1);">Gasto Particular / Imputación Individual (Prorrateo Pág. 6)</td>
+            <td style="padding:0.75rem 0.5rem; text-align:right; font-weight:700; color:var(--red);">${fmtFull(m.gastos_extra)}</td>
+        </tr>`;
+    }).join("");
 };
 
 // ── TABLE RENDERER WITH CLIENT-SIDE PAGINATION ──────────────────
