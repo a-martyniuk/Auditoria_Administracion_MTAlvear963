@@ -36,7 +36,7 @@ jobs:
           OCTOPUS_EMAIL: ${{ secrets.OCTOPUS_EMAIL }}
           OCTOPUS_PASSWORD: ${{ secrets.OCTOPUS_PASSWORD }}
         run: |
-          python cron_update.py --all
+          python cron_update.py
 
       - name: Commit Updated Data Back to Repo
         run: |
