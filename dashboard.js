@@ -1653,3 +1653,26 @@ const exportCSV = () => {
 const exportPDF = () => {
     window.print();
 };
+
+// ── MOBILE MENU NAVIGATION ─────────────────────────────────────
+const toggleMobileMenu = () => {
+    const sidebar = document.querySelector(".sidebar");
+    const backdrop = document.getElementById("mobileBackdrop");
+    if (sidebar) sidebar.classList.toggle("mobile-open");
+    if (backdrop) backdrop.classList.toggle("open");
+};
+window.toggleMobileMenu = toggleMobileMenu;
+
+const closeMobileMenu = () => {
+    const sidebar = document.querySelector(".sidebar");
+    const backdrop = document.getElementById("mobileBackdrop");
+    if (sidebar) sidebar.classList.remove("mobile-open");
+    if (backdrop) backdrop.classList.remove("open");
+};
+window.closeMobileMenu = closeMobileMenu;
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+});

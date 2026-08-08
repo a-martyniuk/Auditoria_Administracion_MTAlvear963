@@ -547,3 +547,26 @@ const loadServicesStatus = () => {
             container.innerHTML = `<span style="font-size: 0.75rem; color: var(--text-3);">Estado no disponible</span>`;
         });
 };
+
+// ── MOBILE MENU NAVIGATION ─────────────────────────────────────
+const toggleMobileMenu = () => {
+    const sidebar = document.querySelector(".sidebar");
+    const backdrop = document.getElementById("mobileBackdrop");
+    if (sidebar) sidebar.classList.toggle("mobile-open");
+    if (backdrop) backdrop.classList.toggle("open");
+};
+window.toggleMobileMenu = toggleMobileMenu;
+
+const closeMobileMenu = () => {
+    const sidebar = document.querySelector(".sidebar");
+    const backdrop = document.getElementById("mobileBackdrop");
+    if (sidebar) sidebar.classList.remove("mobile-open");
+    if (backdrop) backdrop.classList.remove("open");
+};
+window.closeMobileMenu = closeMobileMenu;
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+});
