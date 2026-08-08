@@ -184,7 +184,24 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(getAssetUrl("prorrateo.json")).then(r => r.json()).catch(() => ({}))
     ])
     .then(([data, prorrateoData]) => {
-        rawExpenses = data.gastos || [];
+        const rawList = data.gastos || [];
+        rawList.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
+
+        // Consolidar desgloses parciales del mismo concepto en el mismo período (evita renglones fragmentados por desgloses de SAC)
+        const consMap = {};
+        rawList.forEach(e => {
+            const p = e.periodo;
+            const r = e.rubro;
+            const c = (e.concepto || "").trim();
+            const key = `${p}___${r}___${c.toLowerCase()}`;
+            if (!consMap[key]) {
+                consMap[key] = { ...e };
+            } else {
+                consMap[key].monto += e.monto;
+            }
+        });
+        rawExpenses = Object.values(consMap);
+
         rawComprobantes = data.comprobantes || [];
         rawBalances = data.balances || [];
         rawMultas = data.multas || [];
@@ -201,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         rawProrrateo = allProrrateo;
 
-        rawExpenses.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
 
