@@ -422,7 +422,37 @@
             border: 1px solid transparent;
         }
         .badge-deuda { background: rgba(244,63,94,0.1); color: var(--red); border-color: rgba(244,63,94,0.2); }
-        .badge-regular { background: rgba(16,185,129,0.1); color: var(--green); border-color: rgba(16,185,129,0.2); }
+        /* ── UNIVERSAL FLOATING TOOLTIP SYSTEM ── */
+        [data-tooltip] { position: relative; cursor: help; }
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 115%;
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            background: #0b1120;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            color: #f1f5f9;
+            padding: 0.6rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.73rem;
+            font-weight: 400;
+            line-height: 1.4;
+            width: max-content;
+            max-width: 280px;
+            white-space: normal;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            text-align: left;
+        }
+        [data-tooltip]:hover::after, [data-tooltip]:focus::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
 
         /* BTN */
         .btn {
@@ -696,17 +726,17 @@
             <table id="prorrateoTable">
                 <thead>
                     <tr>
-                        <th>U.F.</th>
-                        <th>Piso</th>
-                        <th>Dpto.</th>
-                        <th style="text-align:right;">Saldo Anterior</th>
-                        <th style="text-align:right;">Pagado</th>
-                        <th style="text-align:right;">Deuda</th>
-                        <th style="text-align:right;">Interés</th>
-                        <th style="text-align:right;">Exp. A (GA)</th>
-                        <th style="text-align:right;">Gastos Part.</th>
-                        <th style="text-align:right;">Redon.</th>
-                        <th style="text-align:right;">Total Exp.</th>
+                        <th data-tooltip="Número de Unidad Funcional (tu departamento o local comercial).">U.F. ℹ️</th>
+                        <th data-tooltip="Número de piso del departamento en el edificio.">Piso ℹ️</th>
+                        <th data-tooltip="Letra o número identificador de la vivienda u oficina.">Dpto. ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Dinero que debías o tenías a favor al cerrar la liquidación del mes anterior.">Saldo Anterior ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Dinero abonado durante el mes y que ya fue acreditado en la cuenta del consorcio.">Pagado ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Monto adeudado de expensas de meses anteriores que aún no fue abonado.">Deuda ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Recargo por pago de expensas fuera de término aplicado según la tasa del consorcio.">Interés ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Parte proporcional de expensas ordinarias del mes que le corresponde abonar a esta unidad según su porcentaje (%) del edificio.">Exp. Ordinarias (GA) ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Gastos individuales imputados exclusivamente a tu departamento (ej. copias de llaves, reparaciones privadas).">Gastos Part. ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Pequeña diferencia de centavos para redondear el total a pagar a favor del propietario.">Redon. ℹ️</th>
+                        <th style="text-align:right;" data-tooltip="Importe final definitivo que figura en tu cupón de pago para abonar este mes.">Total a Pagar ℹ️</th>
                     </tr>
                 </thead>
                 <tbody id="prorrateoTableBody">

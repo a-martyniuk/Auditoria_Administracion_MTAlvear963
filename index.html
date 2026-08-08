@@ -723,14 +723,14 @@
                 <table class="data-table" id="providerAuditTable">
                     <thead>
                         <tr>
-                            <th style="text-align: left;" data-tooltip="Nombre comercial del proveedor de bienes o servicios del consorcio.">Proveedor</th>
-                            <th style="text-align: left;" data-tooltip="Categoría legal o rubro al que pertenece el comprobante.">Rubro</th>
-                            <th style="text-align: right;" data-tooltip="Monto abonado al proveedor en el período seleccionado.">Monto Reciente</th>
-                            <th style="text-align: right;" data-tooltip="Monto abonado al mismo proveedor en el mismo mes del año anterior.">Monto Año Anterior</th>
-                            <th style="text-align: right;" data-tooltip="Variación porcentual interanual del proveedor.">Variación</th>
-                            <th style="text-align: right;" data-tooltip="Inflación interanual acumulada IPC INDEC para este período (271.5%).">IPC Acum.</th>
-                            <th style="text-align: right;" data-tooltip="Diferencia en Pesos ($) entre lo abonado al proveedor y la tarifa esperada si hubiera ajustado 100% por IPC INDEC.">Desvío vs. IPC</th>
-                            <th style="text-align: center;" data-tooltip="🟢 Estable: <= IPC | 🟡 Alto: > IPC | 🔴 Excesivo: > IPC + 25%">Alerta</th>
+                            <th style="text-align: left;" data-tooltip="Empresa o profesional contratado por el consorcio para abonos de mantenimiento o servicios.">Proveedor ℹ️</th>
+                            <th style="text-align: left;" data-tooltip="Clasificación o rubro legal del servicio prestado.">Rubro ℹ️</th>
+                            <th style="text-align: right;" data-tooltip="Última tarifa abonada a este proveedor en el período seleccionado.">Monto Reciente ℹ️</th>
+                            <th style="text-align: right;" data-tooltip="Lo que se le pagaba al mismo proveedor exactamente un año atrás.">Monto Año Anterior ℹ️</th>
+                            <th style="text-align: right;" data-tooltip="Porcentaje de aumento del proveedor acumulado en los últimos 12 meses.">Variación ℹ️</th>
+                            <th style="text-align: right;" data-tooltip="Inflación interanual oficial (IPC INDEC) del período. Sirve como tope para comparar aumentos justos.">IPC Acum. ℹ️</th>
+                            <th style="text-align: right;" data-tooltip="Pesos abonados de más (+) o ahorrados (-) en comparación a si el proveedor hubiera aumentado al ritmo de la inflación IPC.">Desvío vs. IPC ℹ️</th>
+                            <th style="text-align: center;" data-tooltip="🟢 Estable: subió igual o menos que la inflación | 🟡 Alto: subió un poco más que el IPC | 🔴 Excesivo: subió más de 25% por encima de la inflación">Alerta ℹ️</th>
                         </tr>
                     </thead>
                     <tbody id="providerAuditBody">
@@ -916,15 +916,15 @@
             <table id="expensesTable">
                 <thead>
                     <tr>
-                        <th data-tooltip="Año y Mes de la liquidación oficial de expensas auditada.">Período</th>
-                        <th data-tooltip="Rubro legal según clasificación estándar de liquidación.">Categoría</th>
-                        <th data-tooltip="Indica si el gasto es Fijo/Variable y si es Expensa Ordinaria (Inquilinos) o Extraordinaria (Propietarios).">Tipo</th>
-                        <th data-tooltip="Detecta desvíos atípicos superiores al +50% respecto al mes regular anterior.">Alerta</th>
-                        <th data-tooltip="Estado de pago del comprobante (Pagado / Pendiente).">Estado</th>
-                        <th data-tooltip="Descripción oficial del comprobante respaldatorio. Haz clic para ver el historial del proveedor.">Concepto / Proveedor</th>
-                        <th style="text-align:right" data-tooltip="Monto pagado al mismo proveedor en el período regular previo (para haberes se compara vs mes no-SAC).">Mes Anterior</th>
-                        <th style="text-align:right" data-tooltip="Variación %. Renglones previsionales en julio/diciembre muestran (Inc. SAC) en violeta por aguinaldo de ley.">Var. %</th>
-                        <th style="text-align:right" data-tooltip="Monto total liquidado e imputado en el período actual.">Monto Actual</th>
+                        <th data-tooltip="Año y Mes de la expensa que estás consultando (ej. 2026-07 es Julio de 2026).">Período ℹ️</th>
+                        <th data-tooltip="Agrupación del gasto según la ley (Sueldos, Mantenimiento, Servicios Públicos, etc.).">Categoría ℹ️</th>
+                        <th data-tooltip="Indica si es un gasto regular del mes (Ordinaria, la pagan inquilinos y propietarios) u obra especial (Extraordinaria, la pagan solo propietarios).">Tipo ℹ️</th>
+                        <th data-tooltip="Te avisa si este gasto subió más del 50% de forma imprevista respecto al mes anterior.">Alerta ℹ️</th>
+                        <th data-tooltip="Muestra si la factura ya fue pagada por la administración o si está pendiente.">Estado ℹ️</th>
+                        <th data-tooltip="Nombre de la empresa o profesional que hizo el trabajo y número de comprobante. Haz clic para ver el historial del proveedor.">Concepto / Proveedor ℹ️</th>
+                        <th style="text-align:right" data-tooltip="Lo que se pagó por este mismo concepto el mes pasado para comparar si aumentó (en sueldos compara vs mes sin aguinaldo).">Mes Anterior ℹ️</th>
+                        <th style="text-align:right" data-tooltip="Porcentaje de aumento o descuento respecto al mes anterior. Si dice (Inc. SAC) en violeta es porque incluye el aguinaldo del empleado.">Var. % ℹ️</th>
+                        <th style="text-align:right" data-tooltip="Importe total liquidado e imputado en la liquidación de este mes.">Monto Actual ℹ️</th>
                     </tr>
                 </thead>
                 <tbody id="expensesTableBody">
@@ -1061,6 +1061,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<script src="dashboard.js?v=16"></script>
+<script src="dashboard.js?v=17"></script>
 </body>
 </html>
