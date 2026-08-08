@@ -11,6 +11,16 @@ let pageSize = 20;
 let ipcData = {};
 let currentViewMode = "DESGLOSADO";
 
+const isSacItem = (concepto) => {
+    const c = (concepto || "").toLowerCase();
+    return c.includes("sac") || c.includes("aguinaldo") || c.includes("sueldo anual");
+};
+
+const isLaborItem = (concepto) => {
+    const c = (concepto || "").toLowerCase();
+    return c.includes("f 931") || c.includes("f.931") || c.includes("suterh") || c.includes("fateryh") || c.includes("jubilac") || c.includes("pami") || c.includes("obra social") || c.includes("caja protecci") || c.includes("cuota sindical");
+};
+
 // Chart instances
 let chartHistorical = null;
 let chartCategory = null;
@@ -229,16 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const key = ((e.proveedor || e.concepto) || "").toLowerCase().slice(0, 30);
             periodMap[p][key] = (periodMap[p][key] || 0) + e.monto;
         });
-
-        const isSacItem = (concepto) => {
-            const c = (concepto || "").toLowerCase();
-            return c.includes("sac") || c.includes("aguinaldo") || c.includes("sueldo anual");
-        };
-
-        const isLaborItem = (concepto) => {
-            const c = (concepto || "").toLowerCase();
-            return c.includes("f 931") || c.includes("f.931") || c.includes("suterh") || c.includes("fateryh") || c.includes("jubilac") || c.includes("pami") || c.includes("obra social") || c.includes("caja protecci") || c.includes("cuota sindical");
-        };
 
         const getPrevPeriod = (pStr, isSac, isLabor) => {
             if (!pStr || pStr.length < 7) return "";
