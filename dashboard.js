@@ -205,13 +205,13 @@ document.addEventListener("DOMContentLoaded", () => {
         rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
 
-        // Construir mapa de montos por periodo y concepto para calcular Mes Anterior
+        // Construir mapa de montos por periodo y concepto (sumando parciales si existen)
         const periodMap = {};
         rawExpenses.forEach(e => {
             const p = e.periodo;
             if (!periodMap[p]) periodMap[p] = {};
             const key = ((e.proveedor || e.concepto) || "").toLowerCase().slice(0, 30);
-            periodMap[p][key] = e.monto;
+            periodMap[p][key] = (periodMap[p][key] || 0) + e.monto;
         });
 
         const isSacItem = (concepto) => {
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const isLaborItem = (concepto) => {
             const c = (concepto || "").toLowerCase();
-            return c.includes("f 931") || c.includes("f.931") || c.includes("suterh") || c.includes("fateryh") || c.includes("jubilac") || c.includes("pami") || c.includes("obra social");
+            return c.includes("f 931") || c.includes("f.931") || c.includes("suterh") || c.includes("fateryh") || c.includes("jubilac") || c.includes("pami") || c.includes("obra social") || c.includes("caja protecci") || c.includes("cuota sindical");
         };
 
         const getPrevPeriod = (pStr, isSac, isLabor) => {
@@ -236,8 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (isLabor) {
-                if (m === 8) return `${y}-06`;
-                if (m === 1) return `${y - 1}-11`;
+                if (m === 7) return `${y}-05`;
+                if (m === 8) return `${y}-05`;
+                if (m === 12 || m === 1) return `${y - 1}-11`;
             }
 
             if (m === 1) return `${y - 1}-12`;
