@@ -231,12 +231,23 @@ document.addEventListener("DOMContentLoaded", () => {
         rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
 
-        // Construir mapa de montos por periodo y concepto (sumando parciales si existen)
+        const getNormalizedKey = (e) => {
+            let p = e.proveedor || "";
+            if (!p) {
+                const c = e.concepto || "";
+                const parts = c.split(/\s+[\–\-]\s+/);
+                p = parts.length > 1 ? parts[0] : c;
+            }
+            p = p.replace(/\b\d{4,}\b/g, "").replace(/\(.*?\)/g, "").trim().toLowerCase();
+            return p.slice(0, 30);
+        };
+
+        // Construir mapa de montos por periodo y proveedor/concepto normalizado
         const periodMap = {};
         rawExpenses.forEach(e => {
             const p = e.periodo;
             if (!periodMap[p]) periodMap[p] = {};
-            const key = ((e.proveedor || e.concepto) || "").toLowerCase().slice(0, 30);
+            const key = getNormalizedKey(e);
             periodMap[p][key] = (periodMap[p][key] || 0) + e.monto;
         });
 
@@ -263,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         rawExpenses.forEach(e => {
             const lowerKey = ((e.proveedor || e.concepto) || "").toLowerCase();
-            const key = lowerKey.slice(0, 30);
+            const key = getNormalizedKey(e);
             const isSac = isSacItem(lowerKey);
             const isLabor = isLaborItem(lowerKey);
             const prevP = getPrevPeriod(e.periodo, isSac, isLabor);
