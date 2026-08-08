@@ -204,28 +204,41 @@ document.addEventListener("DOMContentLoaded", () => {
         rawExpenses.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawComprobantes.forEach(e => { e.rubro = normalizeRubro(e.rubro); });
         rawExpenses.sort((a, b) => a.periodo.localeCompare(b.periodo));
-        const history = {};
+
+        // Construir mapa de montos por periodo y concepto para calcular Mes Anterior
+        const periodMap = {};
         rawExpenses.forEach(e => {
-            const lowerKey = (e.concepto || "").toLowerCase();
+            const p = e.periodo;
+            if (!periodMap[p]) periodMap[p] = {};
+            const key = ((e.proveedor || e.concepto) || "").toLowerCase().slice(0, 30);
+            periodMap[p][key] = e.monto;
+        });
+
+        const getPrevPeriod = (pStr) => {
+            if (!pStr || pStr.length < 7) return "";
+            const y = parseInt(pStr.slice(0, 4), 10);
+            const m = parseInt(pStr.slice(5, 7), 10);
+            if (m === 1) return `${y - 1}-12`;
+            return `${y}-${String(m - 1).padStart(2, '0')}`;
+        };
+
+        rawExpenses.forEach(e => {
+            const lowerKey = ((e.proveedor || e.concepto) || "").toLowerCase();
             const key = lowerKey.slice(0, 30);
-            const prev = history[key] || [];
-            if (prev.length >= 2) {
-                const recent = prev.slice(-3);
-                const avg = recent.reduce((a, v) => a + v, 0) / recent.length;
-                const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
-                if (avg > 10000 && e.monto > (avg * 1.45) && !isSac) {
-                    e.anomalia = true;
-                    e.desviacion_pct = Math.round(((e.monto - avg) / avg) * 100);
-                } else {
-                    e.anomalia = false;
-                    e.desviacion_pct = 0;
-                }
+            const prevP = getPrevPeriod(e.periodo);
+            const montoAnt = (periodMap[prevP] && periodMap[prevP][key]) ? periodMap[prevP][key] : 0;
+            
+            e.monto_anterior = montoAnt;
+            const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
+
+            if (montoAnt > 0) {
+                const diffPct = Math.round(((e.monto - montoAnt) / montoAnt) * 100);
+                e.desviacion_pct = diffPct;
+                e.anomalia = (diffPct >= 50 && !isSac && e.monto > 15000);
             } else {
-                e.anomalia = false;
                 e.desviacion_pct = 0;
+                e.anomalia = false;
             }
-            if (!history[key]) history[key] = [];
-            history[key].push(e.monto);
         });
 
         populatePeriodFilter();
@@ -1454,9 +1467,9 @@ const renderTable = () => {
                         ${g.concepto}
                     </span>
                 </td>
-                <td style="text-align:right; color:var(--text-3);">${fmtFull(g.monto_anterior || 0)}</td>
-                <td style="text-align:right; color:${(g.desviacion_pct || 0) > 0 ? '#f87171' : 'var(--text-3)'}; font-weight:600;">
-                    ${g.desviacion_pct ? '+' + g.desviacion_pct + '%' : '—'}
+                <td style="text-align:right; color:var(--text-3);">${g.monto_anterior ? fmtFull(g.monto_anterior) : '—'}</td>
+                <td style="text-align:right; color:${(g.desviacion_pct || 0) > 0 ? '#f87171' : ((g.desviacion_pct || 0) < 0 ? '#34d399' : 'var(--text-3)')}; font-weight:600;">
+                    ${g.monto_anterior && g.desviacion_pct !== 0 ? (g.desviacion_pct > 0 ? '+' + g.desviacion_pct + '%' : g.desviacion_pct + '%') : '—'}
                 </td>
                 <td style="text-align:right; font-weight:700; color:var(--text-1); font-family:'Outfit', sans-serif;">
                     ${fmtFull(g.monto)}
