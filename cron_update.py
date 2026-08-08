@@ -58,7 +58,6 @@ def main():
         try:
             subprocess.run([sys.executable, "download_octopus.py"], check=True)
             subprocess.run([sys.executable, "parse_official_expensas.py"], check=True)
-            subprocess.run([sys.executable, "fix_balances.py"], check=True)
             subprocess.run([sys.executable, "extract_prorrateo.py"], check=True)
             print("\n✅ Proceso de actualización de expensas completado exitosamente.")
         except Exception as e:

@@ -7,14 +7,14 @@ Panel de control, ingesta automática y auditoría de expensas, gastos y servici
 ## 🚀 Arquitectura y Tecnologías
 
 * **Frontend:**
-  * **HTML5 / Vanilla CSS (Variables CSS):** Diseño responsive de estética en modo oscuro.
-  * **Vanilla JavaScript (ES6+):** Lógica pura para procesamiento de datos y filtrado dinámico.
+  * **HTML5 / Vanilla CSS (Variables CSS):** Interfaz responsive modo oscuro con diseño mobile-first y tooltips flotantes en lenguaje claro.
+  * **Vanilla JavaScript (ES6+):** Motores de auditoría de inflación IPC INDEC, discriminación de aguinaldos (SAC), clasificación Ordinarias vs. Extraordinarias y normalización de proveedores.
   * **ApexCharts (CDN):** Visualizaciones interactivas de series temporales y rubros.
 * **Backend de Ingesta & API Octopus:**
+  * **parse_official_expensas.py:** Parser principal de comprobantes y balances para la generación de `gastos.json` alineado a la Ley CABA 941.
+  * **extract_prorrateo.py:** Parser de saldos y prorrateo por U.F. para la generación de `prorrateo.json` (100% de cobertura en 23 UFs).
   * **download_octopus.py:** Ingestor de alto rendimiento integrado con la API REST de AWS de Octopus Vecinos (`https://vecinos.octopus.com.ar/`).
-  * **extract_data.py:** Parser de comprobantes y balances para la generación de `gastos.json`.
-  * **extract_prorrateo.py:** Parser de saldos y prorrateo por U.F. para la generación de `prorrateo.json`.
-  * **check_servicios.py:** Script de monitoreo de interrupciones de Luz (Edesur), Agua (AySA) y Gas (Metrogas) en CABA.
+  * **check_servicios.py:** Script de monitoreo preventivo de servicios públicos (Edesur, AySA y Metrogas).
   * **cron_update.py:** Coordinador inteligente de actualización automática.
 
 ---
@@ -23,27 +23,38 @@ Panel de control, ingesta automática y auditoría de expensas, gastos y servici
 
 ```
 Auditoria_Administracion_MTAlvear963/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # Workflow de CI/CD para GitHub Actions
-├── liquidaciones/              # PDF descargados de Octopus
-├── scratch/                    # Scripts de diagnóstico e inspección
-├── check_servicios.py          # Script de monitoreo de Edesur, AySA y Metrogas
-├── download_octopus.py         # Descargador automático vía API Octopus AWS
-├── extract_data.py             # Parser principal de gastos y balances
-├── extract_prorrateo.py        # Parser de expensas por U.F. e intereses
-├── cron_update.py              # Coordinador de actualización y descargas
-├── gastos.json                 # Base de datos consolidada de gastos
-├── prorrateo.json              # Base de datos consolidada de U.F. e intereses
-├── index.html                  # Panel de Control General de Gastos
-├── dashboard.js                # Lógica del dashboard de gastos
-├── unidades.html               # Panel de control de Unidades Funcionales
-├── unidades.js                 # Lógica e interés por U.F.
-├── cartelera_dashboard.html    # Cartelera para impresión
-├── robots.txt                  # Directivas para buscadores
-├── sitemap.xml                 # Mapa del sitio
-└── README.md                   # Documentación técnica
+├── index.html                   # Interfaz Principal (Cuadro de Mando, KPIs, Gráficos y Auditoría)
+├── dashboard.js                 # Lógica de Negocio, Motores de Auditoría IPC y ApexCharts
+├── unidades.html                # Interfaz de Unidades Funcionales (Prorrateo, Morosidad y Coeficientes)
+├── unidades.js                  # Lógica de Prorrateo, Historial por UF y Auditoría de Intereses
+├── cartelera_dashboard.html     # Plantilla A4 Imprimible para Cartelera del Edificio con Código QR
+│
+├── parse_official_expensas.py   # Motor Principal ETL: Extrae gastos desglosados y categoriza según CABA 941
+├── extract_prorrateo.py         # Motor ETL Prorrateo: Extrae estados de cuenta de las 23 UFs
+├── check_servicios.py           # Scraper de Servicios Públicos (Edesur, AySA, Metrogas)
+├── cron_update.py               # Coordinador General de Ingesta Automatizada
+├── download_octopus.py          # Cliente API/Scraper para la descarga de PDFs de liquidación
+│
+├── gastos.json                  # Dataset Consolidado de Gastos Auditados (+1.300 registros)
+├── prorrateo.json               # Dataset Consolidado de Prorrateo y Morosidad (1.097 registros UF)
+├── servicios_status.json        # Estado de Servicios Públicos en Tiempo Real
+│
+├── liquidaciones/               # Repositorio de PDFs Oficiales Auditados (2022-08 a 2026-07)
+├── novedades/                   # Repositorio de Comunicados y Adjuntos del Consorcio
+│
+├── DOCUMENTACION_TECNICA.md     # Documentación Técnica Integral del Proyecto
+├── README.md                    # Guía Rápida de Uso del Repositorio
+├── vercel.json                  # Configuración de Rutas de Vercel
+└── requirements.txt             # Dependencias del Entorno Python
 ```
+
+---
+
+## 📖 Documentación Técnica Completa
+
+Para acceder al análisis detallado de la arquitectura de software, metodologías de auditoría, paridad IPC INDEC, reglas de negocio e instrucciones para desarrolladores, consulta el documento:
+
+👉 **[DOCUMENTACION_TECNICA.md](DOCUMENTACION_TECNICA.md)**
 
 ---
 
