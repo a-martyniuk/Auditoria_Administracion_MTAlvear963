@@ -421,6 +421,38 @@
         }
         [data-tooltip-right]:hover::after { opacity: 1; }
 
+        /* ── UNIVERSAL FLOATING TOOLTIP SYSTEM ── */
+        [data-tooltip] { position: relative; cursor: help; }
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 115%;
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            background: #0b1120;
+            border: 1px solid rgba(6, 182, 212, 0.4);
+            color: #f1f5f9;
+            padding: 0.6rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.73rem;
+            font-weight: 400;
+            line-height: 1.4;
+            width: max-content;
+            max-width: 280px;
+            white-space: normal;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            text-align: left;
+        }
+        [data-tooltip]:hover::after, [data-tooltip]:focus::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
         /* ── RESPONSIVE MOBILE STYLES ── */
         .mobile-header {
             display: none;
@@ -601,22 +633,22 @@
 
     <!-- KPI CARDS -->
     <div class="kpi-grid">
-        <div class="kpi-card c-ingresos">
+        <div class="kpi-card c-ingresos" data-tooltip="Suma total recaudada por expensas liquidadas a todas las UFs en el período según hoja oficial de prorrateo.">
             <div class="kpi-label">💰 Liquidación Total Consorcio</div>
             <div class="kpi-val green" id="kpiRecaudado">$ 0,00</div>
             <div class="kpi-delta neutral" id="kpiRecaudadoDelta">Masa total de expensas</div>
         </div>
-        <div class="kpi-card c-gastos">
+        <div class="kpi-card c-gastos" data-tooltip="Sumatoria total de comprobantes de egreso auditados e imputados en el período.">
             <div class="kpi-label">📤 Egresos / Gastos Auditados</div>
             <div class="kpi-val red" id="kpiEgresado">$ 0,00</div>
             <div class="kpi-delta neutral" id="kpiEgresadoDelta">Sumatoria del período</div>
         </div>
-        <div class="kpi-card c-predictivo">
+        <div class="kpi-card c-predictivo" data-tooltip="Cuota promedio de las 22 UFs residenciales ($154.544,98). Excluye la UF 001 (SAS 38,58%) para no distorsionar la media de los departamentos.">
             <div class="kpi-label" id="kpiPromedioLabel">🏢 Promedio Deptos (22 UF)</div>
             <div class="kpi-val purple" id="kpiPromedio">$ 0,00</div>
             <div class="kpi-delta neutral" id="kpiPromedioDelta">Excluye UF 001 (SAS 38,58%)</div>
         </div>
-        <div class="kpi-card c-balance">
+        <div class="kpi-card c-balance" data-tooltip="Gastos con desvío superior al +50% respecto al mes regular previo (excluye SAC estacional de ley).">
             <div class="kpi-label">⚠️ Anomalías / Alertas</div>
             <div class="kpi-val cyan" id="kpiAnomalias">0</div>
             <div class="kpi-delta neutral" id="kpiAnomaliasDelta">Desvíos > 50% vs media</div>
@@ -691,14 +723,14 @@
                 <table class="data-table" id="providerAuditTable">
                     <thead>
                         <tr>
-                            <th style="text-align: left;">Proveedor</th>
-                            <th style="text-align: left;">Rubro</th>
-                            <th style="text-align: right;">Monto Reciente</th>
-                            <th style="text-align: right;">Monto Año Anterior</th>
-                            <th style="text-align: right;">Variación</th>
-                            <th style="text-align: right;">IPC Acum.</th>
-                            <th style="text-align: right;">Desvío vs. IPC</th>
-                            <th style="text-align: center;">Alerta</th>
+                            <th style="text-align: left;" data-tooltip="Nombre comercial del proveedor de bienes o servicios del consorcio.">Proveedor</th>
+                            <th style="text-align: left;" data-tooltip="Categoría legal o rubro al que pertenece el comprobante.">Rubro</th>
+                            <th style="text-align: right;" data-tooltip="Monto abonado al proveedor en el período seleccionado.">Monto Reciente</th>
+                            <th style="text-align: right;" data-tooltip="Monto abonado al mismo proveedor en el mismo mes del año anterior.">Monto Año Anterior</th>
+                            <th style="text-align: right;" data-tooltip="Variación porcentual interanual del proveedor.">Variación</th>
+                            <th style="text-align: right;" data-tooltip="Inflación interanual acumulada IPC INDEC para este período (271.5%).">IPC Acum.</th>
+                            <th style="text-align: right;" data-tooltip="Diferencia en Pesos ($) entre lo abonado al proveedor y la tarifa esperada si hubiera ajustado 100% por IPC INDEC.">Desvío vs. IPC</th>
+                            <th style="text-align: center;" data-tooltip="🟢 Estable: <= IPC | 🟡 Alto: > IPC | 🔴 Excesivo: > IPC + 25%">Alerta</th>
                         </tr>
                     </thead>
                     <tbody id="providerAuditBody">
@@ -884,15 +916,15 @@
             <table id="expensesTable">
                 <thead>
                     <tr>
-                        <th>Período</th>
-                        <th>Categoría</th>
-                        <th>Tipo</th>
-                        <th>Alerta</th>
-                        <th>Estado</th>
-                        <th>Concepto / Proveedor</th>
-                        <th style="text-align:right">Mes Anterior</th>
-                        <th style="text-align:right">Var. %</th>
-                        <th style="text-align:right">Monto Actual</th>
+                        <th data-tooltip="Año y Mes de la liquidación oficial de expensas auditada.">Período</th>
+                        <th data-tooltip="Rubro legal según clasificación estándar de liquidación.">Categoría</th>
+                        <th data-tooltip="Indica si el gasto es Fijo/Variable y si es Expensa Ordinaria (Inquilinos) o Extraordinaria (Propietarios).">Tipo</th>
+                        <th data-tooltip="Detecta desvíos atípicos superiores al +50% respecto al mes regular anterior.">Alerta</th>
+                        <th data-tooltip="Estado de pago del comprobante (Pagado / Pendiente).">Estado</th>
+                        <th data-tooltip="Descripción oficial del comprobante respaldatorio. Haz clic para ver el historial del proveedor.">Concepto / Proveedor</th>
+                        <th style="text-align:right" data-tooltip="Monto pagado al mismo proveedor en el período regular previo (para haberes se compara vs mes no-SAC).">Mes Anterior</th>
+                        <th style="text-align:right" data-tooltip="Variación %. Renglones previsionales en julio/diciembre muestran (Inc. SAC) en violeta por aguinaldo de ley.">Var. %</th>
+                        <th style="text-align:right" data-tooltip="Monto total liquidado e imputado en el período actual.">Monto Actual</th>
                     </tr>
                 </thead>
                 <tbody id="expensesTableBody">
@@ -1029,6 +1061,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<script src="dashboard.js?v=15"></script>
+<script src="dashboard.js?v=16"></script>
 </body>
 </html>

@@ -1527,8 +1527,8 @@ const renderTable = () => {
             : `<span class="badge badge-variable">Variable</span>`;
 
         const expensaBadge = g.tipo_expensa === "Extraordinaria"
-            ? `<span class="badge" style="background:rgba(245,158,11,0.15); color:#fbbf24; border:1px solid rgba(245,158,11,0.3);">🏛️ Extraordinaria</span>`
-            : `<span class="badge" style="background:rgba(6,182,212,0.15); color:#22d3ee; border:1px solid rgba(6,182,212,0.3);">🏠 Ordinaria</span>`;
+            ? `<span class="badge" data-tooltip="Expensa Extraordinaria (Obras/Fondo de reserva). Aportada exclusivamente por Propietarios." style="background:rgba(245,158,11,0.15); color:#fbbf24; border:1px solid rgba(245,158,11,0.3);">🏛️ Extraordinaria</span>`
+            : `<span class="badge" data-tooltip="Expensa Ordinaria (Gasto operativo corriente). Aportada por Inquilinos y Propietarios." style="background:rgba(6,182,212,0.15); color:#22d3ee; border:1px solid rgba(6,182,212,0.3);">🏠 Ordinaria</span>`;
 
         const lowerConcepto = (g.concepto || "").toLowerCase();
         const isLabor = isLaborItem(lowerConcepto);
