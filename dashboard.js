@@ -214,10 +214,32 @@ document.addEventListener("DOMContentLoaded", () => {
             periodMap[p][key] = e.monto;
         });
 
-        const getPrevPeriod = (pStr) => {
+        const isSacItem = (concepto) => {
+            const c = (concepto || "").toLowerCase();
+            return c.includes("sac") || c.includes("aguinaldo") || c.includes("sueldo anual");
+        };
+
+        const isLaborItem = (concepto) => {
+            const c = (concepto || "").toLowerCase();
+            return c.includes("f 931") || c.includes("f.931") || c.includes("suterh") || c.includes("fateryh") || c.includes("jubilac") || c.includes("pami") || c.includes("obra social");
+        };
+
+        const getPrevPeriod = (pStr, isSac, isLabor) => {
             if (!pStr || pStr.length < 7) return "";
             const y = parseInt(pStr.slice(0, 4), 10);
             const m = parseInt(pStr.slice(5, 7), 10);
+
+            if (isSac) {
+                if (m === 6 || m === 7) return `${y - 1}-12`;
+                if (m === 12 || m === 1) return `${y}-07`;
+                return `${y - 1}-12`;
+            }
+
+            if (isLabor) {
+                if (m === 8) return `${y}-06`;
+                if (m === 1) return `${y - 1}-11`;
+            }
+
             if (m === 1) return `${y - 1}-12`;
             return `${y}-${String(m - 1).padStart(2, '0')}`;
         };
@@ -225,16 +247,20 @@ document.addEventListener("DOMContentLoaded", () => {
         rawExpenses.forEach(e => {
             const lowerKey = ((e.proveedor || e.concepto) || "").toLowerCase();
             const key = lowerKey.slice(0, 30);
-            const prevP = getPrevPeriod(e.periodo);
+            const isSac = isSacItem(lowerKey);
+            const isLabor = isLaborItem(lowerKey);
+            const prevP = getPrevPeriod(e.periodo, isSac, isLabor);
+
             const montoAnt = (periodMap[prevP] && periodMap[prevP][key]) ? periodMap[prevP][key] : 0;
-            
             e.monto_anterior = montoAnt;
-            const isSac = lowerKey.includes("sac") || lowerKey.includes("aguinaldo") || lowerKey.includes("sueldo anual");
+
+            const m = parseInt(e.periodo.slice(5, 7), 10);
+            const isSacMonth = (m === 6 || m === 7 || m === 12 || m === 1);
 
             if (montoAnt > 0) {
                 const diffPct = Math.round(((e.monto - montoAnt) / montoAnt) * 100);
                 e.desviacion_pct = diffPct;
-                e.anomalia = (diffPct >= 50 && !isSac && e.monto > 15000);
+                e.anomalia = (diffPct >= 50 && !isSac && !(isLabor && isSacMonth) && e.monto > 15000);
             } else {
                 e.desviacion_pct = 0;
                 e.anomalia = false;
