@@ -1491,6 +1491,29 @@ const renderTable = () => {
             ? `<span class="badge badge-fijo">Fijo</span>`
             : `<span class="badge badge-variable">Variable</span>`;
 
+        const lowerConcepto = (g.concepto || "").toLowerCase();
+        const isLabor = isLaborItem(lowerConcepto);
+        const m = parseInt(g.periodo.slice(5, 7), 10);
+        const isSacMonth = (m === 6 || m === 7 || m === 12 || m === 1);
+        const isSacEffect = isLabor && isSacMonth && (g.desviacion_pct || 0) > 15;
+
+        let varText = '—';
+        let varColor = 'var(--text-3)';
+
+        if (g.monto_anterior && g.desviacion_pct !== 0) {
+            const sign = g.desviacion_pct > 0 ? '+' : '';
+            const sacTag = isSacEffect ? ' (Inc. SAC)' : '';
+            varText = `${sign}${g.desviacion_pct}%${sacTag}`;
+
+            if (isSacEffect) {
+                varColor = '#a855f7';
+            } else if (g.desviacion_pct > 0) {
+                varColor = '#f87171';
+            } else {
+                varColor = '#34d399';
+            }
+        }
+
         let alertaHtml = `<span class="badge-normal">Normal</span>`;
         if (g.anomalia) {
             alertaHtml = `<span class="badge badge-anomalia">+${g.desviacion_pct}% Desvío</span>`;
@@ -1511,8 +1534,8 @@ const renderTable = () => {
                     </span>
                 </td>
                 <td style="text-align:right; color:var(--text-3);">${g.monto_anterior ? fmtFull(g.monto_anterior) : '—'}</td>
-                <td style="text-align:right; color:${(g.desviacion_pct || 0) > 0 ? '#f87171' : ((g.desviacion_pct || 0) < 0 ? '#34d399' : 'var(--text-3)')}; font-weight:600;">
-                    ${g.monto_anterior && g.desviacion_pct !== 0 ? (g.desviacion_pct > 0 ? '+' + g.desviacion_pct + '%' : g.desviacion_pct + '%') : '—'}
+                <td style="text-align:right; color:${varColor}; font-weight:600;">
+                    ${varText}
                 </td>
                 <td style="text-align:right; font-weight:700; color:var(--text-1); font-family:'Outfit', sans-serif;">
                     ${fmtFull(g.monto)}
