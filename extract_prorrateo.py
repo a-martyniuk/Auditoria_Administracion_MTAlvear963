@@ -74,7 +74,7 @@ def parse_prorrateo_page(page):
         row_words = sorted(rows[y], key=lambda r: r[0])
         row_text = " ".join(w[2] for w in row_words).upper()
         
-        if "UF" in row_text and ("SALDO" in row_text or "DEUDA" in row_text or "%" in row_text):
+        if ("SALDO" in row_text or "DEUDA" in row_text or "PAGO" in row_text or "%" in row_text) and ("ANT" in row_text or "GA" in row_text or "TOTAL" in row_text):
             for x0, x1, txt in row_words:
                 u_txt = txt.upper()
                 if "SALDO" in u_txt and "saldo_ant" not in col_bounds:
@@ -108,14 +108,25 @@ def parse_prorrateo_page(page):
 
     for y in sorted(rows.keys()):
         row = sorted(rows[y], key=lambda r: r[0])
+        if not row: continue
         first_txt = row[0][2]
         first_x = row[0][0]
+        uf_num = None
+        piso_override, dpto_override = "", ""
 
-        if first_x < 40 or not re.match(r'^\d{1,2}$', first_txt):
-            continue
-        
-        uf_num = int(first_txt)
-        if not (1 <= uf_num <= 30) or uf_num in seen_ufs:
+        # Caso A: Número de UF estándar (ej: "1", "2", "18")
+        if first_x < 80 and re.match(r'^\d{1,2}$', first_txt):
+            uf_num = int(first_txt)
+        # Caso B: Concatenado (ej: "104-10", "115-11", "187-18", "de 187-18")
+        else:
+            m = re.search(r'\b(\d{1,2})(\d{1,2}\-[\w]+)\b', " ".join(w[2] for w in row[:3]))
+            if m:
+                uf_num = int(m.group(1))
+                if "-" in m.group(2):
+                    parts = m.group(2).split("-", 1)
+                    piso_override, dpto_override = parts[0], parts[1]
+
+        if not uf_num or not (1 <= uf_num <= 23) or uf_num in seen_ufs:
             continue
         seen_ufs.add(uf_num)
 
@@ -214,12 +225,14 @@ def process_all_official_pdfs():
             seen_ufs = set()
             for p in range(doc.page_count):
                 txt = doc[p].get_text("text").upper()
-                if "ESTADO DE CUENTA Y PRORRATEO" in txt or "PRORRATEO" in txt:
+                if "ESTADO DE CUENTA" in txt or "PRORRATEO" in txt or "SALDO ANT" in txt:
                     ufs_page = parse_prorrateo_page(doc[p])
                     for u in ufs_page:
                         if u["uf"] not in seen_ufs:
                             seen_ufs.add(u["uf"])
                             all_parsed_ufs.append(u)
+
+            all_parsed_ufs.sort(key=lambda x: x["uf"])
 
             if all_parsed_ufs:
                 total_ga = sum(u["ga_pct"] for u in all_parsed_ufs)

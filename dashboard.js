@@ -272,12 +272,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return `${y}-${String(m - 1).padStart(2, '0')}`;
         };
 
+        const isExtraordinaria = (e) => {
+            const c = (e.concepto || "").toLowerCase();
+            const r = (e.rubro || "").toLowerCase();
+            if (c.includes("obra social") || r.includes("obra social")) return false;
+
+            const keywords = [
+                "extraordinari", "columna cloacal", "portero electr", "cuota 1/", "cuota 2/", "cuota 3/",
+                "cuota 4/", "cuota 5/", "cuota 6/", "obra ", "pintura", "fachada", "impermeabiliz",
+                "fondo de reserva", "sustitucion", "cambio de ca", "reparacion cloacal", "yeseria"
+            ];
+            return keywords.some(k => c.includes(k) || r.includes(k));
+        };
+
         rawExpenses.forEach(e => {
             const lowerKey = ((e.proveedor || e.concepto) || "").toLowerCase();
             const key = getNormalizedKey(e);
             const isSac = isSacItem(lowerKey);
             const isLabor = isLaborItem(lowerKey);
             const prevP = getPrevPeriod(e.periodo, isSac, isLabor);
+
+            e.tipo_expensa = isExtraordinaria(e) ? "Extraordinaria" : "Ordinaria";
 
             const montoAnt = (periodMap[prevP] && periodMap[prevP][key]) ? periodMap[prevP][key] : 0;
             e.monto_anterior = montoAnt;
@@ -338,10 +353,12 @@ const applyFilter = () => {
     const searchInp = document.getElementById("searchInput");
     const modeSel = document.getElementById("viewModeSelect");
     const statusSel = document.getElementById("statusFilter");
+    const tipoExpSel = document.getElementById("tipoExpensaFilter");
 
     currentViewMode = modeSel ? modeSel.value : "DESGLOSADO";
     const period = periodSel ? periodSel.value : "todos";
     const status = statusSel ? statusSel.value : "todos";
+    const tipoExp = tipoExpSel ? tipoExpSel.value : "todos";
     const query = searchInp ? searchInp.value.toLowerCase().trim() : "";
 
     let sourceDataset = rawExpenses;
@@ -364,7 +381,10 @@ const applyFilter = () => {
         const okSearch = !query ||
             (e.concepto && e.concepto.toLowerCase().includes(query)) ||
             (e.rubro && e.rubro.toLowerCase().includes(query));
-        return okPeriod && okStatus && okSearch;
+        const okTipo = tipoExp === "todos" ||
+            (tipoExp === "ordinarias" && e.tipo_expensa === "Ordinaria") ||
+            (tipoExp === "extraordinarias" && e.tipo_expensa === "Extraordinaria");
+        return okPeriod && okStatus && okSearch && okTipo;
     });
 
     currentPage = 1;
@@ -377,12 +397,14 @@ const setupEventListeners = () => {
     const searchInp = document.getElementById("searchInput");
     const modeSel = document.getElementById("viewModeSelect");
     const statusSel = document.getElementById("statusFilter");
+    const tipoExpSel = document.getElementById("tipoExpensaFilter");
     const pageSizeSel = document.getElementById("pageSizeSelect");
 
     if (periodSel) periodSel.addEventListener("change", applyFilter);
     if (searchInp) searchInp.addEventListener("input", applyFilter);
     if (modeSel) modeSel.addEventListener("change", applyFilter);
     if (statusSel) statusSel.addEventListener("change", applyFilter);
+    if (tipoExpSel) tipoExpSel.addEventListener("change", applyFilter);
     if (pageSizeSel) {
         pageSizeSel.addEventListener("change", () => {
             pageSize = parseInt(pageSizeSel.value);
@@ -1250,9 +1272,11 @@ const auditProviders = (period) => {
         { name: "📱 Octopus (Plataforma Expensas)", key: "octopus", rubro: "Abonos de Servicios" },
         { name: "⚡ Edesur SA (Servicio Eléctrico)", key: "edesur", rubro: "Servicios Públicos" },
         { name: "🌐 Personal / Telecom (Internet)", key: "personal", rubro: "Abonos de Servicios" },
-        { name: "🌐 Iplan (Internet Consorcio)", key: "iplan", rubro: "Abonos de Servicios" },
+        { name: "🛗 Ocampos Abel (Bombas y Ascensores)", key: "ocampos", rubro: "Abonos de Servicios" },
         { name: "🐜 Noplag (Desinsectación)", key: "noplag", rubro: "Abonos de Servicios" },
-        { name: "🛗 Asegal SRL (Ascensores)", key: "asegal", rubro: "Abonos de Servicios" },
+        { name: "📑 Gestionar (DDJJ y Ley Fachadas)", key: "gestionar", rubro: "Abonos de Servicios" },
+        { name: "🛡️ Federación Patronal Seguros", key: "federación patronal", rubro: "Pagos del Período por Seguros" },
+        { name: "⚖️ Perez Catriel Damian (Rúbrica)", key: "perez catriel", rubro: "Gastos de Administración" },
         { name: "🔥 Geas (Matafuegos)", key: "geas", rubro: "Abonos de Servicios" }
     ];
 
@@ -1502,6 +1526,10 @@ const renderTable = () => {
             ? `<span class="badge badge-fijo">Fijo</span>`
             : `<span class="badge badge-variable">Variable</span>`;
 
+        const expensaBadge = g.tipo_expensa === "Extraordinaria"
+            ? `<span class="badge" style="background:rgba(245,158,11,0.15); color:#fbbf24; border:1px solid rgba(245,158,11,0.3);">🏛️ Extraordinaria</span>`
+            : `<span class="badge" style="background:rgba(6,182,212,0.15); color:#22d3ee; border:1px solid rgba(6,182,212,0.3);">🏠 Ordinaria</span>`;
+
         const lowerConcepto = (g.concepto || "").toLowerCase();
         const isLabor = isLaborItem(lowerConcepto);
         const m = parseInt(g.periodo.slice(5, 7), 10);
@@ -1536,7 +1564,7 @@ const renderTable = () => {
             <tr>
                 <td style="font-weight:600; color:var(--accent);">${g.periodo}</td>
                 <td>${getCatPill(g.rubro)}</td>
-                <td>${tipoBadge}</td>
+                <td>${tipoBadge} ${expensaBadge}</td>
                 <td>${alertaHtml}</td>
                 <td>${estadoBadge}</td>
                 <td>
