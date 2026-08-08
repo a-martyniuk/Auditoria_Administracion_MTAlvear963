@@ -432,25 +432,52 @@
             background: #0b1120;
             border: 1px solid rgba(6, 182, 212, 0.4);
             color: #f1f5f9;
-            padding: 0.6rem 0.85rem;
+            padding: 0.65rem 0.85rem;
             border-radius: 8px;
-            font-size: 0.73rem;
+            font-size: 0.75rem;
             font-weight: 400;
             line-height: 1.4;
             width: max-content;
             max-width: 280px;
             white-space: normal;
-            z-index: 9999;
+            z-index: 99999;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
             backdrop-filter: blur(8px);
             text-align: left;
         }
         [data-tooltip]:hover::after, [data-tooltip]:focus::after {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
+        }
+
+        /* ── TABLE HEADER TOOLTIPS (DESPLIEGUE HACIA ABAJO PARA EVITAR CORTE) ── */
+        th[data-tooltip] { position: relative; cursor: help; z-index: 10; }
+        th[data-tooltip]::after {
+            bottom: auto;
+            top: 125%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-4px);
+        }
+        th[data-tooltip]:hover::after, th[data-tooltip]:focus::after {
+            transform: translateX(-50%) translateY(0);
+        }
+        th:first-child[data-tooltip]::after {
+            left: 0;
+            transform: translateX(0) translateY(-4px);
+        }
+        th:first-child[data-tooltip]:hover::after, th:first-child[data-tooltip]:focus::after {
+            transform: translateX(0) translateY(0);
+        }
+        th:last-child[data-tooltip]::after {
+            left: auto;
+            right: 0;
+            transform: translateX(0) translateY(-4px);
+        }
+        th:last-child[data-tooltip]:hover::after, th:last-child[data-tooltip]:focus::after {
+            transform: translateX(0) translateY(0);
         }
 
         /* ── RESPONSIVE MOBILE STYLES ── */
