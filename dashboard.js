@@ -352,17 +352,25 @@ const renderKPIs = (period) => {
     const balance = rawBalances.find(b => b.periodo === period);
     const totalRecaudado = balance ? balance.monto_expensa : (period === "todos" ? rawBalances.reduce((s, b) => s + b.monto_expensa, 0) : 0);
     const totalEgresos = isFiltered ? filteredExpenses.reduce((sum, g) => sum + g.monto, 0) : totalRecaudado;
-    const promUf = totalRecaudado > 0 ? totalRecaudado / 23 : 0;
+
+    // UF 001 (SAS) representa el 38.58% del total de expensas.
+    // El 61.42% restante corresponde a las 22 Unidades Funcionales residenciales (Deptos 1 a 23).
+    const totalDeptos = totalRecaudado * (1 - 0.3858);
+    const promDeptos = totalRecaudado > 0 ? totalDeptos / 22 : 0;
+    const promGeneral = totalRecaudado > 0 ? totalRecaudado / 23 : 0;
+
     const countAnomalias = rawExpenses.filter(g => (period === "todos" || g.periodo === period) && g.anomalia).length;
 
     const elRecaudado = document.getElementById("kpiRecaudado");
     const elEgresado = document.getElementById("kpiEgresado");
     const elProm = document.getElementById("kpiPromedio");
+    const elPromDelta = document.getElementById("kpiPromedioDelta");
     const elAnom = document.getElementById("kpiAnomalias");
 
     if (elRecaudado) elRecaudado.innerText = fmtFull(totalRecaudado);
     if (elEgresado) elEgresado.innerText = fmtFull(totalEgresos);
-    if (elProm) elProm.innerText = fmtFull(promUf);
+    if (elProm) elProm.innerText = fmtFull(promDeptos);
+    if (elPromDelta) elPromDelta.innerText = `Cuota media 22 deptos (Excl. UF 1 SAS 38.58%). Prom. total 23 UF: ${fmtFull(promGeneral)}`;
     if (elAnom) elAnom.innerText = countAnomalias;
 };
 
@@ -379,11 +387,14 @@ const renderNarrative = (period) => {
     } else {
         const b = rawBalances.find(x => x.periodo === period) || {};
         const totalMonto = b.monto_expensa || filteredExpenses.reduce((s, e) => s + e.monto, 0);
-        const promUf = totalMonto / 23;
+        const uf1Monto = totalMonto * 0.3858;
+        const promDeptos = (totalMonto * 0.6142) / 22;
+        const promGeneral = totalMonto / 23;
         const venc1 = b.vencimiento_1 ? new Date(b.vencimiento_1).toLocaleDateString("es-AR") : "Consultar liquidación";
         const countAnomalias = rawExpenses.filter(g => g.periodo === period && g.anomalia).length;
         block.innerHTML = `
-            📌 <strong>Auditoría del Período ${period}:</strong> La liquidación total de expensas asciende a <strong>${fmtFull(totalMonto)}</strong> (Promedio por U.F.: <strong>${fmtFull(promUf)}</strong>). 
+            📌 <strong>Auditoría del Período ${period}:</strong> La liquidación total de expensas asciende a <strong>${fmtFull(totalMonto)}</strong>. 
+            Promedio por Depto (22 UFs): <strong>${fmtFull(promDeptos)}</strong> <span style="font-size:0.82rem; opacity:0.85;">(Excl. UF 001 SAS: ${fmtFull(uf1Monto)} [38,58%] \| Prom. gral 23 UFs: ${fmtFull(promGeneral)})</span>. 
             Vencimiento fijado para el <span class="hl">${venc1}</span>. 
             ${countAnomalias > 0 ? `<span style="color:#f43f5e; font-weight:700;">⚠️ Se detectaron ${countAnomalias} alertas de desvío en este período.</span>` : `✅ Todos los costos auditados se encuentran dentro de los parámetros normales.`}
         `;
