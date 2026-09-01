@@ -1,6 +1,383 @@
 {
   "gastos": [
     {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical SUTERH (2%)",
+      "monto": 1435221.68,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 91
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "Belica – 00000330 - Por provision y colocacion de bomba sumergible de drenaje cloacal ROWA modelo DRAIN 1300",
+      "monto": 1250000.0,
+      "tipo": "Variable",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Sueldo Básico",
+      "monto": 1123693.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "ARCA F 931 (Período Agosto)",
+      "monto": 826587.6,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Antigüedad",
+      "monto": 516899.7,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "Destapaciones LoBruno – 00003377 - DIAGNOSTICO POR IMAGEN CLOACA - DESDE EDIFICIO A LA COLECTORA GENERAL DE AYSA CON EQUIPO",
+      "monto": 450000.0,
+      "tipo": "Variable",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 358475.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": true,
+      "desviacion_pct": 186
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Gastos de Administración",
+      "concepto": "Administracion Ferazzoli – 00000247 - HONORARIOS ADMINISTRACION. PERIODO 06/2026",
+      "monto": 344100.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Gastos de Limpieza",
+      "concepto": "Weledniger Javier Eduardo – 00000029 - CIF ACTIVE GEL LIMON AMARILLO 300 ML - PROCENEX BIDON X 5LTS - LAVANDINA BIDON X 5 LTS CH",
+      "monto": 331305.7,
+      "tipo": "Variable",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Servicios Públicos",
+      "concepto": "Edesur SA – 87132927 - Nº de cliente: 00173029 + Período de consumo (06/07/2026 al 05/08/2026) + fecha de vto: 2",
+      "monto": 223401.15,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "Destapaciones LoBruno – 00003376 - DESOBSTRUCCION DE CLOACA - SE DETECTO ANOMALIAS EN LA CAÑERIA DESDE EDIFICIO A LA COLECTO",
+      "monto": 210000.0,
+      "tipo": "Variable",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Jubilación – Aporte Empleado (11%)",
+      "monto": 201756.4,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": true,
+      "desviacion_pct": 91
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001590 - Mantenimiento de 2 ascensor/es mes de Julio.",
+      "monto": 200000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 168611.69,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 80
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Noplag – 00004148 - Por Fumigación, Desinsectación, Abono Julio 2026.",
+      "monto": 126500.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Gastos Bancarios",
+      "concepto": "Comisiones bancarias (Período Agosto)",
+      "monto": 102918.32,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Otros",
+      "concepto": "Provisión de zapatillas de trabajo para encargado.",
+      "monto": 102500.0,
+      "tipo": "Variable",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "SUTERH – Cuotas Sindicales",
+      "monto": 82536.71,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Adicional Viáticos",
+      "monto": 79459.8,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Gastos de Administración",
+      "concepto": "CASAIS JULIO – 00000084 - HONORARIOS CONFECCION CARTA DOCUMENTO A ALAIN GARCIA MARTINEZ",
+      "monto": 75000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "OCTOPUS – 00381214 - Suscripción Período agosto - 2026",
+      "monto": 60375.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "SOLEX – 00002329 - CONTROL PERIODICO DE EXTINTOR - AUDIT. Y SELLO DE CALIDAD S/CONTROL PERIODICO",
+      "monto": 57172.39,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Gestionar – 00047870 - Prevision Gestionar Consorcio en Regla C1 CABA 1 Meses 01/08/2026 hasta 31/08/2026",
+      "monto": 57000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "INSSJP / PAMI – Aporte Empleado (3%)",
+      "monto": 55024.47,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Obra Social SUTERH – Aporte Empleado (3%)",
+      "monto": 55024.47,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001597 - Servicio y mantenimiento de bomba/s elevadoras de agua, correspondiente al mes de Julio.",
+      "monto": 55000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Retiro de Residuos",
+      "monto": 48086.1,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Clasificación de Residuos",
+      "monto": 36010.5,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Suma Remunerativa No Retenible",
+      "monto": 30000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Personal – 95960210 - Período Facturado: 07/2026 + fecha de vto: 10/08/2026",
+      "monto": 28460.06,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Perez Catriel Damian – 00008933 - Proc. F - 931 + Liq. Sueldo + Libro sueldo digital CABA 07/2026",
+      "monto": 24000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Caja Protección Familiar – FATERYH (1%)",
+      "monto": 18341.49,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 18341.49,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical CCT589/10 (0.75%)",
+      "monto": 13756.12,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH / SERACARH – Aportes Patronales",
+      "monto": 9170.75,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-08",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 8816.0,
+      "tipo": "Fijo",
+      "archivo": "2026-08_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
       "periodo": "2026-07",
       "rubro": "Sueldos y Aportes",
       "concepto": "Cuota Sindical SUTERH (2%)",
