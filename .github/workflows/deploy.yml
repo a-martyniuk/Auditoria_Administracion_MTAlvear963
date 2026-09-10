@@ -43,4 +43,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add gastos.json prorrateo.json servicios_status.json liquidaciones/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: actualización automática de expensas y servicios [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "auto: actualización automática de expensas y servicios [skip ci]" && git pull --rebase origin main && git push origin main)
