@@ -1,12 +1,12 @@
 {
-    "ultima_actualizacion": "2026-10-29 15:51:19",
+    "ultima_actualizacion": "2026-10-30 00:36:43",
     "luz": {
         "status": "Normal",
         "detalles": "Sin interrupciones masivas reportadas en Edesur"
     },
     "agua": {
         "status": "Normal",
-        "detalles": "Servicio de agua potable AySA normal"
+        "detalles": "Servicio de agua potable y cloacas AySA normal"
     },
     "gas": {
         "status": "Normal",
