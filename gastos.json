@@ -1,6 +1,353 @@
 {
   "gastos": [
     {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical SUTERH (2%)",
+      "monto": 1613427.12,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Sueldo Básico",
+      "monto": 1210515.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "AFIP F 931 – Contribuciones Laborales",
+      "monto": 954777.72,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Antigüedad",
+      "monto": 581047.2,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Gastos de Administración",
+      "concepto": "Administracion Ferazzoli – 00000268 - HONORARIOS ADMINISTRACION. PERIODO 09/2026",
+      "monto": 371767.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 358475.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": true,
+      "desviacion_pct": 186
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Gastos de Limpieza",
+      "concepto": "Weledniger Javier Eduardo – 00000131 - CIF BIOACTIVE GEL LIMA X300ML - PROCENEX BIDON X 5LTS - LAVANDINA BIDON X 5 LTS CHEMICOL",
+      "monto": 351467.67,
+      "tipo": "Variable",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001679 - Previsión Mantenimiento mensual de dos ascensores (Período Septiembre)",
+      "monto": 230000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Jubilación – Aporte Empleado (11%)",
+      "monto": 226807.65,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Servicios Públicos",
+      "concepto": "Edesur SA – 91664967 - Período de consumo 28/07 al 25/09, consumo 1080kw , liq 1/2 (Período Septiembre)",
+      "monto": 198881.88,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 186314.71,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": true,
+      "desviacion_pct": 157
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "Ocampos Abel Antonio – 00001757 - Provisión y colocación de nueva cerradura piso PB. Ascensor chico.",
+      "monto": 145000.0,
+      "tipo": "Variable",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Noplag – 00004326 - Servicio de desinsectación (Período Agosto)",
+      "monto": 130500.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Gastos Bancarios",
+      "concepto": "Comisiones bancarias (Período Octubre)",
+      "monto": 105226.14,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "SUTERH – Cuotas Sindicales",
+      "monto": 92784.95,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Adicional Viáticos",
+      "monto": 90035.3,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Suma Remunerativa No Retenible",
+      "monto": 85000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Mantenimiento de Partes Comunes",
+      "concepto": "PALMA GARRIDO – 00000266 - Arreglo de artefactos de luz palier 5to piso",
+      "monto": 85000.0,
+      "tipo": "Variable",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Otros",
+      "concepto": "Mediadora Vanesa Steimberg, pago inicio mediaciòn",
+      "monto": 76500.0,
+      "tipo": "Variable",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Gestionar – 00060016 - Servicio de gestion de ddjj, registro de empleadores, y empleados, ley de fachadas, regis",
+      "monto": 65900.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Ocampos Abel Antonio – 00001689 - Mantenimiento de bombas elevadoras de agua (Período Julio)",
+      "monto": 65000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "INSSJP / PAMI – Aporte Empleado (3%)",
+      "monto": 61856.63,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Obra Social SUTERH – Aporte Empleado (3%)",
+      "monto": 61856.63,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "OCTOPUS – 00394148 - Servicio de procesamiento de expensas (Período Octubre)",
+      "monto": 59167.5,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Retiro de Residuos",
+      "monto": 54487.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Clasificación de Residuos",
+      "monto": 40803.2,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Remuneración Directa",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Perez Catriel Damian – 00009119 - Liquidación de sueldos y cargas sociales. Rúbrica digital CABA. (Período Septiembre)",
+      "monto": 30000.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Abonos de Servicios",
+      "concepto": "Personal – 14123079 - Período Facturado: 09/2026 + fecha de vto: 13/10/2026",
+      "monto": 29646.29,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Caja Protección Familiar – FATERYH (1%)",
+      "monto": 20618.88,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH – Aportes Patronales",
+      "monto": 20618.88,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "Cuota Sindical CCT589/10 (0.75%)",
+      "monto": 15464.16,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Sueldos y Aportes",
+      "concepto": "FATERYH / SERACARH – Aportes Patronales",
+      "monto": 10309.44,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "sub_tipo": "Cargas Sociales",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
+      "periodo": "2026-10",
+      "rubro": "Pagos del Período por Seguros",
+      "concepto": "Federación Patronal Seguros",
+      "monto": 8816.0,
+      "tipo": "Fijo",
+      "archivo": "2026-10_expensa_oficial.pdf",
+      "anomalia": false,
+      "desviacion_pct": 0
+    },
+    {
       "periodo": "2026-09",
       "rubro": "Sueldos y Aportes",
       "concepto": "Cuota Sindical SUTERH (2%)",
